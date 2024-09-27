@@ -9,6 +9,19 @@
 - Break down 'Introduction' page into subpages
 - Add images
 
+## Guides and Reference
+
+Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
+Writing a good guide requires thinking about what your users are trying to do.
+
+> Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+
+Reference pages are ideal for outlining how things work in terse and clear terms.
+Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+
+> Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+
+
 ## Project Structure
 
 Inside of your Astro + Starlight project, you'll see the following folders and files:
