@@ -1,11 +1,15 @@
-# Starlight Starter Kit: Basics
+# The HIVE Wiki, Renewed
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-## Features to Implement
+## To-Dos / Features to Implement
 - Filtering out pages depending if you are an end user or a peer instructor
+- Sidebar manual ordering of pages
+- Import all the other pages from old wiki, which are currently external links
+- Break down 'Introduction' page into subpages
+- Add images
 
-## 🚀 Project Structure
+## Project Structure
 
 Inside of your Astro + Starlight project, you'll see the following folders and files:
 
@@ -29,7 +33,7 @@ Images can be added to `src/assets/` and embedded in Markdown with a relative li
 
 Static assets, like favicons, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -42,6 +46,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Help
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+
+View an existing site's usage of Astro/Starlight: [freeCodeCamp.org's "Contribute" website repo](https://github.com/freeCodeCamp/contribute)

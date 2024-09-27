@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,6 +18,18 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'Introduction',
+					autogenerate: { directory: 'introduction' },
+				},
+				{
+					label: 'Policies',
+					autogenerate: { directory: 'policies' },
+				},
+				{
+					label: 'Workshop Docs',
+					autogenerate: { directory: 'workshop' },
+				},
+				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
@@ -27,11 +40,17 @@ export default defineConfig({
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
-				{
-					label: 'Policies',
-					autogenerate: { directory: 'policies' },
-				},
 			],
 		}),
 	],
+	markdown: {
+		rehypePlugins: [
+			[
+				rehypeExternalLinks,
+				{
+					content: { type: 'text', value: ' 🔗' }
+				},
+			],
+		],
+	},
 });
