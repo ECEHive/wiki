@@ -1,5 +1,6 @@
 ---
 title: Rules and Policies
+description: Rules and policies document governing The Hive Makerspace.
 tableOfContents: 
     minHeadingLevel: 2
     maxHeadingLevel: 3
@@ -206,6 +207,3 @@ This document serves as the official collection of the rules and policies of the
 ## 5. Infractions and Disciplinary Action
 
 
-## Further reading
-
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
