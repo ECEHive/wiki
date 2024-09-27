@@ -6,9 +6,12 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'The HIVE Wiki',
+			customCss: [
+				'./src/styles/override.css',
+			],
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/amwnag/hive-wiki',
 			},
 			sidebar: [
 				{

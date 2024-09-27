@@ -1,17 +1,17 @@
 ---
-title: Welcome to Starlight
+title: Hive Wiki, Renewed
 description: Get started building your docs site with Starlight.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Built off of Astro and Starlight as the theme. Planned to eventually host workshop documents, policies, and SOPs.
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/old-logo.png
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Test Page (Policies)
+      link: /policies/policies-main/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Go to existing wiki
+      link: https://wiki.hive.ece.gatech.edu/doku.php
       icon: external
       variant: minimal
 ---
@@ -20,7 +20,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## Next steps
 
-<CardGrid stagger>
+<CardGrid>
 	<Card title="Update content" icon="pencil">
 		Edit `src/content/docs/index.mdx` to see this page change.
 	</Card>
@@ -32,5 +32,8 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 	</Card>
 	<Card title="Read the docs" icon="open-book">
 		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
+	<Card title="Bookmarks/References" icon="heart">
+		Existing wiki built off of Astro: [freeCodeCamp](https://contribute.freecodecamp.org/intro/), [repo](https://github.com/freeCodeCamp/contribute)
 	</Card>
 </CardGrid>
