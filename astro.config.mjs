@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://amwnag.github.io/hive-wiki/',
+	base: '/hive-wiki',
 	integrations: [
 		starlight({
 			title: 'The HIVE Wiki',
