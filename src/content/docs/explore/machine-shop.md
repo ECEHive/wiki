@@ -1,0 +1,33 @@
+---
+title: Machine Shop
+
+---
+
+Located on the first floor, the machine shop provides resources for students to design and develop the structural components of their projects. The shop has both large power tools and small tools, which are generally geared towards woodworking. Large equipment, most of which require SUMS access, include:
+
+- Miter saw
+- Drill presses
+- Scroll saw
+- Band saw
+- Belt sanders
+- Sandblasting booth
+
+Other tools available include (*this is a long list, so we might not want to put it here*):
+
+- Cordless drills (with drill bits and screws)
+- Dremmels
+- Hand saws
+- Jigsaw
+- Saw zall
+- Sandpaper
+- etc.
+
+Scrap wood is located in a large red bin inside the machine shop. For specific materials, we recommend purchasing what you need at our [local store](https://goo.gl/maps/y3oZAu8EDnYmPrXc8) or online. Lots of people also go to the nearest Home Depot which is near Ponce City, it's a little far, but probably has anything you need if you can get a ride there. Here's the [address](https://goo.gl/maps/umYteSfVQE2mvTZA8).
+
+The Hive also has some SOP's (Standard Operating Procedures) so you can familiarize yourself with the equipment. However, you must have a PI in the room to use any of the tools in the machine shop and just reading the SOP's is not enough for training. Here are all the SOP's we have!
+
+- [Hand Tools](https://docs.google.com/document/d/1SUMQI8_UgVF7M0ihd8Glz9Z2m9h9XdPRv93W0NECXdY/edit?usp=sharing)
+- [Quick Starts and Safety for other tools](https://docs.google.com/document/d/1yMeGPBlozGpkKePS0IW1K93vtVHZE9u5IyeeFU0W898/edit?usp=sharing)
+- [Shop Inventory - WIP](https://wiki.hive.ece.gatech.edu/doku.php?id=shopinventory)
+
+In addition to the SOP's, the Hive has also created a video series on the Machine shop that you can watch to familiarize yourselves with the tools. Here's the [playlist](https://www.youtube.com/playlist?list=PLaHV-4SxpcHxXAjU6JqBEzSRYNgT7Uvle). 

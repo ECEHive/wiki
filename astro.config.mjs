@@ -18,8 +18,17 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Introduction',
-					autogenerate: { directory: 'introduction' },
+					label: 'Explore',
+					items: [
+						'explore/intro',
+						'explore/electronics-benchtop',
+						'explore/3d-printing',
+						'explore/laser-cutting',
+						'explore/embedded-systems',
+						'explore/pcb-fabrication',
+						'explore/machine-shop',
+						'explore/crafts',
+					],
 				},
 				{
 					label: 'Policies',

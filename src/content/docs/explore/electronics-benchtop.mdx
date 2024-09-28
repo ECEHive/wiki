@@ -1,0 +1,101 @@
+---
+title: Electronics Benchtop
+---
+
+The IDC contains a suite of electronics benchtop equipment available to all end users.
+
+Each standard station includes an:
+
+- Oscilloscope
+- Function generator
+- Multimeter
+- Power supply
+- Soldering station, complete with a soldering iron and desoldering tool.
+
+When you check out a station, you gain access to drawers with additional hand tools, such as tweezers, wire cutters, and screw drivers, to help you in your project.
+
+Beginner guides on to use each piece of equipment are listed below:
+
+- [Oscilloscope guide](/hive-wiki/guides/benchtop-oscilloscope)
+- [Function generator guide](/hive-wiki/guides/benchtop-funcgen)
+- [Multimeter guide](/hive-wiki/guides/benchtop-dmm)
+- Power supply guide (Planned)
+- Soldering guide (Planned)
+
+In addition we also have video demoes listed for all of these different pieces of equipment found here: 
+
+import YouTubeGrid from '/src/components/youtube-grid.astro';
+
+
+{/* Redesign component to auto-populate from playlist link https://www.youtube.com/playlist?list=PLaHV-4SxpcHx4nsOkHsaOwHsnmBU3wZ4W */}
+
+<YouTubeGrid
+	videos={[
+		{
+			href: 'https://youtu.be/HUVbGxMgu3E',
+			title: 'Intro To Electronics Prototyping',
+			description: 'This video introduces breadboards, multi-meters, and other tools needed to start prototyping electronics.',
+		},
+		{
+			href: 'https://youtu.be/ypZLYhUnwcs',
+			title: 'Intro To Soldering',
+			description: 'Here we talk about what soldering is, the basics of the soldering iron and solder, and how to do through hole soldering.',
+		},
+		{
+			href: 'https://youtu.be/9fZ4wMBCywc',
+			title: 'Waveform Generator',
+			description: 'Stevie shows you how to use the Waveform Generator found on most benches.',
+		},
+		{
+			href: 'https://youtu.be/f8wX688K1Nc',
+			title: 'DMM and Power Supply',
+			description: 'Stevie shows you how to use the DC power supply and Digital multi meter located on most of the benches.',
+		},
+		{
+			href: 'https://youtu.be/mKCJM2boW5I',
+			title: 'Oscilloscope How-To',
+			description: 'In this video, Stevie shows you how to use the oscilloscope, a tool that tells you voltage over time at a sample rate of 5 billion times a second.',
+		},
+	]}
+/>
+
+
+## Full List of Benchtop Equipment
+
+The following is provided in no particular order. 
+
+{/*
+
+	Images are too chunky for me to reasonably import over at the moment.
+	https://wiki.hive.ece.gatech.edu/doku.php?id=benchtop:equiplist
+
+	Use 
+		<img src="" width="200"/>
+
+	To get text to show up nicely, set vertical-align property of td to middle
+
+*/}
+
+| Name      | 
+| ------------- | 
+| Keithley source meter 2450  | 
+| Keithley digital multimeter DMM6500  | 
+| Tektronix oscilloscope MSO58  | 
+| Tektronix function generator AFG31152  | 
+| Keithley precision supply and battery simulator 2281S-20-6  | 
+| Keithley triple output power supply 2230-30-1  | 
+| Keysight LCR meter E4980-AL  | 
+| Keysight power meter N1913A  | 
+| Keysight triple power supply U8031A (2x 0-30V, 6A; 1x 5V, 3A)  | 
+| Keysight digital multimeter 34460A | 
+| Keysight waveform generator 33500B | 
+| Keysight oscilloscope DSOX3014A | 
+| Keysight oscilloscope DSOX4024A | 
+| Keysight oscilloscope DSOX6002A | 
+| Keysight network analyzer E5063A | 
+| Keysight signal analyzer N9000B | 
+| Keysight vector signal generator | 
+| Keysight triple power supply, low power E3630A (0-6V, 2.5A; 0-20V, 0.5V; 0-(-20)V, 0.5A) | 
+| Aoyue vacuum pick-up hand tool 932 | 
+| Weller soldering iron and solder sucker WXR3 | 
+| Quick hot-air rework station 957DW+ | 
