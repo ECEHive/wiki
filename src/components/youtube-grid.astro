@@ -1,0 +1,14 @@
+---
+import FluidGrid from './fluid-grid.astro';
+import YoutubeCard, { type Props as CardProps } from './youtube-card.astro';
+
+interface Props {
+	videos: CardProps[];
+}
+---
+
+<!-- https://github.com/withastro/starlight/blob/main/docs/src/components/youtube-grid.astro -->
+
+<FluidGrid minColumnWidth="16rem">
+	{Astro.props.videos.map((video) => <YoutubeCard {...video} />)}
+</FluidGrid>
