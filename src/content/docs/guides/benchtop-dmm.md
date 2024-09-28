@@ -1,0 +1,88 @@
+---
+title: Multimeter Guide
+---
+
+<!--
+Two images on https://wiki.hive.ece.gatech.edu/doku.php?id=benchtop:dmm
+{{ benchtop:dmm:dmm.jpeg?300}}
+{{ :benchtop:dmm:dmm_front.png?400}}
+-->
+
+A digital multimeter (DMM) is a device that can measure voltage, current, and resistance. Unlike an oscilloscope, which can measure and display a varying voltage vs. time, a multimeter can only display one value at a time. Therefore, multimeters can only be used to measure constant values. The following quantities can be measured.
+  * DC Voltage
+  * AC Voltage (RMS)
+  * DC Current
+  * AC Current (RMS)
+  * Resistance
+  * Capacitance
+In addition, a multimeter can be used for continuity and diode testing.
+
+## Basic Operation
+
+The front panel of a multimeter is shown. The screen displays the value of the measurement, and options associated with the measurement can be adjusted with the buttons below the screen. The buttons to the right of the screen are used to adjust the measurement type. The functions in blue above these buttons can be accessed by clicking the **[Shift]** button. On the right side of the DMM is where you connect probes.
+
+#### Connecting Probes to the Multimeter
+There are two types of probes at the IDC that can be used to take measurements. Test probes (left) need to be held on the circuit being measured, so they are best for quick measurements. Banana plugs (right) can be connected to alligator clips, which can be secured to a wire in a circuit. Both types of probes are connected to the multimeter in the same way. 
+
+The probes must be connected to the correct inputs on the multimeter. For voltage, resistance, and capacitance, connect the probes as shown below. The other ends of the probes should be connected in parallel (across a component). For resistance and capacitance measurements, it is important to remove the resistor or capacitor from the circuit. If left in a circuit, voltages and parallel resistances/capacitances can significantly affect the measurement.  
+
+For current, the probes must be connected differently, as shown below. The 3A next to the lower input signifies that the multimeter can handle up to 3A of current. If you are trying to measure a current above or close to 3A, another device must be used to obtain an accurate measurement and avoid damaging the multimeter. Current measurements must be taken in series, meaning the path of current must flow through the multimeter. You need to break open a part of the circuit and insert the multimeter in the path. 
+
+#### Selecting the Measurement Type
+Once the probes are properly connected, you need to select a measurement type by clicking one of the buttons shown below. DCV means DC volts, ACV means AC volts (this is an RMS voltage), and Ω2W signifies resistance. You can select capacitance by clicking **[Shift]** **[Freq]**, which corresponds to the capacitor symbol above the **[Freq]** button. For current measurements, first confirm that the probes are connected to the current inputs and that the probes are connect to your circuit in series. Then, click **[Shift] [DCV]** for DC Current and **[Shift] [ACV]** for AC Current. If the multimeter is set to auto trigger and auto range, the measured value will be displayed on the screen. 
+
+## Additional Measurement Types
+#### Continuity
+Continuity means that there is a complete path for current to flow between two points. In other words, the resistance between those points is very low. When in continuity test mode, the multimeter will beep when there is continuity between the two probes. This is a useful tool to test switches, fuses, connectors, electrical connections, conductors, and other components. For example, a continuity test can be used to verify that two components were soldered together correctly, and that other nearby components were not accidentally soldered together. 
+ 
+A continuity test must be performed when all power supplies are off. There should be no voltage anywhere in the circuit. Connect the probes the same way you would connect them for voltage and press the **[Cont]** button. As a test, touch the probes together. You should hear the beep and see 0 on the screen, implying that there is continuity. If preferred, the beeper can be disabled using the first softkey.
+
+#### Diode
+The diode test can be used when testing a diode, LED, transistor, and other circuit components for damage. Like the diode, many components conduct current in primarily one direction. The Forward and Reverse bias tests check that current is only allowed to flow in one direction. If testing a transistor see the article [[https://www.wikihow.com/Test-a-Transistor|How to Test a Transistor]] by wikiHow. To begin testing a diode turn the power supply to the circuit off and remove the diode from the circuit. 
+ 
+Connect test probe leads to the digital multimeter as shown. Press front panel **[Shift]** button followed by **[Cont]** button to enter diode measurement mode. Perform forward bias test by placing test probes on diode as shown in figure 14. If the digital multimeter reports a value greater than 0 and less than 1 then the forward bias test is passed. Perform the reverse bias test, if the digital multimeter displays the OPEN the test is passed.
+ 
+#### Frequency
+First connect test probes or leads to the Digital Multimeter as shown in figure 11. Press front panel **[Freq]** button and use the first softkey to choose either frequency (Freq) or Period measurement. Set voltage range of the frequency/period measurement by selecting Range on the display menu using softkey. If range is set to Auto the digital multimeter will automatically set the range based on the input. Set an AC filter (AC Filter softkey) to accurately measure low frequencies or remove noise. Select the highest frequency filter whose frequency is less than that of the signal you are measuring; for example, when measuring a signal between 20 and 200 Hz, use the 20 Hz filter. Next touch test probes or secure test leads with alligator clips and wire to breadboard circuit connected to an external AC power supply. If in Single Trigger mode press front panel **[Single]** button to take a measurement. 
+ 
+#### Four Wire Resistance
+ 
+First  turn off the circuit power supply, remove the resistor from the circuit, and examine the resistor’s color code to determine its original resistance value and tolerance. For example a resistor with 4 bands of color brown, black, red, and gold would be a 1000 Ohm resistor with 5% tolerance, therefore its should measure between 950 and 1050 Ohms. Next connect test leads to the Digital Multimeter as shown in Figure 8 above. If measuring a resistor at or above 500 Ohms use the 2-wire resistance configuration and if measuring a resistor below 500 Ohms use the 4-wire resistance configuration for greater accuracy. Press **[Ω2W]** button for 2-wire resistance or **[Ω4W]** for 4-wire resistance on the front panel. Set range of the resistance measurement by selecting Range on the display menu using softkey. Next remove test lead resistance by shorting the test probes (touching each end together) and pressing the front panel **[Null]** button, repeat for each pair of test probes. Attach test leads with alligator clips to each end of the resistor to measure its resistance value. If the measured value is outside the tolerance of the original resistance value then the resistor is damaged and should be replaced. A negative resistance value may be reported due to resistor contact with other circuit components while measuring or reversed test probe leads. If the absolute value of the resistance is between the resistor’s tolerance it may be ignored, else ask an IDC peer instructor for help.
+ 
+## Additional Options and Function
+#### Triggering
+Triggering is used to acquire measurements with greater accuracy. The Digital Multimeter does this by waiting until the test leads read a steady stream of values to report a measurement on the display. The default trigger setting for the Keysight Digital Multimeter is Auto Trigger which takes continuous measurements. Continuous measuring is noisy and is not useful when trying to reach a precise value for a measurement. Continuous measuring is appropriate for checking components for defects and when only estimations of measurement values are needed. In Auto Trigger mode you can stop and resume the taking of measurements by pressing the front panel **[Run/Stop]** button.
+
+##### Set Mode
+Press front panel **[Acquire]** button and select Trg Src option on the display by using the soft key. Select Auto using the soft key to enter Auto Trigger mode and take measurements continuously. Select Single using the soft key to enter Single Trigger mode and the Digital Multimeter will take a single measurement each time the front panel **[Single]** button is pressed.
+
+##### Auto and Manual Trigger Delay
+The instrument inserts a trigger delay between the occurrence of a trigger and the first measurement. When Delay Auto is selected the instrument automatically determines the delay based on function, range and integration time. However, when Delay Man is selected the user can manually set a delay longer than the automatic delay to allow the input to settle before taking a measurement. These options can be set by pressing the front panel **[Acquire]** button and using the Delay softkey to select either Delay Auto or Delay Man.
+
+##### Number of Samples
+In Single Mode the user can specify the number of samples to be taken per trigger by using the Samples/Trigger softkey. Press **[Acquire]** button and select Samples / Trigger soft key. Press up/down selection buttons on the front panel to set the number of samples. This is useful when trying to take a specific number of samples per measurement to be saved to a CSV file using the USB port on the front panel, for more information see the Save Readings section under Advanced Functionality.
+
+#### Range
+
+#### AC Filtering
+
+#### Math Functions
+The Keysight 34460A Digital Multimeter offers built-in math functions to analyze readings taken. A Null value can be set to be subtracted from all measurement values. A dB Scaling value can be set to scale all measurement values. The Statistics function offers analysis of all measurements in reading memory by the means of central tendency measures and graphing utilities such as histograms. Limit checking indicates how many samples have exceeded specified limits and visually indicates when the limits are exceeded while measuring on the display.
+ 
+To enter the math menu press front panel **[Shift]** button followed by front panel **[Null]** button. Use the softkeys under the display to select which built-in math function to explore.
+
+#### Exporting Results to Flash Drive
+The Keysight 34460A Digital Multimeter can save up to 1,000 measurements in its reading memory and does so each time a measurement is taken. These readings can be saved to a CSV file for further analysis at a later time. 
+
+If attempting to take a single measurement for a certain amount of time, it is recommended to use Auto Trigger mode because measurements are taken continuously. Once in Auto Trigger mode press front panel **[Run/Stop]** button to stop taking continuous measurements and press the Clear Readings softkey to clear all past measurements. Then once the measurement is set up with the circuit or component press the **[Run/Stop]** button to begin taking measurements, wait the desired amount of time, and the press the [Run/Stop] button again to stop taking measurements. 
+
+It is recommended to use Single Trigger mode when saving a specific number of samples from each measurement taken. While entering Single Trigger mode remember to specify the number of samples that will be taken per measurement. Press the Clear Readings softkey to clear all past measurements taken. Setup the cricut or electrical component for measurement and press front panel **[Single]** button to take the measurement and each sample will be saved to reading memory.
+
+Now save the measurements to file out of the reading memory. Press the front panel [Acquire] button and then select the Save Readings softkey. Then use the menu that appears to configure where you want to save the file to CSV. These readings can be saved either on the digital multimeter’s internal memory or on external memory by inserting a USB device into the digital multimeter’s front panel USB port. Once finished press Done > Save Readings to save.
+
+#### Capture Display
+First take the measurement and leave the screen that is to be captured by entering the Utility menu. Enter the Utility menu by pressing the front panel **[Shift]** button followed by the front panel [Display] button. Now select Manage Files using the softkey. The Manage Files softkey is used to create, copy, delete, and rename files and folders in the instrument's internal flash memory or on a USB drive attached to the front panel. It also allows you to capture the current screen to either a (*.bmp) or (*.png) file. /’
+
+Select Action using the softkey and then Capture Display using the softkey to save a screen capture of the display at the moment that you pressed **[Shift]** to go to the Utility menu.
+
+
