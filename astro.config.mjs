@@ -34,15 +34,15 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Workshop Docs',
+					autogenerate: { directory: 'workshop' },
+				},
+				{
 					label: 'Policies',
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Rules and Policies', slug: 'policies/policies-main' },
 					],
-				},
-				{
-					label: 'Workshop Docs',
-					autogenerate: { directory: 'workshop' },
 				},
 			],
 		}),
