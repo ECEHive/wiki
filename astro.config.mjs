@@ -10,6 +10,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'The HIVE Wiki',
+			editLink: {
+				baseUrl: 'https://github.com/amwnag/hive-wiki/edit/main/',
+			},
 			customCss: [
 				'./src/styles/override.css',
 			],
