@@ -2,12 +2,21 @@
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-## To-Dos / Features to Implement
-- Filtering out pages depending if you are an end user or a peer instructor
-- Sidebar manual ordering of pages
+## To-Dos
+
+### Content
 - Import all the other pages from old wiki, which are currently external links
-- Break down 'Introduction' page into subpages
+- Update "Introduction" page, then afterwards update Tech Area pages
 - Add images
+
+### Features / Components
+- Filtering out pages depending if you are an end user or a peer instructor (maybe a toggle in top toolbar)
+- Sidebar manual ordering of pages
+- Replace external links indicator with something more minimal
+- Disable "next" and "previous" navigation on policies
+- Hover to copy anchor links for headings
+- Button toggle light/dark theme rather than dropdown
+- Backlinks to previous page
 
 ## Guides and Reference
 
