@@ -11,7 +11,7 @@ HiveMind is a wiki built by the [The Hive](https://hive.ece.gatech.edu/) and the
 
 Besides containing up-to-date information on IDC equipment, the HiveMind also contains useful advice on how to make your projects come to life, as well as step-by-step guides on how to recreate the Hive's most popular workshops on your own time and standard operating procedures for all of our equipment.
 
-Our Technical Areas and other resources can be found on this page.
+Below are links to our Technical Area pages. Other resources can be found further down this page.
 - [Electronics Benchtop](/hive-wiki/explore/electronics-benchtop)
 - [3D Printing](/hive-wiki/explore/3d-printing)
 - [Laser Cutting](/hive-wiki/explore/laser-cutting)
