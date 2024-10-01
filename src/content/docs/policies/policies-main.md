@@ -314,6 +314,16 @@ This document serves as the official collection of the rules and policies of the
     <dd class="pol-1">Certain events at the Hive, such as workshops, take place after hours and are open to end users who RSVP for the specific event. End users in the space after hours who are not participating in the event and are not supervised by a PI are in violation of the policies of this section.</dd>
 </dl>
 
+### 2.8. Workshops
+<dl>
+     <dt class="pol-1">2.9.1.</dt>
+    <dd class="pol-1">Hive workshops are educational events, usually hosted after-hours, open to a limited number of end users or PIs.</dd>
+    <dt class="pol-1">2.9.2.</dt>
+    <dd class="pol-1">Anyone who wishes to attend a workshop must RSVP for the workshop using the appropriate form sent in the weekly newsletter or elsewhere. Workshop slots are filled in the order RSVP forms are submitted. Once someone has filled out the form, they will receive an email indicating whether they have been successfully registered or placed on the waitlist. Workshops often have an extensive waitlist.</dd>
+    <dt class="pol-1">2.9.3.</dt>
+    <dd class="pol-1">If someone is unable to attend a workshop, they must cancel their registration at least 24 hours in advance of the start of the workshop using the link provided in the original registration email. A failure to cancel 24 hours in advance or a failure to attend the workshop signed up for will result in the person being given probationary workshop status. When on probationary workshop status, if someone commits another violation of this policy, they will be banned from registering for workshops for a period of 3 months. Any concerns regarding this policy should be directed to hive@ece.gatech.edu.</dd>
+</dl>
+
 ## 3. Area Specific Policies
 
 ### 3.1. Benchtop Electronics
