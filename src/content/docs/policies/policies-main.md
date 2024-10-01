@@ -258,7 +258,9 @@ This document serves as the official collection of the rules and policies of the
     <dt class="pol-1">2.5.4.</dt>
     <dd class="pol-1">Only closed-lid drinks (including coffee cups and drinks with straws) are allowed on the 1st floor.</dd>
     <dt class="pol-1">2.5.5.</dt>
-    <dd class="pol-1">Eating is only permitted on the 1st floor in the round center room. Eating is prohibited in all other locations on the 1st floor.</dd>
+    <dd class="pol-1">Eating is only permitted on the 1st floor in the round center room. Eating is prohibited in all other locations on the 1st floor. See the following map:
+    <img src="/hive-wiki/policies-main-img1.png" width="300">
+    </dd>
 </dl>
 
 ### 2.6. Restricted Areas
