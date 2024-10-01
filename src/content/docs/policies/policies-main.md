@@ -314,7 +314,7 @@ This document serves as the official collection of the rules and policies of the
     <dd class="pol-1">Certain events at the Hive, such as workshops, take place after hours and are open to end users who RSVP for the specific event. End users in the space after hours who are not participating in the event and are not supervised by a PI are in violation of the policies of this section.</dd>
 </dl>
 
-### 2.8. Workshops
+### 2.9. Workshops
 <dl>
      <dt class="pol-1">2.9.1.</dt>
     <dd class="pol-1">Hive workshops are educational events, usually hosted after-hours, open to a limited number of end users or PIs.</dd>
