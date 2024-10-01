@@ -13,7 +13,7 @@ If you have a book you would like to rebind, please feel free to bring it. If yo
 This event is limited to the first **20** sign-ups. Please fill out the RSVP form to secure your spot. 
 
 ### Original Newsletter Ad
-![](/hive-wiki/src/assets/crafts-bookbinding-internal-img1.png)
+![](/hive-wiki/public/crafts-bookbinding-internal-img1.png)
 
 
 ## Logistical Information
