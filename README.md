@@ -13,7 +13,6 @@
 - Filtering out pages depending if you are an end user or a peer instructor (maybe a toggle in top toolbar)
 - Sidebar manual ordering of pages
 - Replace external links indicator with something more minimal
-- Disable "next" and "previous" navigation on policies
 - Hover to copy anchor links for headings
 - Button toggle light/dark theme rather than dropdown
 - Backlinks to previous page

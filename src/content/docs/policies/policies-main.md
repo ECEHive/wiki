@@ -4,6 +4,8 @@ description: Rules and policies document governing The Hive Makerspace.
 tableOfContents: 
     minHeadingLevel: 2
     maxHeadingLevel: 3
+prev: false
+next: false
 ---
 
 
