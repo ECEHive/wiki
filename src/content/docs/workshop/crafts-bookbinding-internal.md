@@ -5,7 +5,6 @@ sidebar:
 ---
 
 ## Workshop Description
-### Text Description
 
 A book-binding class where you can rebind your favorite book! Learn how to take any paperback, hardcover, or block of test and create a custom cover. 
 
@@ -74,6 +73,19 @@ For part 2, end users focus more on designing their covers, so less setup was re
 - Iron-on Vinyl 
 - Wax paper 
 
+
+#### BOM (01/24/2024)
+| Item | Description | Quantity | Link |
+| ---- | ----------- | -------- | ---- |
+| Lineco Glue | Book binding glue | 3 | [Primary](https://a.co/d/3VJVYa6) |
+| Lineco Bookbinding Super Cloth  | Cloth for book spine | 5 | [Primary](https://a.co/d/bRE53o3) |
+| Genuine Bone Folder | Creasing tool | 20 | [Primary](https://a.co/d/dekbNx9) |
+| Silicone Painting Brush | Brush for applying book glue | 5 | [Primary](https://a.co/d/f4ThJHH) |
+| Lineco Neutral pH Binder Board | Material for Book cover | 10 | [Primary](https://a.co/d/60RKLn4) |
+| Binding Headbands Endbands | Material for book spine | 1 | [Primary](https://a.co/d/1bUP0GK) |
+| Cardstock | Material for end papers | 6 | [Primary](https://a.co/d/ddi7aLa) |
+| Ribbon set | Material for book mark | 1 | [Primary](https://a.co/d/5xbU70S) |
+
 ### Presentation Equipment Required
 
 None required. A hands-free mic may be helpful for the introduction and general instructions
@@ -88,7 +100,7 @@ None required. A hands-free mic may be helpful for the introduction and general 
 Coordinating a two-part workshop is difficult because attendees are not always available for the next workshop.” 
 
 
-### Suggestions if run again:
+### Suggestions for Future Iterations
 
 “I would allow more time to learn basic arts and crafts skills. Many people did not know how to use x-acto knives, T-Squares, or basics rules of arts and crafts. I think giving more time for those fundamentals would help.” 
 
