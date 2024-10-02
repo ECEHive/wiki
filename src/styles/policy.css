@@ -1,0 +1,42 @@
+dl {
+    display: inline;
+}
+
+dt {
+    float: left;
+    justify-content: end;
+    display: flex;
+    font-weight: 500 !important;
+    padding-right: 5px;
+    margin-top: 1rem !important;
+}
+
+dd {
+    margin-top: 1rem !important; 
+}
+
+dt.pol-1 {
+    width: 50px;
+}
+
+dd.pol-1 {
+    padding-inline-start: 50px;
+}
+
+dt.pol-2 {
+    width: 80px;
+}
+
+dd.pol-2 {
+    padding-inline-start: 80px;
+}
+
+dt.pol-3 {
+    width: 110px;
+}
+
+dd.pol-3 {
+    padding-inline-start: 110px;
+}
+
+
