@@ -1,0 +1,34 @@
+---
+title: Microcontroller Selection Guide
+---
+
+## Power Efficiency
+How much processing power do you require for the task? Will a single-core processor suffice, or do you need a dual-core?
+ 
+The Pi4B requires a 5V at 3A power supply. It can be supplied over USB-C or GPIO. If attached downstream USB devices consume less than 500mA, a 5V, 2.5A supply may be used.
+ 
+The Arduino requires 2.7-5.5 volts.
+
+## Hardware Interface
+USB, Wi-Fi, Bluetooth, audio, video, or camera. Depending on the use, some microcontrollers provide more hardware interfaces than others.
+The number of analogs and digital inputs should be taken into consideration. These are essentials and help interface with the outside world. Arduino provides 10 bits of resolution at the input/output pins, i.e. 1024 different values. Arduino can be used to communicate with a computer, another Arduino board, or other microcontrollers.
+
+## Software Architecture
+Some microcontrollers are operable on multiple OSs, and others are not. If you need to scale, it is better to use the same software architecture to increase interoperability.
+What is interoperability?
+Interoperability is a characteristic of a product or system to work with other products or systems.
+Arduino Pro Mini does not have a programmer. Therefore, it is best where the system is a permanent installation. In permanent applications, the board only needs to be programmed once, and that is all. In those cases, features provided like USB programmer, I/O connectors, and other supporting hardware are useless.
+
+## Processing Power
+The major questions here are: How much processing power do you require for the task, will a single-core processor suffice, or do you need a dual-core? Keep in mind that a multicore processor will be significantly faster but will consume a lot more energy. Therefore, you would want to consider if a multicore is necessary.
+
+## Security
+IoT is subject to various hacking attacks nowadays. In response, microcontroller makers are implementing layers of security such as cryptography and physical security.
+
+## Temperature Tolerance
+The environment where the microcontroller will be operating plays a significant role.
+
+## Cost
+This might not be relevant in the case of the Hive Markerspace assuming all microcontrollers are loaned for free. However, whenever designing an embedded system, you always think about its affordability. Who is your target audience? Considering your cost of production, do you think this is an affordable product for your general audience? A microcontroller’s price can be a significant portion of your production cost. 
+
+For more information about microcontroller selection criteria, click [here](https://components101.com/microcontrollers)

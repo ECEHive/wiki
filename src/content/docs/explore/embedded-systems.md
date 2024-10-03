@@ -13,7 +13,7 @@ At the Hive, we have a large selection of electronics available to checkout for 
 - Beaglebone
 - TI launchpads
 
-There's no such thing as a 'best' microcontroller. It all depends on what you want to do. Therefore, depending on your needs, one microcontroller might be more appropriate. For example, the fastest chips tend to use more power than the slowest ones. The boards with the most I/O pins are bigger (and usually cost more) than ones with fewer features. Below is a list of aspects to consider when choosing a microcontroller. For more information, click [Here](https://wiki.hive.ece.gatech.edu/doku.php?id=selection-guide)
+There's no such thing as a 'best' microcontroller. It all depends on what you want to do. Therefore, depending on your needs, one microcontroller might be more appropriate. For example, the fastest chips tend to use more power than the slowest ones. The boards with the most I/O pins are bigger (and usually cost more) than ones with fewer features. Below is a list of aspects to consider when choosing a microcontroller. For more information, click [Here](/hive-wiki/guides/embed-selection/)
 
 Items are available for checkout at the front desk. We do not sell electronics parts. If you need to purchase a part, please visit an online vendor. For more information on borrowing components, see the front desk.
 

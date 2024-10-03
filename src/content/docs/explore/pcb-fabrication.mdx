@@ -11,9 +11,9 @@ Here at The Hive, we have a suite of tools made by LPKF that enable students to 
 
 There are three primary pieces of equipment used in this process:
 
-- The LPKF ProtoMat S103 - a 2.5-dimensional plotter that drills and mills (cuts) PCB substrates, plastics, and soft metals
-- The LPKF ProtoLaser U4 - a 20um-diameter laser to etch (selectively remove) a wide variety of film/substrate pairings
-- The LPKF Contac S4 - a semi-automatic galvanic electroplater for via formation and other copper/tin plating needs. **The electroplater works, but the quality is no longer guaranteed by The Hive, and we are actively suggesting that students look for alternative options, such as 1mm through-holes or no-via designs.**
+- [The LPKF ProtoMat S103](/hive-wiki/guides/pcb-protomat/) - a 2.5-dimensional plotter that drills and mills (cuts) PCB substrates, plastics, and soft metals
+- [The LPKF ProtoLaser U4](/hive-wiki/guides/pcb-protolaser/) - a 20um-diameter laser to etch (selectively remove) a wide variety of film/substrate pairings
+- [The LPKF Contac S4](/hive-wiki/guides/pcb-electroplater/) - a semi-automatic galvanic electroplater for via formation and other copper/tin plating needs. **The electroplater works, but the quality is no longer guaranteed by The Hive, and we are actively suggesting that students look for alternative options, such as 1mm through-holes or no-via designs.**
 
 We also can [cut stencils](https://wiki.hive.ece.gatech.edu/doku.php?id=process_stencils) from polyamide or PET sheets (for stainless, see the laser cutting area), and assemble boards with a [reflow oven](https://wiki.hive.ece.gatech.edu/doku.php?id=process_reflowoven). We also have a few unsupported capabilities, including applying [soldermask](https://www.lpkfusa.com/datasheets/prototyping/promask.pdf) and [silkscreen](https://www.lpkfusa.com/datasheets/prototyping/prolegend.pdf), a less-complicated [psuedo-masking process](https://wiki.hive.ece.gatech.edu/doku.php?id=process_kaptonmask), as well as a [chemical-free electroplating process](https://www.lpkfusa.com/datasheets/prototyping/ProConduct_Specs.pdf), but again, your mileage may vary with these. Head to our [PCB fabrication](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-fab) page for more details.
 
@@ -25,13 +25,65 @@ Our DRC file: [DRC](https://drive.google.com/open?id=1YITdTXkcW3ROWZprw-xxPsB8ok
 
 Out CAM file: [CAM](https://drive.google.com/open?id=1WzzpPwXMDUg5DD4iUzenZINrzRG0kSn4)
 
+
+## Quick Links
 - **No idea what a trace is?** –> [What is a PCB?](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-basics)
 - **Designing your own PCB?** –> [PCB Design](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-design)
 - **Want to use the machines?** –> [PCB Training](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-training)
 - **Looking to schedule tool time?** –> [Head to SUMS!](http://www.sums.gatech.edu/) ([What is SUMS?](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ETGfA3m7Q3tCmtG0XVgAHG0Bz3-84vabxqlTRuF5spUmQw?e=q999Yt))
 - **What can we do, and how to do it** –> [PCB Fabrication](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-fab)
-- **Help!** –> [Knowledge Base and FAQ](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-help)
-- **Looking to take your fab to the next level?** –> [Tips, tricks, and process miscellany](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-tips)
-- **Something broken?** –> [Maintenance and troubleshooting](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-maintenance)
+- **Looking to take your fab to the next level?** –> [Tips, tricks, and process miscellany](/hive-wiki/explore/pcb-fabrication#miscellaneous-processing-tips)
+- **Something broken?** –> [Maintenance and troubleshooting](/hive-wiki/guides/pcb-maintenance/)
 
 Questions? You can reach the PCB MPIs at [hive-pcb@ece.gatech.edu](mailto:hive-pcb@ece.gatech.edu). 
+
+
+## PCB Knowledge Base and FAQ
+
+Where to go if you have general questions about anything.
+
+It's suggested that, if you're having processing issues, go to the [relevant process guide](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-fab) first to confirm you're doing things right. Then look at the relevant tool pages (below) for additional details.
+
+[General fabrication](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-help_fab), including non-standard process questions.
+
+[ProtoMat](/hive-wiki/guides/pcb-protomat/)
+
+[ProtoLaser](/hive-wiki/guides/pcb-protolaser/)
+
+[Electroplater](/hive-wiki/guides/pcb-electroplater/)
+
+[PCB design](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-design)
+
+[Fab tips and tricks](/hive-wiki/explore/pcb-fabrication#miscellaneous-processing-tips)
+
+If you cannot find the answer to your issue here, please reach out to us at [hive-pcb@ece.gatech.edu](mailto:hive-pcb@ece.gatech.edu).
+
+### Miscellaneous processing tips
+
+*So you made a few boards. Or not! Either way, this is a running list of tips and tricks for users - things to do and things to avoid, in absolutely no order whatsoever other than the order in which we discovered them. This is basically the Institutional Knowledge of the LPKF equipment at The Hive. We make no guarantee with any of these, but we have found that they've helped us in some way.*
+
+- Plating is typically avoidable by making vias with a diameter of 40 mil (1 mm). A standard 0.1” header pin can then be pushed through and soldered on both the top and bottom.
+- Higher polygon isolation will reduce the chance of bridging to a plane during assembly (since we don’t really offer soldermask). However, it will also increase etch time because more of the substrate will be etched. “Isolataion” is usually a setting that you can edit per specific polygon; 10 mil is the default often, but 24 or 32 mil (or more, though the benefits decrease) will reduce the risks further.
+- Slots! We can do them! Here are a few methods for doing them:
+    - The best method is if your CAD program allows you to generate oval holes. Then just export those with your drill file (either plated or unplated) and it should work fine.
+    - If you have square slots with a minimum dimension of at least 1mm AND they do not need plating, you can add the slots in the same layer as the board's outline in your CAD software such that they get plotted onto the Gerber that gets assigned to the “BoardOutline” layer in the LPKF CircuitPro software. (You can also just put the slots onto a completely different layer in your CAD program, generate an additional Gerber for that layer, and then in the LPKF software, import it onto either the “BoardOutline” layer or onto its own layer.) Once in the LPKF software, if your slot are on the “BoardOutline” layer, select the outline of all slots that are currently on the BoardOutline layer and move them to a new layer that you create in the “Layers” pane (making sure that the “BoardOutline” layer is selectable has helped us to select the path in question, and then right-click on one of them to reach the “Assign to layer…” submenu). Once that's done, and you're ready to generate your toolpath (save first!), generate the entire toolpath as you would normally first, and then go back into the toolpath generation window. Deselect everything but the “Contour Routing” step. Click “Show details” under that step. Select the layer you have the slots on as the “Source”, the “1mm contour router” as the tool, “No Gaps” for the number/style of breakout tabs, uncheck “Replace existing toolpath”, and check “Inside” (rather than “Outside”). Note that sometimes changing one of these resets the others, so double check these settings prior to pressing “Start” to generate the additional toolpath.
+    - Plated square slots have not been demonstrated yet, but my guess would be that if they have a minimum dimension of at least 1mm, then you can use a similar method to the un-plated square slots from above, but instead of generating a “Contour Routing” toolpath, you'd generate a “Drills” toolpath with the new “Slots” layer as the source file. Note that in this situation, the slot would have to be converted to a polygon first (right-click and select “Convert to polygon” if it's not already one). YMMV here.
+    - Overlapping drill hits can be used as a rough approximation for a slot, and get definitely be plated, by just putting them with the other plated holes.
+- If you're interested in optimizing your ProtoLaser experience, see the [LPKF ProtoLaser Optimization](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EZGQyfhrC0BItpbSxd_rjRQBzDyNWUubu-RCuJr6a3OI9A?e=8kXjaA) document for more information.
+- Laser precision is dictated by many things, some (even many) of which are likely beyond your control as a user. Here is a completely-uncomplete list of some of these things (a * indicates things that you, as a user, will not be able to adjust, but get in touch if you think it's a major contributor to any issues you're seeing):
+    - Flatness of your substrate
+    - Laser power and other material-specific settings
+    - Design choices (e.g. spacing, trace widths, substrate, copper thickness, etc.)
+    - Position of the design on the substrate (left, right, center, etc.)
+    - Cleanliness of the laser lens*
+    - Level-ness of the floor*
+    - Level-ness of the sample plate*
+    - Filter cleanliness*
+- One way to minimize systematic errors from the laser system itself is to do what might be termed a “dose test”. This would involve make a very small design that has one or more features at and/or around your actual design's minimum feature size. Think something that can be etched in a minute or two. You develop your material settings on this design so that you can try many iterations of material settings within a shorter time frame (and you can likely fit many of them on a single sheet of your substrate) while keeping in mind that there are some things out of your control. Once you've determined settings that seem to work, do a test etch of the dose-test design prior to etching your actual design. If done properly, this can tell you if the etch will be up to spec for your work. Try to hold as many systemic parameters constant as possible, e.g. the same position on the substrate, the same substrate piece, etc.
+- Another suggestion for the laser would be to define a metric for etch quality using the aforementioned test design. That way, you can quantitatively determine which parameters are doing better than others.
+- For the laser, if you're using a substrate thinner than 5 mil (0.125mm), tabs in your design are a near-requirement! You can make them in the laser.
+- Laser cannot do two-sided jobs with plating by itself; the plotter is required for fiducials. No idea why.
+- You can actually make boards with more required bits than the tool magazine has slots. It will yell at you about it, but just walk through the process as normal and it will ask you to put the bits into the magazine when it needs them.
+- The LPKF sofware handles drill hits down to 0.2mm (7.5 mil) without any adjustments, but we have the capability to make 0.15mm (5.6 mil) drill hits as well with slightly more effort. See our [0.15mm Drill Hits](/hive-wiki/guides/pcb-protomat/#guide-making-015-mm-drill-hits) guide for details on that.
+
+[The Book of Kane](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-book-of-kane)
