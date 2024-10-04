@@ -100,21 +100,13 @@ Usually, this happens because the “supported by ProtoMat” box was not checke
 - *Potential issue*: If your substrate is very small, not enough of the bed may be covered for proper vacuum pressure.
     - Tape down an old piece of 8”x12” FR4 on the bed. Then, secure your sample inside one of the cutouts. If the FR4 has a lot of holes, try covering some of them with tape.
 
-## Guide: Single-sided, No Holes
-
-This process uses the ProtoLaser only to etch a single side of substrate and cut the board out. It is strongly advised not to attempt any holes using this process, including fiducials! The ProtoLaser is, frankly, not good at making holes, and you’ll be sad when your parts don’t fit.
-
-The other thing to be aware of is that you’ll need to push quite hard to remove the board out of the substrate. For thinner substrates, this might be damaging, so carefully consider what you need before starting this. The tabs are 0.5mm thick by default (so a very thin knife), but this can actually be changed - see "[Adjusting breakout tabs](/hive-wiki/guides/pcb-protolaser/#guide-how-to-adjust-the-breakout-tabs-on-the-laser)" for details.
-
-[Single-sided, no drills process](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EZKY7KrKwEFKnTCmCzAEnOEBIVD32Zv7U5zpH8woXEz-Pg?e=e8hKqD)
-
 
 ## Guide: How to adjust the breakout tabs on the laser
 
 {/* TODO: Add images, starting from toolpathsmenu_configurecontour.png */}
 
 
-So you're running a [single-sided laser-only process](/hive-wiki/guides/pcb-protolaser/#guide-single-sided-no-holes), and you'd like to adjust the breakout tabs. No problem! It's very straightforward to do, and you can do it before or after the toolpath has been generated.
+So you're running a [single-sided laser-only process](/hive-wiki/guides/pcb-processes#single-sided-no-holes), and you'd like to adjust the breakout tabs. No problem! It's very straightforward to do, and you can do it before or after the toolpath has been generated.
 
 Before we start, it's useful to recognize that the software has some silly and sort of confusing nomenclature: “Contour routing” is the cutting out of the board, and is done using the “CutOutside” tool. The “Contour” tool is completely unrelated to this; this tool isolates regions that need to retain copper from those that need to copper removed. Don't confuse them in the Toolpath Generation window!
 
