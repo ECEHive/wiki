@@ -26,5 +26,123 @@ If you have a single sided substrate, meaning copper on only one side, go back t
 
 ## Double Sided, No Plating
 
+*(Some common errors and solutions are listed after the process steps.)*
+
+**Before starting, make sure:**
+
+- [you're logged into SUMS](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVBq41QPV51FvAhi3I_zkAUBqOHfQh_ylA_ddHQ4ZyzPGA?e=cO0su7);
+- [the ProtoMat and software are running](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EY2LyqOt_o9Pr8JPhp6u26cBxRIilQx5lEn7qFY9cZ2SoA?e=nH5y1X); and
+- [the ProtoLaser and software are on and warming up](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EbBDlXvWlSVItrI0YtYitGoBxD4IAhapi2-ZIFklbZFu_w?e=rjlMci).
+
+**Step 1:** [Process setup and first drilling on the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVU4FeAXtdBLmLRg28Gp1XkBkJj_OcnjsgNE_SWZ_LaIYg?e=0bBHpq)
+
+- After completion of Step 1, the ProtoMat will pause at a step called “Flip Material”.
+    - If it pauses at a step called “Dismount material” instead, DO NOT PANIC! You selected something during the Process Planning Wizard for through-hole plating equipment, when you should've left it blank. But no worries - simply leave the software and continue with these steps as though everything is hunky-dory.
+- Once the software has paused, lift the ProtoMat's lid. Note the orientation of the substrate, and then remove it.
+- Move to the ProtoLaser, and continue with Step 2.
+
+**Step 2**: [Etching with the ProtoLaser](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ERfKdS6GbVpJo6k_gJ1MgLgB3VVaU7ckSrJCkb4FGMK1IA?e=1rAYmW)
+
+**Step 3**: [Routing with the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/Edjj8jMNM41GlLnyGoimobUBNnqyUsva7KgEmdtWk4Ceow?e=brYMfK) 
+
+### Common issues
+
+**ProtoMat - Software cannot connect to the tool**
+
+First, make sure the ProtoMat hardware is on; if it's on already, there will be a red light under the toolhead (for the camera), and the status light on the toolhead should be at least blinking green. If it's not on, turn it on by toggling the green switch located underneath the cover, to the right of the working table, above the main power cable. Once you've confirmed the hardware is on, in the software, in the main toolbar (with the File menu), click “Machining” > “Connect”. Make sure that “S103” is selected in the dropdown menu and click “Connect”. Let the connection process happen, and then try the fabrication again.
+
+**ProtoMat - My gerber/drill file didn’t show up on the CAM view.**
+
+You probably forgot to assign it a layer. If this happens, the software will put the gerbers onto their own layers that are named with the gerber's name. Try re-importing the files, and make sure you’ve assigned each file a Layer/Template (see figure 11). Also make sure to delete the incorrectly-generated layers (right-click and select “Delete”).
+
+**ProtoMat - The tool didn't drill out my holes!**
+
+You likely forgot to import the drill file. If so, you'll have to restart the project over again. Sorry. Alternatively, the tool may have failed to pickup the bit correctly. In this case, come find a PI.
+
+**ProtoMat - The tool exchange was botched!**
+
+Stop the process as soon as possible, if it's still running, even by lifting the lid. Go get a PI. If they don't know what to do, ask them to message our Slack channel.
+
+**ProtoMat - The drill hits are incorrect, or the routing path was wrong!**
+
+There are a couple of possible reasons for this.
+
+1. You may not have imported the drill file or the board outline gerber correctly.
+2. The bits in the magazine may have been incorrect.
+3. The tool may have done something silly.
+
+In any of these cases, there is no good solution other than to restart the project and double check all of these (if possible) before starting to re-process. Sorry.
+
+**ProtoLaser - The pre-toolpath file did not import correctly.**
+
+It’s likely that you either did not save at the correct point in the process, you saved over the pre-toolpath file, or you are trying to import the wrong file. Double check all of this. If you’re certain you did it correctly, get a PI.
+
+**ProtoLaser - The fiducials did not move/moved incorrectly when I moved the design during “Placement”.**
+
+Sometimes, when placing the board, the fiducials move in the opposite direction as the board. This is a known bug! You can either: try estimating the location of the fiducials and starting the process; start a new document; restart the software; or restart the hardware. (The latter two require a fresh 20 minute warmup for optimal performance.)
+
+**ProtoLaser - The bottom/top didn’t etch completely.**
+
+You can either restart the process entirely (hit the Play button, see figure 32) or right click on “Top Side” (or “Bottom side”) under “Processing” on the left, and click “Process from here” to restart the top (or bottom) side processing with top (or bottom) side alignment. Do first check to see if you can manually remove the strips, either with a scour pad or with a microscope and tweezers/a knife. It's usually faster, and less likely to ruin your board.
+
+**ProtoLaser - The board is/is not flipped in the Processing tab.**
+
+On the left of the screen, make sure nothing is selected under “Processing”. If there is, hold down either CTRL (on Windows) or the command key (on Mac) and then left click to de-select it. If that doesn’t fix it, you can select either “Bottom Side” or “Top Side” (again, on the left) to force the correct orientation. You can try starting the project over again if this doesn’t solve it as well. Sometimes, the software has bugs.
+
+**ProtoLaser - Insufficient pressure**
+- *Potential issue*: The vacuum hose may be disconnected from the extraction hood.
+    - Lift the door. The extraction hood is the plastic bit that the laser comes out of. There is a hose that should run from that to the back of the machine (still all inside the main bay). Make sure that its snugly inserted on both ends.
+- *Potential issue*: The vacuum system may not be on or working strongly enough.
+    - Confirm that the vacuum system is on.The vacuum system is the tall white box to the tool’s right. On the front panel, at the bottom, there should be some buttons. Try increasing the suction pressure.
+- *Potential issue*: The vacuum hose(s) may be clogged.
+    - There are two vacuum hoses. One runs from the extraction hood (the round plastic bit inside the main bay) to the rear interior wall of the tool, and the second runs from the outside backside of the tool to the vacuum system (the tall white box to the tool’s right). You should be able to remove both of these and check for clogs.
+
+**I'm having other issues.**
+
+Please check out our [Knowledge Base](/hive-wiki/explore/pcb#pcb-knowledge-base-and-faq) for additional Q&As, tips, tricks, and solutions to common processing errors.
+
 
 ## Double Sided, With Plating
+
+
+This is for PCBs with traces and/or components on both sides of the board, and a need to electroplate the board (most commonly, for vias).
+
+Note that as of Fall 2022, the electroplater is a separate tool that requires a separate training sequence. Please check our [Training](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-training) page for details.
+
+**Be sure you actually NEED to electroplate before starting this!** The plating process usually takes in excess of three hours (depending on how closely you're watching it), and is historically unreliable. Further, even if it looks like the plating quality is good, the micron-scale variability across the sheet may doom any etching attempts. *There is an alternative!* Plating is typically avoidable by designing your vias as a standard hole with a diameter of 40 mil (1 mm). A standard 0.1” header pin can then be pushed through and soldered on both the top and bottom. You can accomplish similar things with wires or other pins of different diameters.
+
+**Before starting, make sure:**
+
+- [you're logged into SUMS;](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVBq41QPV51FvAhi3I_zkAUBqOHfQh_ylA_ddHQ4ZyzPGA?e=cO0su7)
+- [the ProtoMat and software are running](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EY2LyqOt_o9Pr8JPhp6u26cBxRIilQx5lEn7qFY9cZ2SoA?e=nH5y1X); and
+- [the ProtoLaser are software are on and warming up](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EbBDlXvWlSVItrI0YtYitGoBxD4IAhapi2-ZIFklbZFu_w?e=rjlMci).
+- Turn on the electroplater and let it warm up. Bath 1 needs to heat to 55C, which can take up to an hour, and which it will do in the background while the tool is not being used.
+
+**Step 1**: [Process setup and first drilling on the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVU4FeAXtdBLmLRg28Gp1XkBkJj_OcnjsgNE_SWZ_LaIYg?e=r7f7YP)
+
+- The ProtoMat will pause at a step called “Dismount Material”.
+- Once it reaches that point, remove the substrate from the ProtoMat and click “Abort” in the Wizard. (Note that in the electroplater training video, we don't do this, but doing this will save you some time if you follow these guides.)
+- Continue with Step 2.
+
+**Step 2**: [Electroplating with the Contac S4](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ESv_zF8waMZDucEP3-J6NFYBuArRkl8M5vwusDOW_0RiDQ?e=IUuxvH)
+
+*Quick Plating Tips*:
+
+- Adjusting the plating time can be done if you need a different thickness of copper rather than the standard 18um. If you would like to adjust the plating time, contact the MPIs at [hive-pcb@ece.gatech.edu](mailto:hive-pcb@ece.gatech.edu).
+- Do not let your substrate sit in the bath (any bath) for very long after the timer runs out.
+- If the machine throws an error on startup, it’s likely a bath needs to be topped off. Get a PI to help.
+- Don't forget to stir bath 3 prior to use! At least 3 minutes, about 200 end-to-end strokes.
+- When rinsing after drying (after “bath 4”), scrub the copper surface with a sponge to remove as much of the dried activator off the copper as possible.
+- Scour around your fiducials after plating. It makes a noticeable difference to the laser.
+
+Step 3: [Etching with the ProtoLaser](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ERfKdS6GbVpJo6k_gJ1MgLgB3VVaU7ckSrJCkb4FGMK1IA?e=1rAYmW)
+
+Step 4: [Routing with the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/Edjj8jMNM41GlLnyGoimobUBNnqyUsva7KgEmdtWk4Ceow?e=brYMfK)
+
+---
+
+For issues with the ProtoMat, see the [ProtoMat Knowledge Base](/hive-wiki/guides/pcb-protomat/).
+
+For issues with the ProtoLaser, see the [ProtoLaser Knowledge Base](/hive-wiki/guides/pcb-protolaser/).
+
+For issues with the electroplater, see the [Contact S4 Knowledge Base](/hive-wiki/guides/pcb-electroplater/).

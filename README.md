@@ -16,6 +16,8 @@
 - Hover to copy anchor links for headings
 - Button toggle light/dark theme rather than dropdown
 - Backlinks to previous page
+- Dropdown page component
+- Add currently hidden guides to sidebar
 
 ## Guides and Reference
 
