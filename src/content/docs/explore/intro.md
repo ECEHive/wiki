@@ -16,7 +16,7 @@ Below are links to our Technical Area pages. Other resources can be found furthe
 - [3D Printing](/hive-wiki/explore/3d-printing)
 - [Laser Cutting](/hive-wiki/explore/laser-cutting)
 - [Embedded Systems](/hive-wiki/explore/embedded-systems)
-- [PCB Fabrication](/hive-wiki/explore/pcb-fabrication)
+- [PCB Fabrication](/hive-wiki/explore/pcb)
 - [Machine Shop](/hive-wiki/explore/machine-shop)
 - [Crafts](/hive-wiki/explore/crafts)
 

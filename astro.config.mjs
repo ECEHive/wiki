@@ -28,7 +28,7 @@ export default defineConfig({
 						'explore/3d-printing',
 						'explore/laser-cutting',
 						'explore/embedded-systems',
-						'explore/pcb-fabrication',
+						'explore/pcb',
 						'explore/machine-shop',
 						'explore/crafts',
 					],

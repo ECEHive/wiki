@@ -1,0 +1,50 @@
+---
+title: PCB Design
+---
+
+So you want to design a PCB, eh? This will be a good resource and place to start!
+
+*(Last updated: Spring 2024)*
+
+*(Be very aware that this page may not be updated as frequently as we'd like, and therefore might be out of date. Apologies.)*
+
+*(Note: the links require a GT account. Sorry about that, institute requirements. Email us for a copy if you don't have one!)*
+
+There are three “main” PCB CAD programs: KiCAD (free and open-source), Eagle (now owned by AutoDesk), and Altium (the industry standard), though there are literally dozens more. These each offer their own advantages and have their own disadvantages that won't be covered here. But once you learn one, learning the others is often mostly just figuring our the new layout and where all the icons and settings are.
+
+*Update (2024)*: KiCAD has improved dramatically in the last few years. Eagle may no longer exist anymore at all (I can't find it on the AutoDesk website), and may have been entirely subsumed into Fusion, sadly. You can probably still download old versions though that would allow you to use the below tutorials. Altium has begun adding AI/ML features as well, and it quite powerful, though definitely better for more advanced designers and larger teams.
+
+**Some potentially useful resources:**
+
+- KiCAD Tutorials by out own MPI, Ben H: [PCB Design with KiCAD](https://www.youtube.com/playlist?list=PLaHV-4SxpcHyxIewNGTkg91Whu2T2Rbzt) (YouTube) - an 11-part video series based on a 3-hour workshop that covers PCB design using KiCAD to develop circuit boards from start to finish, plus four videos about library and model creation and management.
+    - PDFs: [All](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/Ea-iq9XZTmRKpgIhaqSv_CkBP3X41tO_PM-9FgsP-Uyw5w?e=1cI7cE), [Part 0 (Intro)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/ERbrtNbUlpdHh_xTuOn_dtcBU5wLn7HFKPWijzhANfLsWA?e=CmLaFf), [Part 1 (PCB basics)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EerQhxajgHtDmcWZIK5Qa34BsDLC2rtAPxbngbGIICIVgQ?e=eHiW6H), [Part 2 (Design basics)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EZeAPiUvTnBAo_UVZedBcXUBtdT90J7cAg3GWGWXgxrhIg?e=kaTKfn), [Part 3 (Circuit and part selection)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EbhBhWYEQG1FudMUiXVwvlwBoHrUta_U7Aq_22O2qgvm5A?e=ylRx0P), [Part 4A (Adding symbols to the schematic)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EfhuJ7mRDVJHloQ8nnCF_FoBY8V5W4QYw4fSdhziocEiJQ?e=yQ2HpF), [Part 4B (Symbol creation)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EVXHemkmG1tEmQR58UifSKwB7MLDBjeMBtug1VMyxaX9gw?e=C6TYXO), [Part 4C (Schematic wiring)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EVW-IitidK1LswlVWJR_4yMBHzYZNr4YLkku9w_t2Jkqmw?e=YXwKiM), [Part 4D (Footprint assignment)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EbjuMX4jzs9BnyZ3BytjTj0BGGYykd6JBA_z210-GQ5ACQ?e=Ju4pjG), [Part 4E (ERC)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EUJcdYv5269JmiEg_ZofLA8B0lzU4_caeYBDdulhjZLQDg?e=fdCA8C), [Part 5A (PCB editor/layout setup)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EUa4zIKECF1PjVRyNWpLaw0BTXVBMhZdkOKuDuIdzRYJdw?e=j1KswG), [Part 5B (Footprint placement and routing)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/ERBYcvr9TahMoMRye2OWyJsBfjJ0-TBKHWuPzgOZ8DeYkw?e=gNQZFB), [Part 5C (Final layout checks and DRC)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EUWEVIb1_KBIm2UeY5GzPEkBKe2hrXFE7yI99uPCvE11ww?e=OUIPva), [Part 6 (Symbol library management)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EfAhv3r9LP5CqMH89zMgYBwBBOjso5msWPMtsGu29Uwk9Q?e=jaXfXv), [Part 7A (Footprint library management)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EeRsh3LM7dBEslzMtLikZ4MB-G2soQpgTluiWi5waPUspA?e=ijuWr6), [Part 7B (Footprint generation from scratch)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EZl6gZEogptDnvS6QGw2rRUBteivpEFytqvo4aSqp1LQ9w?e=Qg7aNU), [Part 7C (Footprint generation with the wizard)](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EVJ76A5W-WFIhVF5bCFLlcMBx3NMVNBBWvFygatCYzsoKA?e=gcDSpB)
+- SparkFun's Eagle tutorials: [Better PCBs In Eagle](https://www.sparkfun.com/tutorials/115)
+- An old Eagle walk through by our own PCB MPI, Ben H: [How To Eagle](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EUMxzVjmF2hDoAgS18w9Tl0BALFZrPSTjbD2-jXSGu94xQ?e=uPPFKX) (Note: this may be quite outdated by this point (2024) since I haven't used Fusion basically at all, and I'm not even sure if Eagle still exists but I'm leaving it up for posterity.)
+- An Altium walkthrough, by PI Emily Marshall: Part 1 ([PDF guide](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EdduyXWmyHZDhmz7_htEo3cBgIaR5KM03DOmxfvuT7-a3Q?e=uaWDKp), [PDF slides](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EdS-zCD0GKhEsK8PDqOXUyUBX-lvP8VwLwlD7_EePrO0pw?e=z389tO)), part 2 ([PDF guide](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EX7Db7igih5OpPZy7-hb5ToB0JzAepnvbR_2fsbGxHnTHQ?e=EY0G83), [PDF slides](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/Eaa4reVzGhVOsbHZr32Y8zgBS5IWo7s695yJWSo53tcUdw?e=sDHTcH)), [custom Altium library](https://gtvault.sharepoint.com/:u:/s/HiveMakerspace/ESAn75bBeWJIuI3nRp6K69kBvUQrvcI1S6DOyLA2WZSL2w?e=QvoAlg).
+- [PCB Design Tutorial](https://www.scs.stanford.edu/~zyedidia/docs/pcb/pcb_tutorial.pdf) - An old but excellent tutorial on board design. Covers a wide variety of topics from the basic (e.g. what are “thou”s) to more advanced (e.g. design for manufacturing). Highly recommended, even if some of the details are a bit out of date.
+- There are tutorials and guides and walkthroughs for all of these programs and more, just use Google, SparkFun, Adafruit, YouTube, and more.
+
+**Is there an officially recommended PCB CAD/EDA program?**
+
+No, there is not an official recommendation. GT students get Fusion360 for free, and all that entails, which theoretically makes the integration between the mechanical and electrical easier and more fluid. Altium offers a very steep discount for a student license that was (as of Fall 2020) only $100 a year. KiCAD is basically Python to Altiums's MATLAB - it's open source and free, but you have more work to do for yourself to get everything working, and it can be buggy at times. Not sure where Fusion360 fits into that analogy. There are also two or three dozen other programs that provide various levels of quality and advanced tools if you need, though once you learn one, the others mostly differ by where the icons and settings are.
+
+**Where can I buy parts?**
+Parts are really only available online these days, outside of MicroCenter or Fry's if you're near one of those (RIP old Radio Shack). Amazon will sell you tons of different pre-assembled parts, like breakout boards or other plug-and-play-type devices, along with microcontroller breakouts like Arduino and their ilk, but it's very easy to get knock-off parts or badly designed boards from there. The suppliers we recommend are Digikey and Mouser, which sell thousands (millions) of verified individual and pre-assembled components. Arrow is another option there. Octopart is a part search tool that will search many different suppliers. Ebay sells old parts and hard-to-find fully-populated boards and equipment, but who knows about the quality. Electronics companies like Adafruit, Sparkfun, DFRobot, and Seeed Studio are some of the many distributers of high-quality pre-assembled breakout boards, functional PCBs, microcontrollers, sensors, actuators, wires, and much, much more for use.
+
+**Is there a recommended DRC/CAM file I can use?**
+
+Yes!
+
+1. DRC
+2. CAM
+
+**Do you have any recommendations for professional fabrication houses?**
+
+We don’t officially recommend a specific fabrication houses. All of them have positives and negatives. The following is a very incomplete list of fab houses that we've used with varying levels of success.
+
+- You can use [PCB Shopper](https://pcbshopper.com/) to compare prices across a number of different fab houses.
+- [JLC](https://jlcpcb.com/) and [AllPCB](https://allpcb.com/) are two Chinese companies that offer super fast turnaround and super low prices with a wide range of capabilities and good results. But since they're made in China, there may be shipping and IP issues.
+- [OshPark](https://oshpark.com/) is the cheapest USA-based fabrication house because they aren't actually a fab house - they're a middleman to another fab house. Basically, they collect a bunch of designs, and when they have enough, they all get sent off. They're well-known for their purple PBCs, and their capabilities are growing all the time. They also can make solderpaste stencils through their affiliates at [OshStencils](https://oshstencils.com/).
+- [Advanced Circuits](https://4pcb.com/) is another American-made fab facility that has a much more extensive list of capabilities than OshPark. It's more expensive, but the quality is higher, and the turn-around times can be same- or next-day, if you're willing to pay for it. They also have deals on rectangular 2- or 4-layer boards, and deals for students.
+- [Epec Engineered Technologies](https://www.epectec.com/) is the most expensive of this list, but also the highest reliability and widest range of fabrication options. If you need a 16 layer board with super-fine pitches and tolerances and varying copper weights for the internal stack with specialized prepreg, and you need 1000 pieces assembled tomorrow, these are your people. (Okay, that's an exaggeration, but seriously, for non-standard work, or precision standard work, Epec is great.)
+

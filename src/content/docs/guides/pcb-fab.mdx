@@ -1,0 +1,130 @@
+---
+title: "PCB Fabrication Process"
+---
+
+General Processing Reminders...
+
+- Orient all your boards \*before* creating any fiducials.
+- 4 fiducials – always.
+- Don't forget to save before generating the toolpath on the ProtoMat!
+- Make sure that the two boxes are checked before selecting a ProtoLaser template.
+- Do not forget the chemical safety gear when electroplating.
+- **Get a PI to change any bits in the ProtoMat!**
+
+Process Guides
+
+1. [Single sided design, no holes](https://wiki.hive.ece.gatech.edu/doku.php?id=process_1s-noholes), regardless of plating.
+2. [Single sided design, with holes](https://wiki.hive.ece.gatech.edu/doku.php?id=process_1s-holes), regardless of plating.
+3. [Double sided, no plating](https://wiki.hive.ece.gatech.edu/doku.php?id=process_2s-noplate), regardless of hole count.
+4. [Double sided, with plating](https://wiki.hive.ece.gatech.edu/doku.php?id=process_2s-plate), regardless of hole count.
+5. [Solderpaste stencils](https://wiki.hive.ece.gatech.edu/doku.php?id=process_stencils)
+6. [Reflow oven](https://wiki.hive.ece.gatech.edu/doku.php?id=process_reflowoven)
+7. [Kapton tape soldermasking](/hive-wiki/guides/pcb-masknsilkscreen/#soldermasking-with-kapton-tape) (unverified)
+
+**HELP!** –> First, go to the proper process guide and make sure you've followed our most up-to-date process. If that doesn't resolve the issue, see the [Knowledge Base](/hive-wiki/explore/pcb#pcb-knowledge-base-and-faq) for processing issues/concerns/questions.
+
+See our [tips and tricks](/hive-wiki/explore/pcb#miscellaneous-processing-tips) page for some advanced processing concepts (or just interesting tidbits).
+
+*The above guides targeted towards End Users and PIs (Peer Instructors) who want to know about the standard fabrication process often employed at The Hive, either before they are certified or afterwards. It is not intended to serve as a technical manual for any of these three tools or the software that controls them; for those, see the individual tool SOPs. It is also not intended to serve as a complete list of all processes that can be achieved with this tool suite. It is simply a step-by-step guide to our standardized processes.*
+
+
+## Process Capabilities
+
+The Hive has a suite of LPKF tools that enable students to fabricate 2-layer prototype-quality PCBs with fully-plated vias on campus. With additional setup, they can also apply soldermask and silkscreen for a production-quality finish, cut a solder paste stencil for part placement, and a reflow solder the components to the board. The tools have numerous additional capabilities beyond simple PCB fabrication, including 2.5D milling and exotic substrates. We encourage our users to explore new uses for the tools; however, as these options are beyond the scope of this document, if you’re interested in doing a non-standard process, we ask that you contact us beforehand.
+
+The Hive's PCB fabrication tool suite has the following capabilities:
+
+- *Substrate*s: FR4, Rogers materials, polyamide, among many others. See the [ProtoLaser help page](/hive-wiki/guides/pcb-protolaser/) for more details.
+- *Copper thickness/weight*: No known limit, other than processing time.
+- *Slot*: yes, but YMMV. See our [fabs tips](/hive-wiki/explore/pcb#miscellaneous-processing-tips) page for details.
+- *Electroplating*: yes, standard processing time of 3 hours will plate approximately 16 um of copper. We also have a chemical-free non-electrical “plating” process with the ProConduct package. See our [electroplater help page](/hive-wiki/guides/pcb-electroplater/) for details.
+- *Soldermask*: we have the chemicals, which have an official process, but we don't officially support it. See the ProMask datasheet, below. We also have trialed an alternative masking process with Kapton tape, but YMMV. See [this page](/hive-wiki/guides/pcb-masknsilkscreen/#soldermasking-with-kapton-tape) for more details.
+- *Silkscreen*: we have the chemicals, which have an official process, but we don't officially support it. See the ProLegend datasheet below.
+- *Stencils*: we can make them! See our “[How to make stencils](https://wiki.hive.ece.gatech.edu/doku.php?id=process_stencils)” page for more!
+- *Reflow*: we have a fully operational reflow oven, optimized for lead-free solder paste. See “[How to reflow](https://wiki.hive.ece.gatech.edu/doku.php?id=process_reflowoven)” for more information.
+- Our [knowledge base](/hive-wiki/explore/pcb#pcb-knowledge-base-and-faq) is pretty extensive as well, so check that for answers to many questions and processing help.
+
+The full suit includes the following:
+
+- LPKF ProtoMat S103 ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/s103.pdf), [SOP](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EcQvNGoNNa5AjiZ5wU1Vd8wBMPNk8mawFspeLrvNaG8VlQ?e=yWBkGg), [help page](/hive-wiki/guides/pcb-protomat/)) - drilling, milling, and routing
+- LPKF ProtoLaser U4 ([datasheet](https://www.lpkf.com/fileadmin/mediafiles/user_upload/products/pdf/DQ/brochure_lpkf_protolaser_u4_en.pdf), SOP, [help page](/hive-wiki/guides/pcb-protolaser/)) - etching, cutting
+- LPKF Contac S4 ([datasheet](https://www.lpkf.com/fileadmin/mediafiles/user_upload/products/pdf/DQ/flyer_lpkf_contac_s4_en.pdf), SOP, [help page](/hive-wiki/guides/pcb-electroplater/)) - electroplating
+- LPKF ProMask ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/promask.pdf), SOP) - Soldermask
+- LPKF ProLegend ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/prolegend.pdf), SOP) - Silkscreen
+- LPKF ProtoPrint S ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/zelprint.pdf), [How-to](https://wiki.hive.ece.gatech.edu/doku.php?id=process_stencils), SOP) - Solderpaste stencil holder
+- LPKF ProtoFlow ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/protoflow.pdf), [How-to](https://wiki.hive.ece.gatech.edu/doku.php?id=process_reflowoven), SOP) - Reflow oven
+- LPKF ProConduct ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/ProConduct_Specs.pdf), SOP) - Plating for RF applications
+
+## Process Specifications and Tolerances
+
+If you’re board passes OshPark’s specs ([OshPark .dru file](https://docs.oshpark.com/design-tools/eagle/design-rules-files)), it can be made using our process (see their website for details). However, our process can, in fact, go beyond that in some ways. See our [Knowledge Base](/hive-wiki/explore/pcb#pcb-knowledge-base-and-faq) and [Tips and Tricks](/hive-wiki/explore/pcb#miscellaneous-processing-tips) pages for additional information.
+
+| Specification             |  Theoretical Minimum (see note below)  |  Recommended Minimum  |
+|---------------------------|----------------------------------------|-----------------------|
+|  Trace width              |  2 mils (0.05 mm)                      |  5 mils (0.25 mm)     |
+|  Trace spacing (“pitch”)  |  1 mils (0.025 mm)                     |  5 mils (0.15 mm)     |
+|  Polygon isolation        |  10 mils (0.25 mm)                     |  24 mils (0.75 mm)    |
+|  Drill hit                |  6 mil (0.15 mm)                       |  15 mil (0.4 mm)      |
+|  Drill X/Y resolution     |  +/- 0.01 mil (0.25 μm)                |                       |
+|  Drill repeat accuracy    |  +/- 0.2 mil (5 μm)                    |                       |
+|  Laser repeatability      |  0.08 mils (2 μm)                      |                       |
+|  Drill hit                |  0.05 mil (1.2 μm)                     |                       |
+
+**Note**: If you're considering a design at our theoretical minimum capabilities, first strongly consider whether you need that level of precision. If the answer is still yes, go to the [ProtoLaser](/hive-wiki/guides/pcb-protolaser/) (for etching) and [ProtoMat](/hive-wiki/guides/pcb-protomat/) (for drilling) help sections for advice on reaching those new lows.
+
+
+## Q & A
+
+**Is there a recommended DRC/CAM file I can use?**
+
+Yes!
+1. DRC
+2. CAM
+
+**Do I have to be with my board during the entire fabrication process?**
+
+Yes! You must be present for the entire process. This is for safety reasons. PIs have the authority to cancel any unattended boards. You may, however, leave the space *if and only if* you leave a note with a phone number and accept the possibility that something may happen to your product while you're gone (because PIs are not watching your process).
+
+**How long does it take to make a board?**
+
+It depends on the size and layout of your board. A small board with no electroplating (i.e. no vias) can easily be made in under an hour, while a very large board with lots of copper removed can take over 4 hours not including electroplating.
+
+**How long does electroplating take?**
+
+Between 2 and 3 hours, regardless of board size. This will plate between 8-15 um of copper onto your surfaces. Less than this processing time can cause unreliable vias with variable thickness of the plating.
+
+**Can I somehow reserve time on the equipment?**
+
+Yes! Although you are not required to, we *highly* recommend that you do as it guarantees equipment priority. You may reserve time up to 96 hours in advance though SUMS.
+
+1. Go to sums.gatech.edu and login (button is on the top right of the screen).
+2. In the main toolbar on top, on the right, click “Set Active BG/EG”. Make sure your Billing Group is “Interdisciplinary Design Commons” and your Equipment Group is “The Hive”.
+3. On the main page, locate the Schedule section. Under the drop-down menu that says, “My Schedule - Select a tool to schedule time”, select the tool in question. Note that you cannot reserve time on a tool until you have completed training for it.
+4. Click and drag on the calendar itself to reserve time. Release the mouse button to bring up the reservation screen. You must enter a description in order to reserve time! Click “Save” to save the reservation.
+
+We highly advise you to schedule time on all the tools you’ll need, i.e. if you’re fabricating a standard board, you should reserve time on both the Plotter and the Laser. If you do not, and someone schedules time on only the laser, they have priority on the tool.
+
+*Reservations are limited to the following:*
+
+- Non-PIs (i.e. those who are not volunteers at The Hive) may schedule a maximum of 4 hour block per tool per day during The Hive’s open hours, and up to 4 days in advance.
+- PI’s may schedule up to 8 hours per tool per day, up to 7 days in advance.
+
+**Can I add soldermask or silkscreen?**
+
+We have the capability to apply soldermask and silkscreen, though we do not recommend attempting this process - it's time-consuming, UV- and temperature-sensitive, and unnecessary to a complete circuit board. If you need soldermask or silkscreen, consider sending your design to a professional fabrication facility.
+
+For those who would like to attempt this, instructions are available on our [mask and silkscreen](/hive-wiki/guides/pcb-masknsilkscreen/) page, as well as in the “Manuals/Instructions” drawer next to the tools themselves.
+
+We ALSO have an alternative process to use Kapton tape to make a soldermask-like covering on your board. Definite a YMMV-situation, but [the instructions are here](/hive-wiki/guides/pcb-masknsilkscreen/#soldermasking-with-kapton-tape).
+
+**How do you handle slots? Can you do plated slots?**
+
+Unplated slots are indeed do-able in this process. There are probably a couple of methods for doing this, but the way we've had success is to add the slots onto the “BoardOutline” layer in the software. How this happens depends on your EDA (CAD) software, but in essence, you either need to have your slot in a new gerber (which you can assign to “BoardOutline” in the Import step) or you need to put your slots onto the layer in your EDA that spits out your Board Outline gerber file (in Eagle, this layer is called “Dimensions”). If you need help with this, let us know.
+
+Alternatively, you can use the overlapping-drill-hits method, where you just define a number of overlapping drill holes in your CAD. Some CAD programs don't like this, however.
+
+Unfortunately, we haven't found a good way to do plated slots because in the above method, the slot is made after the etching is done (and therefore after the plating would be done). An alternative in this case would be to design your slot as overlapping drill hits which are done prior to plating.
+
+**Do the tools have additional capabilities?**
+
+Many! See the [Knowledge Base](/hive-wiki/explore/pcb#pcb-knowledge-base-and-faq) page for these, as they're often listed in various bits of documentation that would be out of place on this page. We encourage our users to explore the capabilities of the tools beyond our guides, and beyond even what we list in our documentation. However, while such capabilities are technically allowed in the spec of the tool, we do not officially support anything beyond standard PCB fabrication, meaning that our PIs and MPIs do not have experience with them, so you will be on your own if you attempt any of them!
