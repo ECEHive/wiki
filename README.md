@@ -18,7 +18,6 @@
 - Backlinks to previous page
 - Toggle collapsable dropdown page component
 - Carousel item with captions
-- Variable heading margins based on size (broken due to heading-wrapper) 
 
 
 ## Guides and Reference
