@@ -5,6 +5,13 @@ tableOfContents:
     maxHeadingLevel: 3
 ---
 
+import { Image } from 'astro:assets';
+import overview from '../../../assets/intro-overview.jpg';
+import frontdesk from '../../../assets/intro-frontdesk.jpg';
+import thirdfloor from '../../../assets/intro-thirdfloor.jpg';
+
+<Image class="border-2 border-slate-200 rounded-lg" src={overview} alt="Overhead view of the Hive's second floor electronics benchtops" width="300" />
+
 HiveMind is a wiki built by the [The Hive](https://hive.ece.gatech.edu/) and the Georgia Tech maker community as a resource for all students using equipment and making projects within the Interdisciplinary Design Commons (IDC).
 
 Besides containing up-to-date information on IDC equipment, the HiveMind also contains useful advice on how to make your projects come to life, as well as step-by-step guides on how to recreate the Hive's most popular workshops on your own time and standard operating procedures for all of our equipment.
@@ -24,6 +31,8 @@ At the IDC, you can find a plethora of equipment to assist you with your project
 
 ## The Front Desk
 
+<Image class="border-2 border-slate-200 rounded-lg" src={frontdesk} alt="Front desk and equipment checkout area" width="300" />
+
 When you enter the Hive through the main entrance on the second floor, you'll see the front desk on your left. Be sure to sign in! The front desk is a place to ask questions, find information, check in for workshops, and learn about the Hive. If you have a question and don't know who to ask, the front desk is a great place to start. If the PIs there can't answer your question, they can either direct you to another resource or send a message to other PIs. If a room you need access to is locked, visit the front desk, and a PI can unlock and staff a room for you.
 
 You can also check out equipment (for free!) at the front desk, including Raspberry Pis, motors, breakout boards, solder practice kits, USB cables, and several types of Arduinos in exchange for your buzzcard in the space. We no longer check out inventory outside the space. Other supplies, including circuit components, electrical wire, and solder, can be found near the workstations.
@@ -32,13 +41,13 @@ There are also lockers available for checkout at the front desk. If you have a b
 
 
 
-
-
 ## Spray Paint Booth
 
 It exists! A ventilated room is located on the first floor of the IDC and can be used to make your final product look nice. Some common spray paint colors are provided, but for specific colors and substances, please purchase your own. We also have various wood stains for your convenience. 
 
 ## Collaboration and Study Space
+
+<Image class="border-2 border-slate-200 rounded-lg" src={thirdfloor} alt="Collaboration on the third floor" width="300" />
 
 The third floor of the IDC is dedicated to providing space for students to work individually or with others on their projects. This floor features desktop computers (with spinny chairs), movable tables, whiteboards, and generally lots of space. The area is open to all Georgia Tech students for any reason. This is the only public place food is allowed in. Don't forget to sign in! 
 
