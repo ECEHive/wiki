@@ -6,7 +6,6 @@
 	object-fit: cover;
 }
 
-
 a.external {
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -14,18 +13,16 @@ a.external {
 	background-image: url(/hive-wiki/external-arrow.svg);
 }
 
-
-.heading-wrapper {
-	margin-top: 2em !important;
+.anchor {
+	scroll-margin-top: 2rem;
 }
 
-.anchor {
-	display: inline;
-	scroll-margin-top: 2rem;
-	margin-top: 1.5em;
+.anchor:hover >.anchor-link {
+	opacity: 1;
 }
 
 .anchor-link {
+	content: url(/hive-wiki/hyperlink.svg);
 	display: inline-flex;
 	margin-left: 0.25em;
 	
@@ -35,14 +32,12 @@ a.external {
 	justify-content: center;
 	
 	font-size: 1.5rem;
-	font-weight: bold;
-	text-decoration: none;
 
 	opacity: 0;
-	transition: opacity 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
-
-.heading-wrapper:hover>.anchor-link {
-	opacity: 1;
+.anchor-link:hover {
+	/* hard-coded to current accent color #0073AA oops */
+	filter: invert(31%) sepia(92%) saturate(858%) hue-rotate(166deg) brightness(94%) contrast(105%);
 }

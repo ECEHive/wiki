@@ -65,14 +65,7 @@ export default defineConfig({
             [
                 rehypeAutolinkHeadings, 
                 { 
-                    behavior: 'after',
-                    content: {
-                        type: 'text',
-                        value: '#',
-                    },
-                    group: () => {
-                        return h("div.heading-wrapper");
-                    },
+                    behavior: 'append',
                     headingProperties: {
                         className: ['anchor'],
                     },
