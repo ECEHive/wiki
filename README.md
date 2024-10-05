@@ -5,19 +5,20 @@
 ## To-Dos
 
 ### Content
-- Import all the other pages from old wiki, which are currently external links
 - Update "Introduction" page, then afterwards update Tech Area pages
-- Add images
+- Add images to imported pages from old wiki
+- Sidebar manual ordering of pages
+- Add currently hidden guides to sidebar as sub-items (similar to gitbook's setup)
+- Optimize splash image for better load time
 
 ### Features / Components
 - Filtering out pages depending if you are an end user or a peer instructor (maybe a toggle in top toolbar)
-- Sidebar manual ordering of pages
 - Replace external links indicator with something more minimal
 - Hover to copy anchor links for headings
 - Button toggle light/dark theme rather than dropdown
 - Backlinks to previous page
-- Dropdown page component
-- Add currently hidden guides to sidebar
+- Toggle dropdown page component
+
 
 ## Guides and Reference
 
