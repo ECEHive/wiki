@@ -14,31 +14,36 @@ a.external {
 	background-image: url(/hive-wiki/external-arrow.svg);
 }
 
-.anchor {
-	display: inline-block;
-	margin-top: 1.5em;
-	margin-bottom: 1rem;
 
+.heading-wrapper {
+
+	margin-top: 1.5em !important;
+}
+
+.anchor {
+	display: inline;
 	scroll-margin-top: 2rem;
-	
+
 }
 
 .anchor-link {
-	font-size: 1.5rem;
-	margin-left: 0.25em;
-	height: 1em;
-	width: 1em;
-	text-decoration: none;
-
 	display: inline-flex;
+	margin-left: 0.25em;
+	
+	width: 1em;
+	height: 1em;
 	align-items: center;
 	justify-content: center;
+	
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-decoration: none;
 
-	opacity: 0.2;
+	opacity: 0;
 	transition: opacity 0.2s ease-in-out;
 }
 
-.anchor-link:hover,
-.anchor-link:focus {
+
+.heading-wrapper:hover>.anchor-link {
 	opacity: 1;
 }

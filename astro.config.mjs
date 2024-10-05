@@ -6,7 +6,7 @@ import tailwind from '@astrojs/tailwind';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeExternalLinks from 'rehype-external-links';
-
+import { h } from "hastscript";
 
 // https://astro.build/config
 export default defineConfig({
@@ -69,6 +69,9 @@ export default defineConfig({
                     content: {
                         type: 'text',
                         value: '#',
+                    },
+                    group: () => {
+                        return h("div.heading-wrapper");
                     },
                     headingProperties: {
                         className: ['anchor'],
