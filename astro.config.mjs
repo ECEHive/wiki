@@ -5,6 +5,7 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 import tailwind from '@astrojs/tailwind';
 
+
 // https://astro.build/config
 export default defineConfig({
     site: 'https://amwnag.github.io/hive-wiki/',
@@ -61,7 +62,10 @@ export default defineConfig({
             [
                 rehypeExternalLinks,
                 {
-                    content: { type: 'text', value: ' 🔗' }
+                    properties: {
+                        className: ['external'],
+                    },
+                    target: '_blank',
                 },
             ],
         ],

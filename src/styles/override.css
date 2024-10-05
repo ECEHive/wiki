@@ -5,3 +5,11 @@
 	aspect-ratio: 8/9;
 	object-fit: cover;
 }
+
+
+a.external {
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding: 0 16px 0 0;
+	background-image: url(/hive-wiki/external-arrow.svg);
+}
