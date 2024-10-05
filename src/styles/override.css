@@ -15,21 +15,26 @@ a.external {
 }
 
 .anchor {
+	display: inline-block;
+	margin-top: 1.5em;
+	margin-bottom: 1rem;
+
 	scroll-margin-top: 2rem;
+	
 }
 
 .anchor-link {
 	font-size: 1.5rem;
-	margin-left: 0.25em;
+	margin-left: 0.5em;
 	height: 1em;
 	width: 1em;
 	text-decoration: none;
 
-	display: inline-flex;
+	display: inline-block;
 	align-items: center;
 	justify-content: center;
 
-	opacity: 0;
+	opacity: 0.2;
 	transition: opacity 0.2s ease-in-out;
 }
 

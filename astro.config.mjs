@@ -65,7 +65,7 @@ export default defineConfig({
             [
                 rehypeAutolinkHeadings, 
                 { 
-                    behavior: 'append',
+                    behavior: 'after',
                     content: {
                         type: 'text',
                         value: '#',
