@@ -13,3 +13,27 @@ a.external {
 	padding: 0 16px 0 0;
 	background-image: url(/hive-wiki/external-arrow.svg);
 }
+
+.anchor {
+	scroll-margin-top: 2rem;
+}
+
+.anchor-link {
+	font-size: 1.5rem;
+	margin-left: 0.25em;
+	height: 1em;
+	width: 1em;
+	text-decoration: none;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.anchor-link:hover,
+.anchor-link:focus {
+	opacity: 1;
+}

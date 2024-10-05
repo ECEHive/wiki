@@ -1,9 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import rehypeExternalLinks from 'rehype-external-links';
-
 import tailwind from '@astrojs/tailwind';
+
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
 
 
 // https://astro.build/config
@@ -59,6 +61,23 @@ export default defineConfig({
 		})],
     markdown: {
         rehypePlugins: [
+            rehypeSlug,
+            [
+                rehypeAutolinkHeadings, 
+                { 
+                    behavior: 'append',
+                    content: {
+                        type: 'text',
+                        value: '#',
+                    },
+                    headingProperties: {
+                        className: ['anchor'],
+                    },
+                    properties: {
+                        className: ['anchor-link'],
+                    }
+                }
+            ],
             [
                 rehypeExternalLinks,
                 {

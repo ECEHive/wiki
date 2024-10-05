@@ -10,11 +10,10 @@
 - Sidebar manual ordering of pages
 - Add currently hidden guides to sidebar as sub-items (similar to gitbook's setup)
 - Optimize splash image for better load time
+- Change tech area bullet list links to quick link tiles
 
 ### Features / Components
 - Filtering out pages depending if you are an end user or a peer instructor (maybe a toggle in top toolbar)
-- Replace external links indicator with something more minimal
-- Hover to copy anchor links for headings
 - Button toggle light/dark theme rather than dropdown
 - Backlinks to previous page
 - Toggle dropdown page component
@@ -74,4 +73,7 @@ All commands are run from the root of the project, from a terminal:
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
 
-View an existing site's usage of Astro/Starlight: [freeCodeCamp.org's "Contribute" website repo](https://github.com/freeCodeCamp/contribute)
+More sites/pages that have been immense help
+- [freeCodeCamp.org's "Contribute" website repo](https://github.com/freeCodeCamp/contribute)
+- [Section Header Anchors in Astro](https://caseyjamesperno.com/blog/astro-header-anchors/)
+- [Styling the external links on this site](https://rachsmith.com/styling-external-links/)
