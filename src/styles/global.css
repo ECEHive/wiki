@@ -16,14 +16,13 @@ a.external {
 
 
 .heading-wrapper {
-
-	margin-top: 1.5em !important;
+	margin-top: 2em !important;
 }
 
 .anchor {
 	display: inline;
 	scroll-margin-top: 2rem;
-
+	margin-top: 1.5em;
 }
 
 .anchor-link {

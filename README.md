@@ -16,7 +16,9 @@
 - Filtering out pages depending if you are an end user or a peer instructor (maybe a toggle in top toolbar)
 - Button toggle light/dark theme rather than dropdown
 - Backlinks to previous page
-- Toggle dropdown page component
+- Toggle collapsable dropdown page component
+- Carousel item with captions
+- Variable heading margins based on size (broken due to heading-wrapper) 
 
 
 ## Guides and Reference

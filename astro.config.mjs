@@ -18,7 +18,7 @@ export default defineConfig({
             baseUrl: 'https://github.com/amwnag/hive-wiki/edit/main/',
         },
         customCss: [
-            './src/styles/override.css',
+            './src/styles/global.css',
 			'./src/styles/tailwind.css',
         ],
         logo: {
