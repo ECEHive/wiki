@@ -2,13 +2,18 @@
 title: "Knowledge Base: ELECTROPLATER"
 ---
 
+import { Image } from 'astro:assets';
+import electroplater from '../../../assets/pcb-electroplater.jpg';
+
 :::note
 **We are no longer guaranteeing quality of the electroplating results.** The required maintenance for the number of monthly users no longer justifies continued operation, and we'll be phasing the plater out of operation entirely at some point in 2024 (theoretically). You can read below to understand more about the plater.
 
 **If you need vias:** If you can get away with it, we recommend sizing your vias to be 1mm/40mil diameter holes (excluding the annular ring), and then soldering in a standard header pin. Otherwise, your best option is likely to get it fabricated professionally; see [our PCB Design](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-design) page for some fabrication house options. 
 :::
 
- The LPKF Contac S4 Electroplating System provides the ability to galvanically electroplate through-holes. Galvanic electroplating is a process by which your substrate sits in an acid bath (in this case, that’s sulfuric acid, H2SO4) along with a slice of the metal that you’re plating (in this case, copper). When a current is driven from the substrate, through the acid, and into the anode, a negative potential appears on the substrate, which draws copper ions from the copper sheets (called anodes) and distribute themselves onto any conductive surface on your substrate. In a gist. Google if you'd like more information on galvanic electroplating.
+<Image class="border-2 border-slate-200 rounded-lg" src={electroplater} alt="The LPKF Contac S4 Electroplating System" width="300" />
+
+The LPKF Contac S4 Electroplating System provides the ability to galvanically electroplate through-holes. Galvanic electroplating is a process by which your substrate sits in an acid bath (in this case, that’s sulfuric acid, H2SO4) along with a slice of the metal that you’re plating (in this case, copper). When a current is driven from the substrate, through the acid, and into the anode, a negative potential appears on the substrate, which draws copper ions from the copper sheets (called anodes) and distribute themselves onto any conductive surface on your substrate. In a gist. Google if you'd like more information on galvanic electroplating.
 
 Critically, what this means is that *the tool will plate copper everywhere that there is copper!* This means any copper faces of your substrate will get additional copper on them. Astute readers will remember that the internal layer of your substrate (e.g. FR4) is not conductive, so an “Activator” (a conductive ink) is used to coat the inside of your holes with a conductive substance so that current can pass through the holes, and thereby plate your holes.
 

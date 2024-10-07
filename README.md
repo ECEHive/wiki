@@ -5,20 +5,23 @@
 ## To-Dos
 
 ### Content
-- Update "Introduction" page, then afterwards update Tech Area pages
+- All pages need to be updated content-wise
+- Update landing page quick links
 - Add images to imported pages from old wiki
+- On intro page, change tech area bullet list links to tiles
+- Create category related links templates for bottom of the page
+- Manually add backlinks on guides to previous page 
 - Sidebar manual ordering of pages
-- Add currently hidden guides to sidebar as sub-items (similar to gitbook's setup)
+- Add currently hidden guides to sidebar 
 - Optimize splash image for better load time
-- Change tech area bullet list links to quick link tiles
 
 ### Features / Components
 - Filtering out pages depending if you are an end user or a peer instructor (maybe a toggle in top toolbar)
 - Button toggle light/dark theme rather than dropdown
-- Backlinks to previous page
+- Display pages as as sub-items (similar to gitbook's setup)
 - Toggle collapsable dropdown page component
 - Carousel item with captions
-
+- Squoosh image optimizing?
 
 ## Guides and Reference
 

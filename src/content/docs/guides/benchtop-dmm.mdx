@@ -2,11 +2,12 @@
 title: Multimeter Guide
 ---
 
-<!--
-Two images on https://wiki.hive.ece.gatech.edu/doku.php?id=benchtop:dmm
-{{ benchtop:dmm:dmm.jpeg?300}}
-{{ :benchtop:dmm:dmm_front.png?400}}
--->
+import { Image } from 'astro:assets';
+import dmm1 from '../../../assets/guide-dmm1.jpeg';
+import dmm2 from '../../../assets/guide-dmm2.png';
+
+<Image class="border-2 border-slate-200 rounded-lg" src={dmm1} alt="A digital multimeter" width="300" />
+
 
 A digital multimeter (DMM) is a device that can measure voltage, current, and resistance. Unlike an oscilloscope, which can measure and display a varying voltage vs. time, a multimeter can only display one value at a time. Therefore, multimeters can only be used to measure constant values. The following quantities can be measured.
   * DC Voltage
@@ -15,9 +16,12 @@ A digital multimeter (DMM) is a device that can measure voltage, current, and re
   * AC Current (RMS)
   * Resistance
   * Capacitance
+
 In addition, a multimeter can be used for continuity and diode testing.
 
 ## Basic Operation
+
+<Image class="border-2 border-slate-200 rounded-lg" src={dmm2} alt="Front view of a digital multimeter" width="400" />
 
 The front panel of a multimeter is shown. The screen displays the value of the measurement, and options associated with the measurement can be adjusted with the buttons below the screen. The buttons to the right of the screen are used to adjust the measurement type. The functions in blue above these buttons can be accessed by clicking the **[Shift]** button. On the right side of the DMM is where you connect probes.
 
@@ -38,7 +42,7 @@ Continuity means that there is a complete path for current to flow between two p
 A continuity test must be performed when all power supplies are off. There should be no voltage anywhere in the circuit. Connect the probes the same way you would connect them for voltage and press the **[Cont]** button. As a test, touch the probes together. You should hear the beep and see 0 on the screen, implying that there is continuity. If preferred, the beeper can be disabled using the first softkey.
 
 #### Diode
-The diode test can be used when testing a diode, LED, transistor, and other circuit components for damage. Like the diode, many components conduct current in primarily one direction. The Forward and Reverse bias tests check that current is only allowed to flow in one direction. If testing a transistor see the article [[https://www.wikihow.com/Test-a-Transistor|How to Test a Transistor]] by wikiHow. To begin testing a diode turn the power supply to the circuit off and remove the diode from the circuit. 
+The diode test can be used when testing a diode, LED, transistor, and other circuit components for damage. Like the diode, many components conduct current in primarily one direction. The Forward and Reverse bias tests check that current is only allowed to flow in one direction. If testing a transistor see the article [How to Test a Transistor](https://www.wikihow.com/Test-a-Transistor) by wikiHow. To begin testing a diode turn the power supply to the circuit off and remove the diode from the circuit. 
  
 Connect test probe leads to the digital multimeter as shown. Press front panel **[Shift]** button followed by **[Cont]** button to enter diode measurement mode. Perform forward bias test by placing test probes on diode as shown in figure 14. If the digital multimeter reports a value greater than 0 and less than 1 then the forward bias test is passed. Perform the reverse bias test, if the digital multimeter displays the OPEN the test is passed.
  
