@@ -9,12 +9,12 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://amwnag.github.io/hive-wiki/',
-    base: '/hive-wiki',
+    site: 'https://ecehive.github.io/wiki/',
+    base: '/wiki',
     integrations: [starlight({
         title: 'The HIVE Wiki',
         editLink: {
-            baseUrl: 'https://github.com/amwnag/hive-wiki/edit/main/',
+            baseUrl: 'https://github.com/ecehive/hive-wiki/edit/main/',
         },
         customCss: [
             './src/styles/global.css',
@@ -26,7 +26,7 @@ export default defineConfig({
             replacesTitle: true
         },
         social: {
-            github: 'https://github.com/amwnag/hive-wiki',
+            github: 'https://github.com/ecehive/hive-wiki',
         },
         sidebar: [
             {
