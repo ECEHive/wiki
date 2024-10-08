@@ -41,3 +41,5 @@ a.external {
 	/* hard-coded to current accent color #0073AA oops */
 	filter: invert(31%) sepia(92%) saturate(858%) hue-rotate(166deg) brightness(94%) contrast(105%);
 }
+
+ol ol { list-style-type: lower-alpha;}
