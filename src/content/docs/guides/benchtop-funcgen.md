@@ -1,5 +1,8 @@
 ---
 title: Function Generator Guide
+prev: 
+    link: /wiki/explore/electronics-benchtop/
+    label: Electronics Benchtop
 ---
 
 Each benchtop station has a function generator capable of creating a variety of waveforms. These waveform generators have two channels, yellow and green. Each channel can output a waveform with custom parameters. 

@@ -12,21 +12,22 @@ export default defineConfig({
     site: 'https://ecehive.github.io/',
     base: '/wiki',
     integrations: [starlight({
-        title: 'The HIVE Wiki',
+        title: 'The Hive Wiki',
         editLink: {
-            baseUrl: 'https://github.com/ecehive/hive-wiki/edit/main/',
+            baseUrl: 'https://github.com/ecehive/wiki/edit/main/',
         },
         customCss: [
             './src/styles/global.css',
 			'./src/styles/tailwind.css',
         ],
+        favicon: '/favicon.svg',
         logo: {
             light: './public/wiki-logo-light.svg',
             dark: './public/wiki-logo-dark.svg',
             replacesTitle: true
         },
         social: {
-            github: 'https://github.com/ecehive/hive-wiki',
+            github: 'https://github.com/ecehive/wiki',
         },
         sidebar: [
             {

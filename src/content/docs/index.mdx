@@ -1,9 +1,9 @@
 ---
-title: The HIVE Wiki, Renewed
-description: "The HIVE Makerspace Wiki: Definitive Remastered Enhanced Extended Edition DX 4K (Anniversary Director's Cut)"
+title: The Hive Wiki, Renewed
+description: "The Hive Makerspace Wiki: Definitive Remastered Enhanced Extended Edition DX 4K (Anniversary Director's Cut)"
 template: splash
 hero:
-  tagline: Built using Astro and Starlight as the theme. Planned to eventually host workshop documents, policies, and SOPs.
+  tagline: Built by the Hive Makerspace community. Planned home for resources such as workshop documents, policies, and SOPs.
   image:
     html: <img src="/wiki/splash.jpg" class="mask-hexagon w-80 hidden md:block" />
   actions:
@@ -16,21 +16,13 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+
+## Quick Links
+
+{/* How to edit wiki guide */}
 
 <CardGrid>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+	<LinkCard title="Rules and Policies" href="/policies/policies-main/" description="Rules and policies governing the Hive Makerspace."/>
 </CardGrid>

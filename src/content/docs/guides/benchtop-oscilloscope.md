@@ -1,5 +1,8 @@
 ---
 title: Oscilloscope Guide
+prev: 
+    link: /wiki/explore/electronics-benchtop/
+    label: Electronics Benchtop
 ---
 
 This document provides an overview of how to use many common features of the Interdisciplinary Design Commons (IDC) oscilloscopes. 

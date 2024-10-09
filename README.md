@@ -7,6 +7,7 @@
 ### Content
 - All pages need to be updated content-wise
 - Update landing page quick links
+    - Create "How to contribute to this wiki"
 - Add images to imported pages from old wiki
 - On intro page, change tech area bullet list links to tiles
 - Create category related links templates for bottom of the page
@@ -14,6 +15,7 @@
 - Sidebar manual ordering of pages
 - Add currently hidden guides to sidebar 
 - Optimize splash image for better load time
+- Use Starlight's built-in 'steps' component for tutorials
 
 ### Features / Components
 - Filtering out pages depending if you are an end user or a peer instructor (maybe a toggle in top toolbar)
