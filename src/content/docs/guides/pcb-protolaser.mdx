@@ -25,17 +25,17 @@ An incomplete list of compatible substrates and films:
 
 Some theoretical specifications:
 
-| Spec                            | Theoretical value                                              |
-|---------------------------------|----------------------------------------------------------------|
-| Laser pulse frequency           | 25 kHz–300 kHz                                                 |
-| Structuring speed               | 200 mm/s (7.8”/s) on 18 µm/½ oz Cu on FR4                      |
-| Cutting speed                   | 200 mm/s (7.8”/s) 0.5 mm (0.02”) FR4                           |
-| Diameter of focused laser beam  | 20 ± 2 µm                                                      |
-| Minimum line/space              | 50 μm/20 μm (2 mil/0.8 mil), on laminated subtrate (18 µm Cu)  |
-| Accuracy                        | ±1.98 µm (± 0.08 mil)                                          |
-| Positioning accuracy            | ± 20 μm                                                        |
-| Repeatability                   | ± 2 μm                                                         |
-| Resolution                      | 1.2 um                                                         |
+| Spec | Theoretical value |
+|---|---|
+| Laser pulse frequency | 25 kHz–300 kHz |
+| Structuring speed | 200 mm/s (7.8”/s) on 18 µm/½ oz Cu on FR4 |
+| Cutting speed | 200 mm/s (7.8”/s) 0.5 mm (0.02”) FR4 |
+| Diameter of focused laser beam  | 20 ± 2 µm |
+| Minimum line/space | 50 μm/20 μm (2 mil/0.8 mil), on laminated subtrate (18 µm Cu) |
+| Accuracy | ±1.98 µm (± 0.08 mil) |
+| Positioning accuracy | ± 20 μm |
+| Repeatability | ± 2 μm |
+| Resolution | 1.2 um |
 
 For more information, see the following documents:
 
@@ -111,17 +111,17 @@ Usually, this happens because the “supported by ProtoMat” box was not checke
 
 ## Guide: How to adjust the breakout tabs on the laser
 
-{/* TODO: Add images, starting from toolpathsmenu_configurecontour.png */}
+{/* TODO: Add steps, use starlight steps component */}
 
 
 So you're running a [single-sided laser-only process](/wiki/guides/pcb-processes#single-sided-no-holes), and you'd like to adjust the breakout tabs. No problem! It's very straightforward to do, and you can do it before or after the toolpath has been generated.
 
 Before we start, it's useful to recognize that the software has some silly and sort of confusing nomenclature: “Contour routing” is the cutting out of the board, and is done using the “CutOutside” tool. The “Contour” tool is completely unrelated to this; this tool isolates regions that need to retain copper from those that need to copper removed. Don't confuse them in the Toolpath Generation window!
 
-You can adjust the type of breakout tab alignment (two, four, corners, sides, equidistant) and the thickness by going into the “Configure Contour Routing” window under the “Toolpaths” menu to bring up the “Laser contour routing” window: 
+You can adjust the type of breakout tab alignment (two, four, corners, sides, equidistant) and the thickness by going into the “Configure Contour Routing” window under the “Toolpaths” menu to bring up the “Laser contour routing” window: ![Toolpaths menu; Configure contour](../../../assets/guide-protolaser-breakout00.png) ![Contour routing window](../../../assets/guide-protolaser-breakout01.png)
 
 Feel free in this window to adjust pretty much whatever you'd like to. “Method” is how many and where the breakout tabs will exist. “Position” is whether the routing will happen on the inside of the defined zero-width board edge line, or the outside (outside is the default). “Source” is the layer that defines what this routing process will affect; you can add different routing processes by going to “Add Contour Routing” under the “Toolpaths” menu. “Channel width” is the thickness of the rout, i.e. the distance between the board's actual cut edge and the substrate's cut edge. And “Gap width” is the length of the tabs themselves, which can also be adjusted in the “Edit Breakout Tabs” window. I don't really know how “Laser overlap” affects things. “Tab positions” is the same as “Method”.
 
-You can adjust the size and position of the breakout tabs individually through the “Edit Breakout Tabs” window (under the “Toolpaths” menu) 
+You can adjust the size and position of the breakout tabs individually through the “Edit Breakout Tabs” window (under the “Toolpaths” menu) ![Toolpaths menu; Edit breakout tabs](../../../assets/guide-protolaser-breakout02.png) ![Edit breakout tabs; window adjusted](../../../assets/guide-protolaser-breakout03.png) 
 
 I didn't touch the “Algorithm”, but “Gap width” is the length of the tabs themselves, and you can specify the break positions of each tab by clicking “Add tab” to add the number of tabs you'd like explicitly. “Gap width” will affect all the tabs equally. Checking “Replace existing toolpath” will do just that - it will replace any previously made tabs and settings with these new ones. 

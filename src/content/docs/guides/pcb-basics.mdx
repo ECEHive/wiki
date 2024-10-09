@@ -5,6 +5,12 @@ prev:
     label: PCB Fabrication
 ---
 
+import { Image } from 'astro:assets';
+import bb from '../../../assets/guide-pcbbasics1.jpg';
+import pcb from '../../../assets/guide-pcbbasics2.png';
+
+<Image class="border-2 border-slate-200 rounded-lg" src={bb} alt="A breadboard may be used for prototyping before a PCB is fabricated" height="300" />
+
 
 This page will go through the basics of what a PCB actually <u>is</u>, along with definitions and examples of many of the terms used with PCBs. Design is looked at on our “[PCB Design](/wiki/guides/pcb-design/)” page. 
 
@@ -18,6 +24,8 @@ The rest of this article focuses on PCBs. If you are not sure which method for i
 
 ## What are parts of a PCB?
 
+<Image class="border-2 border-slate-200 rounded-lg" src={pcb} alt="A small PCB with green silkscreen" width="300" />
+
 A PCB is a multi-layered substrate specially designed and fabricated for circuit designers to eliminate wiring and mechanically support their components. Let's step though that definition: 
 
 - *Multi-layered substrate* - A PCB starts as a sheet of layered material. This conmanly consists of a thin layer of copper on the bottom, a substrate called FR4 (FR5 is also common), and another thin layer of copper. You might have seem these sheets sitting below the Hive's milling machine (ProtoMat).
@@ -27,7 +35,11 @@ A PCB is a multi-layered substrate specially designed and fabricated for circuit
 
 Traces on different copper layers can be connected by adding *vias*, which are holes drilled into the board and filled with a conductive metal, often copper. The process is known as *electroplating*. Electroplating covers every exposed inch of a surface in a thin layer of copper. This means that via drilling and electroplating should be done before etching traces. At the Hive, the electroplating process takes two hours, regardless of board design. More complex *stackups* (that is, the layering design of the PCB) can include more than two copper layers, different insulating materials, and more. Many PCBs you will come across are covered in a resin-based material, which is often green. This is called *soldermask*, and it can be added to isolate traces beyond just etching. You may also notice the presence of text and images, which is added using a *silkscreen*. 
 
-{/* «Image of a PCB» «Labeled image of a PCB> «Stack up of a 2 layer board» */}
+{/* 
+«Image of a PCB» 
+«Labeled image of a PCB> 
+«Stack up of a 2 layer board» 
+*/}
 
 ## How do I make a PCB?
 

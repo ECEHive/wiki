@@ -5,6 +5,9 @@ prev:
     label: PCB Fabrication
 ---
 
+import { Image } from 'astro:assets';
+
+
 ## How to make (and use!) stencils
 
 ### What is a stencil?
@@ -12,6 +15,17 @@ prev:
 A *stencil* is a material with cutouts that enables solderpaste to be more easily and precisely applied prior to component placement and reflow. (If you don't know what I mean by 'reflow', or want more information about that process, see our “[Reflow Oven](/wiki/guides/pcb-stencilnreflow#how-to-use-the-reflow-oven)” page for more.) Stencils can be made with a variety of materials; the images below show two very common ones (polyimide on the left, and stainless steel on the right) ([Source for images](https://www.autodesk.com/products/fusion-360/blog/getting-started-solder-paste-stencils/)). Kapton tape (also polyimide) is another low-cost option. The Hive has 5mil polyimide sheets for stencil fabrication that are free for users, as well as Kapton tape. We also have (courtesy of Stephan Strassle) recipes for using [PET projector transparency sheets](https://www.amazon.com/dp/B087BF4YLJ) between 0.5 and 10 mil thick.
 
 Stencils are by no means a required or necessary step for completing your PCB. They are very useful if you have many surface-mounted components (SMDs), SMDs with many pins or fine-pitch pins, or have a few SMDs but many identical boards. *They do not work for through-hole components!* Those must be done by hand. 
+
+
+import ex1 from '../../../assets/guide-stencil1.png';
+import ex2 from '../../../assets/guide-stencil2.jpg';
+
+
+<div class="not-content flex gap-1">
+    <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex1} alt="Polyamide stencil" height="200" />
+
+    <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex2} alt="Stainless steel stencil" height="200" />
+</div>
 
 ### How to make a stencil
 
@@ -54,6 +68,15 @@ Once the stencil is fabricated, it must be aligned with the bare board underneat
 Apply paste over the stencil using whatever tool you have, either a syringe, a wooden spatula/tongue depressor, whatever. You don't need a lot, so start with less than you think you need. (**NOTE!!** The reflow oven that The Hive has is optimized for **lead-free** solder paste, so if you're planning on using our oven, please make sure to use lead-free paste, or you'll be sad later.)
 
 Then use a squeegee of some sort (credit card, ID, plastic scraper) to squeegee the applied paste across the stencil and into the cutouts (see image on right ([source](https://www.pcbway.com/blog/PCB_Design_Tutorial/A_very_easy_way_to_accurately_align_the_stencil_with_the_PCB_1.html))). You shouldn't need to press down very hard, and again, maintain the stencil as flat against the board as possible. 
+
+import ex3 from '../../../assets/guide-stencil3.jpg';
+import ex4 from '../../../assets/guide-stencil4.jpeg';
+
+<div class="not-content flex gap-1">
+    <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex3} alt="Stencil supports" height="200" />
+
+    <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex4} alt="Stencil paste application" height="200" />
+</div>
 
 You can always lift the stencil to check your progress, but you run the risk of ruining the alignment, so be careful.
 
@@ -98,22 +121,43 @@ The profile will run. When it's completed, the drawer will open. Carefully remov
 
 **Clockwise from top-left**: the oven with its computer; the drawer open with the magnetic metal bars and green thermistor wires; the front of the oven with the power button prominently featured; and the screen and the four arrow keys on top of the oven. 
 
+import protoflow from '../../../assets/pcb-reflow.png';
+
+<Image class="inline-block border-2 border-slate-200 rounded-lg" src={protoflow} alt="LPKF ProtoFlow S N2" height="300" />
+
+
 **Lead-free solder paste oven temperature profile**
+![](../../../assets/pcb-reflow-leadfree.png)
+
 
 **Leaded solder paste oven temperature profile**
+![](../../../assets/pcb-reflow-leaded.png)
+
 
 ### Advanced reflow use (i.e. using the software)
 
+
+{/* TODO: Add steps, use starlight steps component */}
+
 The reflow oven is a pretty simple tool, especially if you're using the standard recipes. However, the software allows additional functionalities to be taken advantage of. The software is called **FlowShow**, and can be launched from the main taskbar on the desktop to the right of the oven. The computer should be on, so just press the monitor's power button (lower left of the screen); if the computer is off, you can power it on and it should automatically log in. The manual for the software is in the bookmarks bar of the Edge browser. 
+
+
+![FlowShow main window](../../../assets/guide-reflow-flowshow00.png)
 
 There are three tabs of operations. The main tab, “Profile recording”, allows the user to monitor the temperature during tool use, and to record the temperature profile. **NOTE** that the “Start” button only starts the recording, *not* the process! Similarly, the “Stop” button does not stop the process, only the recording. There are seven temperature sensors in the tool: three are built-in, but four, the “Profile recorder” ones, are thermocouples that can be positioned as desired within the oven itself, and can be useful for precision reflow processes where the temperature across the board is critical, or for sensitive components. These four can be found either within the main oven drawer (the green wires; see image above), or disconnected and sitting next to the tool. Be careful not to pull them too hard. Kapton tape is effective at keeping them in place over the duration of a process. It's recommended that you position and attach them to your board prior to placing it into the tool (i.e. have them disconnected and outside the tool, tape the ends down onto your board, place the board into the tool carefully at the assigned time, plug the thermocouples in inside the front door near the floor of the tool, and then close the door to start the process). 
 
-The middle tab, “Profile programming”, is where custom profiles may be created. **ONLY ADJUST PROFILES 12 (“CHANGETHIS”) AND ABOVE (USER01 - USER17)!!** Please do not mess with the other profiles at this time. Adjusting the profile is as easy as changing the numbers and times around, but if you do this without careful consideration sand knowledge, you can seriously damage or ruin your board and components outright. Reflow can typically be separated into three stages: preheating, reflow, and cool-down. The machine has a built-in “optimized” heating ramp up that's given in the upper-right corner of the software. It's generally a good idea to follow this unless your process requires more rapid heating or cooling. Preheating brings the board and components and solder paste to a uniform temperature, and usually involves a soak at that temperature to ensure uniformity. The reflow is when the temperature is brought above the solder's liquidus point, where it transforms into a liquid. Most components don't like being that hot, so the amount of time at those high temperatures should be limited. Finally, there's a cool-down back to “ambient” temperature. Cooling-down too rapidly can also damage the board due to thermal shocks, so it's a good idea to leave this as is as well.
+The middle tab, “Profile programming”, is where custom profiles may be created. **ONLY ADJUST PROFILES 12 (“CHANGETHIS”) AND ABOVE (USER01 - USER17)!!** Please do not mess with the other profiles at this time. Adjusting the profile is as easy as changing the numbers and times around, but if you do this without careful consideration sand knowledge, you can seriously damage or ruin your board and components outright. 
+
+![FlowShow profile programming](../../../assets/guide-reflow-flowshow01.png)
+
+Reflow can typically be separated into three stages: preheating, reflow, and cool-down. The machine has a built-in “optimized” heating ramp up that's given in the upper-right corner of the software. It's generally a good idea to follow this unless your process requires more rapid heating or cooling. Preheating brings the board and components and solder paste to a uniform temperature, and usually involves a soak at that temperature to ensure uniformity. The reflow is when the temperature is brought above the solder's liquidus point, where it transforms into a liquid. Most components don't like being that hot, so the amount of time at those high temperatures should be limited. Finally, there's a cool-down back to “ambient” temperature. Cooling-down too rapidly can also damage the board due to thermal shocks, so it's a good idea to leave this as is as well.
 
 The “Profiling assistant”, seen right above the plot, can be used to see how your profile compares to the “standard” profile. Simply click on your board size (small is around 5-10 sq. in., medium is up to 25 sq. in., large is bigger than that) and click “Draw” to see the estimated profile.
 
 Once you have adjusted the parameters to your liking, press “Write One” to save and load it onto the machine. It should load as the current profile as well. Then you can run it as normal. 
 
 **Write down the parameters as you set them for later!** Someone else may come and write over yours later. 
+
+![FlowShow admin](../../../assets/guide-reflow-flowshow02.png)
 
 The third tab, “Admin”, has no useful options except for the “Virtual Mode” checkbox at the top. This allows you to test different profiles without actually running the tool. This was useful for me to make the profiles above, but frankly, I'm not sure when it may be useful to anyone else. 

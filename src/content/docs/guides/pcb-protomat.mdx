@@ -91,7 +91,7 @@ Details of this process can be found in this [short video](https://gtvault.share
 
 ## Guide: Making 0.15-mm Drill Hits
 
-{/* TODO: Add images, starting from 00_technology-dialog-window.png */}
+import { Steps } from '@astrojs/starlight/components';
 
 You've reached the 0.15mm Drill Hits page! That probably means that you wants the down-low on drilling those super-duper tiny holes.
 
@@ -99,14 +99,17 @@ The first thing to know is that tiny bits are really, really, really tiny. So ti
 
 Unfortunately, the software isn't clever enough to handle this bit because it's smaller than the default drill marker (which is 0.2mm), so we have to do of manual work to force it into using that bit. Not hard, just a few steps: 
 
-1. Setup your process, import your files, and add your fiducials, all as you would normally.
-2. Open the toolpath generation window (the fourth button, called "Toolpath Dialog")
-3. In the bottom section ("Convert to Toolpath"), next to "Drills", click "Show Details" 
-4. For "Tool", select "Spiral Drill 0.15mm".
-5. For "Marking tool", select "Micro Cutter 0.1mm". 
-6. Start the toolpath generation (click "Start"). You should get a result that looks like the below image; each hole in your design will be assigned the 0.15mm spiral drill. 
-7. Now go back into the Technology Dialog window. Change the "Tool" to "\<Automatically assigned\>" and the "Marking tool" to "Universal Cutter 0.2mm". Make sure "Replace existing toolpath" is checked before running the algorithm again (click "Start"). 
-8. The results should now be adjusted correctly for the other drills, with the correct number of 0.15mm drill hits as well. 
+<Steps>
+1. Setup your process, import your files, and add your fiducials, all as you would normally. 
+2. Open the toolpath generation window (the fourth button, called "Toolpath Dialog") ![Technology dialog window](../../../assets/guide-protomat-drill00.png)
+3. In the bottom section ("Convert to Toolpath"), next to "Drills", click "Show Details" ![Show details](../../../assets/guide-protomat-drill01.png)
+4. For "Tool", select "Spiral Drill 0.15mm". ![Tool dropdown](../../../assets/guide-protomat-drill02.png)
+5. For "Marking tool", select "Micro Cutter 0.1mm". ![Marking tool dropdown](../../../assets/guide-protomat-drill03.png)
+6. Start the toolpath generation (click "Start"). You should get a result that looks like the below image; each hole in your design will be assigned the 0.15mm spiral drill. ![First toolpath results](../../../assets/guide-protomat-drill04.png)
+7. Now go back into the Technology Dialog window. Change the "Tool" to "\<Automatically assigned\>" and the "Marking tool" to "Universal Cutter 0.2mm". Make sure "Replace existing toolpath" is checked before running the algorithm again (click "Start"). ![Tool autoassigned](../../../assets/guide-protomat-drill05.png) ![Marking tool reset](../../../assets/guide-protomat-drill06.png)
+8. The results should now be adjusted correctly for the other drills, with the correct number of 0.15mm drill hits as well. ![Final toolpath](../../../assets/guide-protomat-drill07.png)
+
+</Steps>
 
 When you save it after the correct toolpath generation, it will save with the 0.15mm drill hits. However, you'll have to do this every time you generate a toolpath with 0.15mm drill hits.
 
