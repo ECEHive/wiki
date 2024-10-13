@@ -6,24 +6,24 @@
 
 ### Content
 - All pages need to be updated content-wise
-- Port over resources hosted on Sharepoint or GDrive (see pcb-design page)
+- Port over resources hosted on Sharepoint or GDrive
 - Update landing page quick links
-    - Create "How to contribute to this wiki"
+    - Create "How to contribute to this wiki" page
 - On intro page, change tech area bullet list links to tiles
 - Add currently hidden guides to sidebar 
-
 - Use Starlight's built-in 'steps' component for tutorials
 
 ### Features / Components
 - Filtering out pages depending if you are an end user or a peer instructor (maybe a toggle in top toolbar)
+    - Guide: https://starlight-examples.netlify.app/examples/multi-sidebar/
 - Button toggle light/dark theme rather than dropdown
-- Display pages as as sub-items (similar to gitbook's setup)
+- Ability to display pages as as sub-items (similar to gitbook and notion)
 - Toggle collapsable dropdown page component
 - Carousel item with captions
-- Squoosh image optimizing?
+- Youtube playlist component
 - Create category related links templates for bottom of the page
 - Sidebar manual ordering of pages
-- Optimize splash image for better load time
+- Heading link icon click to copy
 
 ## Guides and Reference
 
