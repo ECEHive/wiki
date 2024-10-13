@@ -6,13 +6,12 @@
 
 ### Content
 - All pages need to be updated content-wise
+- Port over resources hosted on Sharepoint or GDrive (see pcb-design page)
 - Update landing page quick links
     - Create "How to contribute to this wiki"
 - On intro page, change tech area bullet list links to tiles
-- Create category related links templates for bottom of the page
-- Sidebar manual ordering of pages
 - Add currently hidden guides to sidebar 
-- Optimize splash image for better load time
+
 - Use Starlight's built-in 'steps' component for tutorials
 
 ### Features / Components
@@ -22,6 +21,9 @@
 - Toggle collapsable dropdown page component
 - Carousel item with captions
 - Squoosh image optimizing?
+- Create category related links templates for bottom of the page
+- Sidebar manual ordering of pages
+- Optimize splash image for better load time
 
 ## Guides and Reference
 

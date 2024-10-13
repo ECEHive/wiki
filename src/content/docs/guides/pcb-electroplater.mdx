@@ -11,7 +11,7 @@ import electroplater from '../../../assets/pcb-electroplater.jpg';
 :::note
 **We are no longer guaranteeing quality of the electroplating results.** The required maintenance for the number of monthly users no longer justifies continued operation, and we'll be phasing the plater out of operation entirely at some point in 2024 (theoretically). You can read below to understand more about the plater.
 
-**If you need vias:** If you can get away with it, we recommend sizing your vias to be 1mm/40mil diameter holes (excluding the annular ring), and then soldering in a standard header pin. Otherwise, your best option is likely to get it fabricated professionally; see [our PCB Design](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-design) page for some fabrication house options. 
+**If you need vias:** If you can get away with it, we recommend sizing your vias to be 1mm/40mil diameter holes (excluding the annular ring), and then soldering in a standard header pin. Otherwise, your best option is likely to get it fabricated professionally; see [our PCB Design](/wiki/guides/pcb-design/) page for some fabrication house options. 
 :::
 
 <Image class="border-2 border-slate-200 rounded-lg" src={electroplater} alt="The LPKF Contac S4 Electroplating System" width="300" />
@@ -20,9 +20,9 @@ The LPKF Contac S4 Electroplating System provides the ability to galvanically el
 
 Critically, what this means is that *the tool will plate copper everywhere that there is copper!* This means any copper faces of your substrate will get additional copper on them. Astute readers will remember that the internal layer of your substrate (e.g. FR4) is not conductive, so an “Activator” (a conductive ink) is used to coat the inside of your holes with a conductive substance so that current can pass through the holes, and thereby plate your holes.
 
-The LPKF Datasheet for the Contac S4: [Contac S4-v1-0-en.pdf](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EYXk2p-bwKpCuKkeLENhqocBqcVTR7-WmhWovjyvxTzRPw?e=D7aZMC)
+The LPKF Datasheet for the Contac S4: [Contac S4-v1-0-en (PDF)](/wiki/pcb-contac-s4-v1.pdf)
 
-The [Material] Safety Data Sheets (MSDS/SDS): [LPKD_SDS.pdf](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/ESjBwZ9SU3pPs1f7gYgGBMwBKNzEZfvGpbCGLWnxXIsNiA?e=xs7k9P)
+The [Material] Safety Data Sheets (MSDS/SDS): [LPKD_SDS (PDF)](/wiki/pcb-lpkf-sds.pdf)
 
 Our standard operating procedures: IN PROGRESS 
 
@@ -40,15 +40,15 @@ So, here's the situation:
 
 If you were trained on the plater in a previous life and would like access, great - shoot us an email. We'll see if we can work something out, though likely we'll just ask you to watch the video anyway, since it's only 30 minutes.
 
-If you have never been trained on the plater but would like to be, also great - see our [Training](https://wiki.hive.ece.gatech.edu/doku.php?id=pcb-training) page for all the details. It's essentially the same process and the plotter/laser training, but for a different tool, and a bit shorter.
+If you have never been trained on the plater but would like to be, also great - see our [Training](/wiki/guides/pcb-training/) page for all the details. It's essentially the same process and the plotter/laser training, but for a different tool, and a bit shorter.
 
 **What are the different baths?**
 
-Baths 1 and 2 are different cleaners, called (appropriately) Cleaner 110 and Cleaner 210, respectively. Both are based on sodium metaborate. Bath 3 is Activator 310, a carbon-laced liquid that provides a conductive pathway for the copper plating onto non-conductive surfaces, such as FR4. Bath 4 is a ViaCleaner that isn't used at the Hive (as of Spring 2021). Bath 5 is called Copper Plater 400; it's sulfuric acid (97% strength) and copper sulfate. Don't stick your hand in it. Please. See the [MSDS](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/ESjBwZ9SU3pPs1f7gYgGBMwBKNzEZfvGpbCGLWnxXIsNiA?e=xs7k9P) for details on these.
+Baths 1 and 2 are different cleaners, called (appropriately) Cleaner 110 and Cleaner 210, respectively. Both are based on sodium metaborate. Bath 3 is Activator 310, a carbon-laced liquid that provides a conductive pathway for the copper plating onto non-conductive surfaces, such as FR4. Bath 4 is a ViaCleaner that isn't used at the Hive (as of Spring 2021). Bath 5 is called Copper Plater 400; it's sulfuric acid (97% strength) and copper sulfate. Don't stick your hand in it. Please. See the [MSDS (PDF)](/wiki/pcb-lpkf-sds.pdf) for details on these.
 
 **Why don't we use bath 4?**
 
-Bath 4 is called “ViaCleaner”. In essence, LPKF realizes that the Activator will adhere somewhat to the copper layers, even after a thorough rinse. ViaCleaner is more effective at removing stuck-on activator. This isn't a huge issue - the plating still works perfectly fine without it - but it makes the finished product cleaner, a bit more even, and it's very useful for blind vias. However, The Hive can't do more than two layer boards, so blind visas aren't an issue. Therefore, we feel the amount of error inherent in the electroplating process in the Semi-Clean room is large enough that the benefits of adding an additional step would be minimal. See LPKF's slide deck on this: [LPKF ViaCleaner_Process Steps and Benefits.pdf](https://gtvault.sharepoint.com/:b:/s/HiveMakerspace/EZ1X2QbVSRBJtIhGbv-XHTwBNmyHv4VMJQ4Jubp-8taXIQ?e=Jra0PO)
+Bath 4 is called “ViaCleaner”. In essence, LPKF realizes that the Activator will adhere somewhat to the copper layers, even after a thorough rinse. ViaCleaner is more effective at removing stuck-on activator. This isn't a huge issue - the plating still works perfectly fine without it - but it makes the finished product cleaner, a bit more even, and it's very useful for blind vias. However, The Hive can't do more than two layer boards, so blind visas aren't an issue. Therefore, we feel the amount of error inherent in the electroplating process in the Semi-Clean room is large enough that the benefits of adding an additional step would be minimal. See LPKF's slide deck on this: [LPKF ViaCleaner_Process Steps and Benefits (PDF)](/wiki/pcb-lpkf-viacleaner-processtepsandbenefits.pdf)
 
 If you'd like cleaner finish, you can try scrubbing the board thoroughly after the curing process before what would be Bath 4.
 
