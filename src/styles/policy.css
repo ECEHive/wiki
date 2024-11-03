@@ -1,19 +1,27 @@
-dl {
-    display: inline;
+dl.pol {
+    margin-top: 1rem;
 }
 
-dt {
+dl.pol dt {
     float: left;
     justify-content: end;
     display: flex;
     font-weight: 500 !important;
     padding-right: 5px;
-    margin-top: 1rem !important;
+    margin: 0 !important;
 }
 
-dd {
-    margin-top: 1rem !important; 
+dl.pol dd {
+    display: block;
+    margin: 0 !important;
 }
+
+dl.pol dd:after {
+    display: block;
+    margin-top: 1rem;
+    content: '';
+}
+
 
 dt.pol-1 {
     width: 50px;
