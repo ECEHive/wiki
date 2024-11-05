@@ -1,0 +1,51 @@
+---
+title: "3D Printing"
+---
+
+
+import { Image } from 'astro:assets';
+import printing from '../../../assets/intro-3dprinting.jpg';
+
+<Image class="border-2 border-slate-200 rounded-lg" src={printing} alt="Close-up of a 3D-printed model" width="300" />
+
+The Hive currently has 12 3D printers: You can click on any hyperlink to learn about each specific printer. It links to their SOP! Printing at the hive is free, and is located in the Semi clean room. You can walk down and find a PI if you have something you would like to print. We only accept STL files and no gcode files since the PI's need to check each print. The printing system works by queue, and each printer may have a different queue. If you're not sure which printer you want to use, ask a PI! 
+
+- 3 [Stratasys F170](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/Ef7iyiLm_GVDp-9IKzhD9pMBvry161uWPPmIvquWYvmKFA?e=2GyH4b)
+    - The F170 printers are dual head FDM printers extruding in Hard plastic ABS and dissolvable support material
+- 4 [Ultimaker 3s Printers](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EQB_pfv2h5ZJq3Uc8NsnL6MBlJfJ2CFfugPA75lm8akXlw?e=WeQ1sQ)
+    - Our ultimaker printers allow our users to print in up to two materials. They are also FDM printers. These machines typically are loaded with PLA and Breakaway material.
+- 1 [Markforged MarkTwo](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVKBTObQTX1NvCcuv44NsoEBBZpRPr3lrXltXi_1dKbkag?e=FUuhQx)
+    - The MarkTwo is a specialty 3D printer that prints high strength parts using nylon-based material with fiber reinforcements such as carbon fiber.
+- 4 [Formlabs Form 3 and 3L](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/Ef2e_5JlTxVKrTe6SbPqZA8Bd9ddg5UHqb-Qg2FrPMrVMg?e=5z0uc4)
+    - These SLA printers specialize in high detail and surface finish using SLA Technology. We carry multiple resins at any given time. You can stop by and check which ones we have. Normally, they are Grey, White, Draft V2, and flexible. We have 3 Form 3's and one Form 3L.
+
+In addition to written and guided SOP's, we have a video series here that you can look at if you're a more visual learner. The videos are quick but may not be as informative.
+
+import YouTubeGrid from '/src/components/youtube-grid.astro';
+
+{/* Create a new component to auto-populate from playlist link https://www.youtube.com/playlist?list=PLaHV-4SxpcHyglqhxBZvGin9r8XcTmYts */}
+
+<YouTubeGrid
+	videos={[
+		{
+			href: 'https://youtu.be/i9n32Y-VGTE',
+			title: 'GrabCAD and Stratasys Training',
+			description: 'In this video, MPI Abhay Cashikar demonstrates how to use the GrabCAD Print software to prepare 3D models for printing, as well as how to set up the printers for printing.',
+		},
+		{
+			href: 'https://youtu.be/ITJHtxCCtcc',
+			title: 'Cura and Ultimaker S3 Training',
+			description: 'This video covers how to print from Hive Computers to the Ultimaker S3\'s directly online, as well as how to load/unload material on the Ultimaker S3.',
+		},
+		{
+			href: 'https://youtu.be/50PXFYMrgvs',
+			title: 'Preform and Formlabs Training',
+			description: 'This video covers how to print from Hive Computers to the Formlabs printers using the Preform software, as well as how to use the Formlabs printers and the washing and curing stations to post process resin prints.',
+		},
+		{
+			href: 'https://youtu.be/SNL-OPTrpk8',
+			title: 'Bambu P1s and Bambu Software Tutorial',
+			description: 'This video will show folks how to use the Bambu P1\'s and their accompanying software. This is a quick start guide and intended for folks that are already familiar with 3D printing as a whole (specifically FDM printing).',
+		},
+	]}
+/>
