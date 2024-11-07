@@ -5,7 +5,7 @@ prev:
     label: PCB Fabrication
 ---
 
-General Processing Reminders...
+:::tip[General Processing Reminders...]
 
 - Orient all your boards \*before* creating any fiducials.
 - 4 fiducials – always.
@@ -13,8 +13,9 @@ General Processing Reminders...
 - Make sure that the two boxes are checked before selecting a ProtoLaser template.
 - Do not forget the chemical safety gear when electroplating.
 - **Get a PI to change any bits in the ProtoMat!**
+:::
 
-Process Guides
+## Process Guides
 
 1. [Single sided design, no holes](/wiki/guides/pcb-processes#single-sided-no-holes), regardless of plating.
 2. [Single sided design, with holes](/wiki/guides/pcb-processes#single-sided-with-holes), regardless of plating.
@@ -40,11 +41,11 @@ The Hive's PCB fabrication tool suite has the following capabilities:
 - *Substrate*s: FR4, Rogers materials, polyamide, among many others. See the [ProtoLaser help page](/wiki/guides/pcb-protolaser/) for more details.
 - *Copper thickness/weight*: No known limit, other than processing time.
 - *Slot*: yes, but YMMV. See our [fabs tips](/wiki/explore/pcb#miscellaneous-processing-tips) page for details.
-- *Electroplating*: yes, standard processing time of 3 hours will plate approximately 16 um of copper. We also have a chemical-free non-electrical “plating” process with the ProConduct package. See our [electroplater help page](/wiki/guides/pcb-electroplater/) for details.
+- *Electroplating*: yes, standard processing time of 3 hours will plate approximately 16 um of copper. We also have a chemical-free non-electrical "plating" process with the ProConduct package. See our [electroplater help page](/wiki/guides/pcb-electroplater/) for details.
 - *Soldermask*: we have the chemicals, which have an official process, but we don't officially support it. See the ProMask datasheet, below. We also have trialed an alternative masking process with Kapton tape, but YMMV. See [this page](/wiki/guides/pcb-masknsilkscreen/#soldermasking-with-kapton-tape) for more details.
 - *Silkscreen*: we have the chemicals, which have an official process, but we don't officially support it. See the ProLegend datasheet below.
-- *Stencils*: we can make them! See our “[How to make stencils](/wiki/guides/pcb-stencilnreflow#how-to-make-and-use-stencils)” page for more!
-- *Reflow*: we have a fully operational reflow oven, optimized for lead-free solder paste. See “[How to reflow](/wiki/guides/pcb-stencilnreflow#how-to-use-the-reflow-oven)” for more information.
+- *Stencils*: we can make them! See our "[How to make stencils](/wiki/guides/pcb-stencilnreflow#how-to-make-and-use-stencils)" page for more!
+- *Reflow*: we have a fully operational reflow oven, optimized for lead-free solder paste. See "[How to reflow](/wiki/guides/pcb-stencilnreflow#how-to-use-the-reflow-oven)" for more information.
 - Our [knowledge base](/wiki/explore/pcb#pcb-knowledge-base-and-faq) is pretty extensive as well, so check that for answers to many questions and processing help.
 
 The full suit includes the following:
@@ -62,48 +63,48 @@ The full suit includes the following:
 
 If you’re board passes OshPark’s specs ([OshPark .dru file](https://docs.oshpark.com/design-tools/eagle/design-rules-files)), it can be made using our process (see their website for details). However, our process can, in fact, go beyond that in some ways. See our [Knowledge Base](/wiki/explore/pcb#pcb-knowledge-base-and-faq) and [Tips and Tricks](/wiki/explore/pcb#miscellaneous-processing-tips) pages for additional information.
 
-| Specification             |  Theoretical Minimum (see note below)  |  Recommended Minimum  |
-|---------------------------|----------------------------------------|-----------------------|
-|  Trace width              |  2 mils (0.05 mm)                      |  5 mils (0.25 mm)     |
-|  Trace spacing (“pitch”)  |  1 mils (0.025 mm)                     |  5 mils (0.15 mm)     |
-|  Polygon isolation        |  10 mils (0.25 mm)                     |  24 mils (0.75 mm)    |
-|  Drill hit                |  6 mil (0.15 mm)                       |  15 mil (0.4 mm)      |
-|  Drill X/Y resolution     |  +/- 0.01 mil (0.25 μm)                |                       |
-|  Drill repeat accuracy    |  +/- 0.2 mil (5 μm)                    |                       |
-|  Laser repeatability      |  0.08 mils (2 μm)                      |                       |
-|  Drill hit                |  0.05 mil (1.2 μm)                     |                       |
+| Specification | Theoretical Minimum (see note below) |  Recommended Minimum |
+|---|---|---|
+| Trace width | 2 mils (0.05 mm) | 5 mils (0.25 mm) |
+| Trace spacing ("pitch") | 1 mils (0.025 mm) | 5 mils (0.15 mm) |
+| Polygon isolation | 10 mils (0.25 mm) | 24 mils (0.75 mm) |
+| Drill hit | 6 mil (0.15 mm) | 15 mil (0.4 mm) |
+| Drill X/Y resolution | +/- 0.01 mil (0.25 μm) |  |
+| Drill repeat accuracy | +/- 0.2 mil (5 μm) |  |
+| Laser repeatability | 0.08 mils (2 μm) |  |
+| Drill hit | 0.05 mil (1.2 μm) |  |
 
 **Note**: If you're considering a design at our theoretical minimum capabilities, first strongly consider whether you need that level of precision. If the answer is still yes, go to the [ProtoLaser](/wiki/guides/pcb-protolaser/) (for etching) and [ProtoMat](/wiki/guides/pcb-protomat/) (for drilling) help sections for advice on reaching those new lows.
 
 
 ## Q & A
 
-**Is there a recommended DRC/CAM file I can use?**
+### Is there a recommended DRC/CAM file I can use?
 
 Yes!
 1. [DRC](/wiki/pcb-hive-minimum.dru)
 2. [CAM](/wiki/pcb-hive-basic.cam)
 
-**Do I have to be with my board during the entire fabrication process?**
+### Do I have to be with my board during the entire fabrication process?
 
 Yes! You must be present for the entire process. This is for safety reasons. PIs have the authority to cancel any unattended boards. You may, however, leave the space *if and only if* you leave a note with a phone number and accept the possibility that something may happen to your product while you're gone (because PIs are not watching your process).
 
-**How long does it take to make a board?**
+### How long does it take to make a board?
 
 It depends on the size and layout of your board. A small board with no electroplating (i.e. no vias) can easily be made in under an hour, while a very large board with lots of copper removed can take over 4 hours not including electroplating.
 
-**How long does electroplating take?**
+### How long does electroplating take?
 
 Between 2 and 3 hours, regardless of board size. This will plate between 8-15 um of copper onto your surfaces. Less than this processing time can cause unreliable vias with variable thickness of the plating.
 
-**Can I somehow reserve time on the equipment?**
+### Can I somehow reserve time on the equipment?
 
 Yes! Although you are not required to, we *highly* recommend that you do as it guarantees equipment priority. You may reserve time up to 96 hours in advance though SUMS.
 
 1. Go to sums.gatech.edu and login (button is on the top right of the screen).
-2. In the main toolbar on top, on the right, click “Set Active BG/EG”. Make sure your Billing Group is “Interdisciplinary Design Commons” and your Equipment Group is “The Hive”.
-3. On the main page, locate the Schedule section. Under the drop-down menu that says, “My Schedule - Select a tool to schedule time”, select the tool in question. Note that you cannot reserve time on a tool until you have completed training for it.
-4. Click and drag on the calendar itself to reserve time. Release the mouse button to bring up the reservation screen. You must enter a description in order to reserve time! Click “Save” to save the reservation.
+2. In the main toolbar on top, on the right, click "Set Active BG/EG". Make sure your Billing Group is "Interdisciplinary Design Commons" and your Equipment Group is "The Hive".
+3. On the main page, locate the Schedule section. Under the drop-down menu that says, "My Schedule - Select a tool to schedule time", select the tool in question. Note that you cannot reserve time on a tool until you have completed training for it.
+4. Click and drag on the calendar itself to reserve time. Release the mouse button to bring up the reservation screen. You must enter a description in order to reserve time! Click "Save" to save the reservation.
 
 We highly advise you to schedule time on all the tools you’ll need, i.e. if you’re fabricating a standard board, you should reserve time on both the Plotter and the Laser. If you do not, and someone schedules time on only the laser, they have priority on the tool.
 
@@ -112,22 +113,22 @@ We highly advise you to schedule time on all the tools you’ll need, i.e. if yo
 - Non-PIs (i.e. those who are not volunteers at The Hive) may schedule a maximum of 4 hour block per tool per day during The Hive’s open hours, and up to 4 days in advance.
 - PI’s may schedule up to 8 hours per tool per day, up to 7 days in advance.
 
-**Can I add soldermask or silkscreen?**
+### Can I add soldermask or silkscreen?
 
 We have the capability to apply soldermask and silkscreen, though we do not recommend attempting this process - it's time-consuming, UV- and temperature-sensitive, and unnecessary to a complete circuit board. If you need soldermask or silkscreen, consider sending your design to a professional fabrication facility.
 
-For those who would like to attempt this, instructions are available on our [mask and silkscreen](/wiki/guides/pcb-masknsilkscreen/) page, as well as in the “Manuals/Instructions” drawer next to the tools themselves.
+For those who would like to attempt this, instructions are available on our [mask and silkscreen](/wiki/guides/pcb-masknsilkscreen/) page, as well as in the "Manuals/Instructions" drawer next to the tools themselves.
 
 We ALSO have an alternative process to use Kapton tape to make a soldermask-like covering on your board. Definite a YMMV-situation, but [the instructions are here](/wiki/guides/pcb-masknsilkscreen/#soldermasking-with-kapton-tape).
 
-**How do you handle slots? Can you do plated slots?**
+### How do you handle slots? Can you do plated slots?
 
-Unplated slots are indeed do-able in this process. There are probably a couple of methods for doing this, but the way we've had success is to add the slots onto the “BoardOutline” layer in the software. How this happens depends on your EDA (CAD) software, but in essence, you either need to have your slot in a new gerber (which you can assign to “BoardOutline” in the Import step) or you need to put your slots onto the layer in your EDA that spits out your Board Outline gerber file (in Eagle, this layer is called “Dimensions”). If you need help with this, let us know.
+Unplated slots are indeed do-able in this process. There are probably a couple of methods for doing this, but the way we've had success is to add the slots onto the "BoardOutline" layer in the software. How this happens depends on your EDA (CAD) software, but in essence, you either need to have your slot in a new gerber (which you can assign to "BoardOutline" in the Import step) or you need to put your slots onto the layer in your EDA that spits out your Board Outline gerber file (in Eagle, this layer is called "Dimensions"). If you need help with this, let us know.
 
 Alternatively, you can use the overlapping-drill-hits method, where you just define a number of overlapping drill holes in your CAD. Some CAD programs don't like this, however.
 
 Unfortunately, we haven't found a good way to do plated slots because in the above method, the slot is made after the etching is done (and therefore after the plating would be done). An alternative in this case would be to design your slot as overlapping drill hits which are done prior to plating.
 
-**Do the tools have additional capabilities?**
+### Do the tools have additional capabilities?
 
 Many! See the [Knowledge Base](/wiki/explore/pcb#pcb-knowledge-base-and-faq) page for these, as they're often listed in various bits of documentation that would be out of place on this page. We encourage our users to explore the capabilities of the tools beyond our guides, and beyond even what we list in our documentation. However, while such capabilities are technically allowed in the spec of the tool, we do not officially support anything beyond standard PCB fabrication, meaning that our PIs and MPIs do not have experience with them, so you will be on your own if you attempt any of them!

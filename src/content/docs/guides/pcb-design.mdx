@@ -11,11 +11,11 @@ So you want to design a PCB, eh? This will be a good resource and place to start
 
 *(Be very aware that this page may not be updated as frequently as we'd like, and therefore might be out of date. Apologies.)*
 
-There are three “main” PCB CAD programs: KiCAD (free and open-source), Eagle (now owned by AutoDesk), and Altium (the industry standard), though there are literally dozens more. These each offer their own advantages and have their own disadvantages that won't be covered here. But once you learn one, learning the others is often mostly just figuring our the new layout and where all the icons and settings are.
+There are three "main" PCB CAD programs: KiCAD (free and open-source), Eagle (now owned by AutoDesk), and Altium (the industry standard), though there are literally dozens more. These each offer their own advantages and have their own disadvantages that won't be covered here. But once you learn one, learning the others is often mostly just figuring our the new layout and where all the icons and settings are.
 
 *Update (2024)*: KiCAD has improved dramatically in the last few years. Eagle may no longer exist anymore at all (I can't find it on the AutoDesk website), and may have been entirely subsumed into Fusion, sadly. You can probably still download old versions though that would allow you to use the below tutorials. Altium has begun adding AI/ML features as well, and it quite powerful, though definitely better for more advanced designers and larger teams.
 
-**Some potentially useful resources:**
+## Some potentially useful resources
 
 - KiCAD Tutorials by out own MPI, Ben H: [PCB Design with KiCAD](https://www.youtube.com/playlist?list=PLaHV-4SxpcHyxIewNGTkg91Whu2T2Rbzt) (YouTube) - an 11-part video series based on a 3-hour workshop that covers PCB design using KiCAD to develop circuit boards from start to finish, plus four videos about library and model creation and management.
     - PDFs: [All Parts](/wiki/pcb-kicadwkshp-2024-all.pdf)
@@ -34,24 +34,27 @@ There are three “main” PCB CAD programs: KiCAD (free and open-source), Eagle
     - Part 1 ([PDF guide](/wiki/pcb-altiumwkshp-p1-guide.pdf), [PDF slides](pcb-altiumwkshp-p1-slides.pdf))
     - Part 2 ([PDF guide](/wiki/pcb-altiumwkshp-p2-guide.pdf), [PDF slides](/wiki/pcb-altiumwkshp-p2-slides.pdf))
     - [Custom Altium library](/wiki/pcb-altiumwkshp-library.IntLib)
-- [PCB Design Tutorial](https://www.scs.stanford.edu/~zyedidia/docs/pcb/pcb_tutorial.pdf) - An old but excellent tutorial on board design. Covers a wide variety of topics from the basic (e.g. what are “thou”s) to more advanced (e.g. design for manufacturing). Highly recommended, even if some of the details are a bit out of date.
+- [PCB Design Tutorial](https://www.scs.stanford.edu/~zyedidia/docs/pcb/pcb_tutorial.pdf) - An old but excellent tutorial on board design. Covers a wide variety of topics from the basic (e.g. what are "thou"s) to more advanced (e.g. design for manufacturing). Highly recommended, even if some of the details are a bit out of date.
 - There are tutorials and guides and walkthroughs for all of these programs and more, just use Google, SparkFun, Adafruit, YouTube, and more.
 
-**Is there an officially recommended PCB CAD/EDA program?**
+## PCB Design Q & A
+
+### Is there an officially recommended PCB CAD/EDA program?
 
 No, there is not an official recommendation. GT students get Fusion360 for free, and all that entails, which theoretically makes the integration between the mechanical and electrical easier and more fluid. Altium offers a very steep discount for a student license that was (as of Fall 2020) only $100 a year. KiCAD is basically Python to Altiums's MATLAB - it's open source and free, but you have more work to do for yourself to get everything working, and it can be buggy at times. Not sure where Fusion360 fits into that analogy. There are also two or three dozen other programs that provide various levels of quality and advanced tools if you need, though once you learn one, the others mostly differ by where the icons and settings are.
 
-**Where can I buy parts?**
+### Where can I buy parts?
+
 Parts are really only available online these days, outside of MicroCenter or Fry's if you're near one of those (RIP old Radio Shack). Amazon will sell you tons of different pre-assembled parts, like breakout boards or other plug-and-play-type devices, along with microcontroller breakouts like Arduino and their ilk, but it's very easy to get knock-off parts or badly designed boards from there. The suppliers we recommend are Digikey and Mouser, which sell thousands (millions) of verified individual and pre-assembled components. Arrow is another option there. Octopart is a part search tool that will search many different suppliers. Ebay sells old parts and hard-to-find fully-populated boards and equipment, but who knows about the quality. Electronics companies like Adafruit, Sparkfun, DFRobot, and Seeed Studio are some of the many distributers of high-quality pre-assembled breakout boards, functional PCBs, microcontrollers, sensors, actuators, wires, and much, much more for use.
 
-**Is there a recommended DRC/CAM file I can use?**
+### Is there a recommended DRC/CAM file I can use?
 
 Yes!
 
 1. [DRC](/wiki/pcb-hive-minimum.dru)
 2. [CAM](/wiki/pcb-hive-basic.cam)
 
-**Do you have any recommendations for professional fabrication houses?**
+### Do you have any recommendations for professional fabrication houses?
 
 We don’t officially recommend a specific fabrication houses. All of them have positives and negatives. The following is a very incomplete list of fab houses that we've used with varying levels of success.
 

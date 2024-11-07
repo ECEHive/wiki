@@ -46,34 +46,36 @@ Our standard operating procedures: [ProtoMat S103 SOP](https://gtvault.sharepoin
 ## Q & A
 
 
-**How do I use the 0.15mm drill bit?**
+### How do I use the 0.15mm drill bit?
 
 The LPKF sofware handles drill hits down to 0.2mm (7.5 mil) without any adjustments, but we have the capability to make 0.15mm (5.6 mil) drill hits as well with slightly more effort. See our [0.15mm Drill Hits](/wiki/guides/pcb-protomat/#guide-making-015-mm-drill-hits) section for details on that.
 
-**Additional small bit information**
+#### Additional small bit information
 
-The tool is most reliable with drill hits down to 0.4mm (15 mil), which is a pretty standard via size. For smaller bits, you're going to want to be very careful. The bits are quite fragile at this size and prone to breaking when either you or a PI or even the tool is handling them. "The tool?" you think. "Isn't the tool supposed to not break its own bits?" Yes, you would think, but at that scale, it still happens. It happens most frequently when the tool is adjusting the bit's height in the toolhead (right after it's picked the bit up), or during a drill hit. Therefore, it's really important to actually watch the bit exchange and then all of the drill hits to be able to emergency stop the tool (lift the cover) if it does break. Otherwise, the tool will not drill your holes out all the way. You can always replace the bit and re-drill if this happens, but it's still a pain. Either way, strongly consider if you need holes that small! Anything to make this process more reliable will save you lots of headaches and heartaches. 
+The tool is most reliable with drill hits down to 0.4mm (15 mil), which is a pretty standard via size. For smaller bits, you're going to want to be very careful. The bits are quite fragile at this size and prone to breaking when either you or a PI or even the tool is handling them. "The tool?" you think. "Isn't the tool supposed to not break its own bits?" Yes, you would think, but at that scale, it still happens. It happens most frequently when the tool is adjusting the bit's height in the toolhead (right after it's picked the bit up), or during a drill hit. 
+
+Therefore, it's really important to actually watch the bit exchange and then all of the drill hits to be able to emergency stop the tool (lift the cover) if it does break. Otherwise, the tool will not drill your holes out all the way. You can always replace the bit and re-drill if this happens, but it's still a pain. Either way, strongly consider if you need holes that small! Anything to make this process more reliable will save you lots of headaches and heartaches. 
 
 ## Common processing errors
 
 
-**Software cannot/did not connect to the tool**
+### Software cannot/did not connect to the tool
 
 First, make sure the ProtoMat hardware is on; if it's on already, there will be a red light under the toolhead (for the camera), and the status light on the toolhead should be at least blinking green. If it's not on, turn it on by toggling the green switch located underneath the cover, to the right of the working table, above the main power cable. Once you've confirmed the hardware is on, in the software, in the main toolbar (with the File menu), click "Machining" > "Connect". Make sure that "S103" is selected in the dropdown menu and click "Connect". Let the connection process happen, and then try the fabrication again.
 
-**My gerber/drill file didn’t show up on the CAM view.**
+### My gerber/drill file didn’t show up on the CAM view.
 
 You probably forgot to assign it a layer. If this happens, the software will put the gerbers onto their own layers that are named with the gerber's name. Try re-importing the files, and make sure you’ve assigned each file a Layer/Template (see figure 11). Also make sure to delete the incorrectly-generated layers (right-click and select "Delete").
 
-**The tool didn't drill out my holes!**
+### The tool didn't drill out my holes!
 
 You likely forgot to import the drill file. You'll have to restart the project over again. Sorry.
 
-**The tool exchange was botched!**
+### The tool exchange was botched!
 
 Stop the process as soon as possible, if it's still running. Go get a PI. If they don't know what to do, ask them to message our Slack channel.
 
-**The drill hits are incorrect, or the routing path was wrong!**
+### The drill hits are incorrect, or the routing path was wrong!
 
 There are a couple of possible reasons for this.
 
@@ -83,7 +85,7 @@ There are a couple of possible reasons for this.
 
 In any of these cases, there is no good solution other than to restart the project and double check all of these (if possible) before starting to re-process. Sorry.
 
-**I can't change the layer/template option in the Import step!**
+### I can't change the layer/template option in the Import step!
 
 Sometimes, for reasons unclear, a Gerber file gets automatically assigned to a undesired layer in the LPKF software on the ProtoMat, and cannot be changed. If this happens, what you need to do is highlight all the polygons on that layer in question that were imported, and move them to the correct layer (right click > Move to Layer). Highlighting a whole layer requires playing with the Layers pane on the left, and then click-and-drag across all the polygons. If there are things on that layer that are supposed to be there (e.g. you need to move only some of the polygons off the TopLayer layer), it can be worth just starting the process again, and importing the messed up Gerber first.
 

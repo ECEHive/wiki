@@ -5,6 +5,7 @@ prev:
     label: PCB Fabrication
 ---
 
+import { Steps } from '@astrojs/starlight/components';
 
 ## Soldermasking with Kapton Tape
 
@@ -12,29 +13,30 @@ So this is a bit of a hidden trick, and YMMV, but you can make a psuedo-solderma
 
 *NOTE: In general, we recommend etching away excess copper when possible to ease soldering. However, there is a balance, because the more etching that's required, the longer the fabrication process will take. One good strategy here is to increase the isolation between planes and pads, rather than etch everything away entirely.*
 
-This process is a slight modification of the process for structuring the [LPKF ProMask](https://www.lpkfusa.com/datasheets/prototyping/promask.pdf) soldermask. The original process can be found in the LPFK ProtoLaser U4's How-To document (section 4.3, p. 155), which is located [here (PDF)](/wiki/pcb-protolaser-u4-howto.pdf) and on the ProtoLaser itself, in a folder called “ProtoLaser Docs” on the Desktop.
+This process is a slight modification of the process for structuring the [LPKF ProMask](https://www.lpkfusa.com/datasheets/prototyping/promask.pdf) soldermask. The original process can be found in the LPFK ProtoLaser U4's How-To document (section 4.3, p. 155), which is located [here (PDF)](/wiki/pcb-protolaser-u4-howto.pdf) and on the ProtoLaser itself, in a folder called "ProtoLaser Docs" on the Desktop.
 
 ### To create a soldermask with Kapton tape:
 
+<Steps>
 1. Fabricate the board entirely, but do not remove it from the substrate (i.e. after routing, do not twist/cut the board out). **It is highly advised to select four tabs when creating the ProtoMat's toolpath at the beginning if you're considering following this masking process.**
 2. Find the widest Kapton tape roll you can. You want as few overlapping strips as possible.
 3. Carefully lay a single strip of Kapton tape over your design. It should be as tight as possible, with **no** (zero) bubbles underneath, and as straight as possible. It can go beyond the edge of your board as well if needed, though that will just be waste, so try to limit that.
     1. I like to use a roller, like a paint roller, or a scraper, to make sure all the bubbles are gone and it's as flat as possible on the substrate.
 4. Repeat laying strips down across the board as needed, taking care to minimize the overlap as much as possible, until the entire design is covered.
-5. On the ProtoLaser, start a new project as normal and import the pre-toolpath file on the ProtoLaser as you normally would (“File” > “Import old version”). **NOTE:** if you saved a laser file, you may alternatively just open that directly.
-6. If you *did not* import the soldermask gerber files on the ProtoMat prior to creating the pre-toolpath file, start by importing these gerber files (“File” > “Import”). Make sure to assign them to the `SolderMaskBottom` and `SolderMaskTop` layers.
+5. On the ProtoLaser, start a new project as normal and import the pre-toolpath file on the ProtoLaser as you normally would ("File" > "Import old version"). **NOTE:** if you saved a laser file, you may alternatively just open that directly.
+6. If you *did not* import the soldermask gerber files on the ProtoMat prior to creating the pre-toolpath file, start by importing these gerber files ("File" > "Import"). Make sure to assign them to the `SolderMaskBottom` and `SolderMaskTop` layers.
 7. On the left, in the `Workflow Setup` pane, expand the `Layout` group and expand the `Layers` node.
 8. While holding the `Ctrl` key, click on the `Fiducial`, `SolderMaskTop`, and `SolderMaskBottom` layers.
-9. Copy these layers (`Ctrl + c` or “Edit” > “Copy”).
-10. Start a new project (“File” > “New”) and select the “ProMask.cp2d” template.
-11. Under “Material type”:
-    1. This process has had success with “Polyimide_0.125mm” material previously, but the resolution is not awesome.
-    2. You might also try the “ProMask” material type and see if it works better.
+9. Copy these layers (`Ctrl + c` or "Edit" > "Copy").
+10. Start a new project ("File" > "New") and select the "ProMask.cp2d" template.
+11. Under "Material type":
+    1. This process has had success with "Polyimide_0.125mm" material previously, but the resolution is not awesome.
+    2. You might also try the "ProMask" material type and see if it works better.
     3. If you are really keen on using this, I would recommend creating your own material and developing that process. See our [ProtoLaser: New Material](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EShrwNPAMH1Cj3cE3pg5h8QB6r3JP-XtLghmQcU96-fNfA?e=Ska4Ud) document for how to do this, and LPKF's [Protolaser - Optimization (PDF)](/wiki/pcb-protolaser-optimization.pdf) document for optimization.
-12. Set the “Material thickness” to 0.03mm. Click “OK”.
-13. Paste (`Ctrl + v` or “Edit” > “Paste”) the copied layers into the new project. Either left click or press Enter to set the pasted layers down in the design. Press `Esc` to deselect the layers.
+12. Set the "Material thickness" to 0.03mm. Click "OK".
+13. Paste (`Ctrl + v` or "Edit" > "Paste") the copied layers into the new project. Either left click or press Enter to set the pasted layers down in the design. Press `Esc` to deselect the layers.
 14. Processing is now nearly-identical to the standard process:
-    1. Compute the toolpath using the standard method (“Toolpaths” > “Compute All”). Press “Close” when it's completed if there are no errors.
+    1. Compute the toolpath using the standard method ("Toolpaths" > "Compute All"). Press "Close" when it's completed if there are no errors.
     2. Lift the ProtoLaser door and place the substrate down onto the bed in the bottom-side up orientation (i.e. the same orientation as you would normally when starting the etching process). Tape it down as normal.
     3. Turn on the pilot laser (the black laser button), bring up the Placement window (right click in the design), and align the design's fiducials with those on the substrate as you would normally do.
     4. Press the green play button to begin processing. Follow the on-screen instructions as normal. Re-align after flipping.
@@ -42,3 +44,4 @@ This process is a slight modification of the process for structuring the [LPKF P
 16. Using an Exacto knife or other blade, carefully cut the Kapton on the board away from the surrounding substrate.
 17. Remove the board from the substrate as normal.
 
+</Steps>

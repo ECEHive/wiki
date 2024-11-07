@@ -18,7 +18,7 @@ import electroplater from '../../../assets/pcb-electroplater.jpg';
 
 The LPKF Contac S4 Electroplating System provides the ability to galvanically electroplate through-holes. Galvanic electroplating is a process by which your substrate sits in an acid bath (in this case, that’s sulfuric acid, H2SO4) along with a slice of the metal that you’re plating (in this case, copper). When a current is driven from the substrate, through the acid, and into the anode, a negative potential appears on the substrate, which draws copper ions from the copper sheets (called anodes) and distribute themselves onto any conductive surface on your substrate. In a gist. Google if you'd like more information on galvanic electroplating.
 
-Critically, what this means is that *the tool will plate copper everywhere that there is copper!* This means any copper faces of your substrate will get additional copper on them. Astute readers will remember that the internal layer of your substrate (e.g. FR4) is not conductive, so an “Activator” (a conductive ink) is used to coat the inside of your holes with a conductive substance so that current can pass through the holes, and thereby plate your holes.
+Critically, what this means is that *the tool will plate copper everywhere that there is copper!* This means any copper faces of your substrate will get additional copper on them. Astute readers will remember that the internal layer of your substrate (e.g. FR4) is not conductive, so an "Activator" (a conductive ink) is used to coat the inside of your holes with a conductive substance so that current can pass through the holes, and thereby plate your holes.
 
 The LPKF Datasheet for the Contac S4: [Contac S4-v1-0-en (PDF)](/wiki/pcb-contac-s4-v1.pdf)
 
@@ -28,11 +28,11 @@ Our standard operating procedures: IN PROGRESS
 
 ## Q & A
 
-**Do I have to do this to get vias? This seems very time consuming.**
+### Do I have to do this to get vias? This seems very time consuming.
 
-It is indeed time consuming, but plating is typically avoidable by making vias with a diameter of 40 mil (1 mm). A standard 0.1” header pin can then be pushed through and soldered on both the top and bottom. Boom.
+It is indeed time consuming, but plating is typically avoidable by making vias with a diameter of 40 mil (1 mm). A standard 0.1" header pin can then be pushed through and soldered on both the top and bottom. Boom.
 
-**What's the deal with training?**
+### What's the deal with training?
 
 We used to lump the electroplater training into the plotter and laser trainings, but it was a long session with the plater normally tacked on at the end as an afterthought, and very few people actually used it. And then the plater was down for a prolonged period (in part due to the COVID pandemic). And then our professional-quality training videos were taking longer than expected. So we just decided to eliminate the plater from the standard training and spin it off as its own thing. This both reduced our standard training requirements and time, and provides a better training experience for those who are interested in actually using the plater.
 
@@ -42,33 +42,33 @@ If you were trained on the plater in a previous life and would like access, grea
 
 If you have never been trained on the plater but would like to be, also great - see our [Training](/wiki/guides/pcb-training/) page for all the details. It's essentially the same process and the plotter/laser training, but for a different tool, and a bit shorter.
 
-**What are the different baths?**
+### What are the different baths?
 
 Baths 1 and 2 are different cleaners, called (appropriately) Cleaner 110 and Cleaner 210, respectively. Both are based on sodium metaborate. Bath 3 is Activator 310, a carbon-laced liquid that provides a conductive pathway for the copper plating onto non-conductive surfaces, such as FR4. Bath 4 is a ViaCleaner that isn't used at the Hive (as of Spring 2021). Bath 5 is called Copper Plater 400; it's sulfuric acid (97% strength) and copper sulfate. Don't stick your hand in it. Please. See the [MSDS (PDF)](/wiki/pcb-lpkf-sds.pdf) for details on these.
 
-**Why don't we use bath 4?**
+#### Why don't we use bath 4?
 
-Bath 4 is called “ViaCleaner”. In essence, LPKF realizes that the Activator will adhere somewhat to the copper layers, even after a thorough rinse. ViaCleaner is more effective at removing stuck-on activator. This isn't a huge issue - the plating still works perfectly fine without it - but it makes the finished product cleaner, a bit more even, and it's very useful for blind vias. However, The Hive can't do more than two layer boards, so blind visas aren't an issue. Therefore, we feel the amount of error inherent in the electroplating process in the Semi-Clean room is large enough that the benefits of adding an additional step would be minimal. See LPKF's slide deck on this: [LPKF ViaCleaner_Process Steps and Benefits (PDF)](/wiki/pcb-lpkf-viacleaner-processtepsandbenefits.pdf)
+Bath 4 is called "ViaCleaner". In essence, LPKF realizes that the Activator will adhere somewhat to the copper layers, even after a thorough rinse. ViaCleaner is more effective at removing stuck-on activator. This isn't a huge issue - the plating still works perfectly fine without it - but it makes the finished product cleaner, a bit more even, and it's very useful for blind vias. However, The Hive can't do more than two layer boards, so blind visas aren't an issue. Therefore, we feel the amount of error inherent in the electroplating process in the Semi-Clean room is large enough that the benefits of adding an additional step would be minimal. See LPKF's slide deck on this: [LPKF ViaCleaner_Process Steps and Benefits (PDF)](/wiki/pcb-lpkf-viacleaner-processtepsandbenefits.pdf)
 
 If you'd like cleaner finish, you can try scrubbing the board thoroughly after the curing process before what would be Bath 4.
 
-**Is tin plating available?**
+### Is tin plating available?
 
 Theoretically, but we don't carry the necessary chemical for Bath 6 to actually do it. However, if you're interested, it takes between 4-8 weeks for us to get a chemical order from them, so you can let us know you're interested, and we'll look into picking some up. Won't be fast though. Sorry - the issue lies with LPKF's chemical procurement process, unfortunately.
 
-**How much copper is plated? Can I specify this?**
+### How much copper is plated? Can I specify this?
 
 The tool estimates a plating rate of approximately 0.14 um/min, which means that their standard 2 hour plating adds an additional 16.8 um of copper. This is highly speculative! We have done no work to confirm this numbers (because the equipment to do so is expensive). Therefore, we strongly advise you to use our standard processing profile; this is improve your plating outcomes. If you reduce the time, you may get less copper, but you may also get a less consistent plating job across the substrate, or incompletely plated vias, or other misfortunes.
 
 If you have specific requirements for plating thickness, please email us (hive-pcb@ece.gatech.edu) so that we can discuss your options further.
 
-**What about RF application? Is there any way to mask certain regions?**
+### What about RF application? Is there any way to mask certain regions?
 
 For those unaware, RF application has specific trace thickness requirements, in addition to everything else. This makes plating in our standard process very challenging because it adds copper onto the sheet everywhere, increasing the eventual trace thickness, which is difficult to account for.
 
-To try and mitigate this issue, we provide a chemically-resistant tape that has been shown to provide some masking capabilities. The tape is a beige color, and should sit underneath the plater. The trick is to apply the tape before drilling but after the “Placement” step; make sure to put tape down around the edges of the board so that, when you remove it to add the tape, you can place it back in the same spot before starting the drilling. We recommend using a roller to make sure the tape is fully contacted with the substrate; any leaks may ruin the design.
+To try and mitigate this issue, we provide a chemically-resistant tape that has been shown to provide some masking capabilities. The tape is a beige color, and should sit underneath the plater. The trick is to apply the tape before drilling but after the "Placement" step; make sure to put tape down around the edges of the board so that, when you remove it to add the tape, you can place it back in the same spot before starting the drilling. We recommend using a roller to make sure the tape is fully contacted with the substrate; any leaks may ruin the design.
 
-**Can I electroplate other materials?**
+### Can I electroplate other materials?
 
 If you're asking about other substrates to plate copper onto, then yes, this should be possible. There are a few tricks here: the material you're trying to plate must not react negatively with sulfuric acid, and it must be conductive. The first constraint is primarily a safety thing; we don't want to generate any dangerous fumes accidentally. For the second, if the material is already conductive, then great! If not, you can use the activator (assume constraint #1 still holds) or you can find some other way to conducti-fy it.
 
@@ -78,16 +78,17 @@ Either way, please contact us first! **DO NOT ATTEMPT THIS WITHOUT PRIOR APPROVA
 
 ## Common Errors
 
-**“Device in failed state” on tool boot up.**
-- *Potential issue*: Baths 1 and/or 2 are low.
-    - Lift the lids to baths 1 and 2. If they are low, get a PI/MPI/Staff to refill from the chemical cabinet in the storage closet in the Semi-clean room.
+### "Device in failed state" on tool boot up
+**Potential issue**: Baths 1 and/or 2 are low.
+- Lift the lids to baths 1 and 2. If they are low, get a PI/MPI/Staff to refill from the chemical cabinet in the storage closet in the Semi-clean room.
 
-**Zero plating current error during plating step (Bath 5)**
-- *Potential issue*: Too much copper buildup on the PCB holder.
-    - Put on the chemical safety gear (apron, goggles, gloves, in that order) and remove the board from bath 5. Using the drip tray, go to the sink and rinse the drip tray, board, holder, and gloves well. Remove the board from the holder with the allen key. Using a fine-grit sandpaper, file, or sanding block, sand off any copper build-up on the posts and on the metal on the underside. Big flakes of copper may come off; this is expected. Once it looks cleaner, seat the empty holder into an empty bath (Bath 4 works well) and screw it down. Get a multimeter. The resistance between either of the posts on the holder and the metal strips with the pegs that run down the line of baths should be less than 1 ohm. If the multimeter confirms the resistance as below 1 ohm, re-attach the substrate to the holder, don the chemical gear again, place it back into Bath 5 and screw it down, and press the play button to continue.
-    - If the error continues to be triggered, the resistance remains high, or you are not comfortable doing this, please get a PI.
-- *Potential issue*: Insufficient contact between the metal pegs in the tool and the metal underside of the tool holder.
-    - While wearing the chemical safety gear, make sure that the tool holder is completely screwed down onto the pegs.
-    - If the toolholder screws will not tighten further but is not in contact with the rail (i.e. there is a gap between the tool holder and the metal side railings), attempt to re-seat the holder onto the pegs While wearing the chemical safety gear.
-    - If that is unsuccessful in solving the issue, while wearing the chemical safety gear, remove the board+holder from Bath 5 and, using the drip tray, move to the sink to rinse the board, holder, gloves, and drip tray. Remove the board from the holder with the allen key. Using a wire brush, sandpaper, or other means, clean out the peg holes in the tool holder. This may require disassembly of the holder entirely. To test the connection, make sure to don the chemical safety gear again before slotting the holder (without the substrate) into Bath 5. Using a multimeter, measure the resistance between the posts on the holder to the metal rails; this should be below 1 ohm. Rinse the holder when you remove it from the Bath while wearing the chemical safety gear.
+### Zero plating current error during plating step (Bath 5)
+**Potential issue**: Too much copper buildup on the PCB holder.
+- Put on the chemical safety gear (apron, goggles, gloves, in that order) and remove the board from bath 5. Using the drip tray, go to the sink and rinse the drip tray, board, holder, and gloves well. Remove the board from the holder with the allen key. Using a fine-grit sandpaper, file, or sanding block, sand off any copper build-up on the posts and on the metal on the underside. Big flakes of copper may come off; this is expected. Once it looks cleaner, seat the empty holder into an empty bath (Bath 4 works well) and screw it down. Get a multimeter. The resistance between either of the posts on the holder and the metal strips with the pegs that run down the line of baths should be less than 1 ohm. If the multimeter confirms the resistance as below 1 ohm, re-attach the substrate to the holder, don the chemical gear again, place it back into Bath 5 and screw it down, and press the play button to continue.
+- If the error continues to be triggered, the resistance remains high, or you are not comfortable doing this, please get a PI.
+
+**Potential issue**: Insufficient contact between the metal pegs in the tool and the metal underside of the tool holder.
+- While wearing the chemical safety gear, make sure that the tool holder is completely screwed down onto the pegs.
+- If the toolholder screws will not tighten further but is not in contact with the rail (i.e. there is a gap between the tool holder and the metal side railings), attempt to re-seat the holder onto the pegs While wearing the chemical safety gear.
+- If that is unsuccessful in solving the issue, while wearing the chemical safety gear, remove the board+holder from Bath 5 and, using the drip tray, move to the sink to rinse the board, holder, gloves, and drip tray. Remove the board from the holder with the allen key. Using a wire brush, sandpaper, or other means, clean out the peg holes in the tool holder. This may require disassembly of the holder entirely. To test the connection, make sure to don the chemical safety gear again before slotting the holder (without the substrate) into Bath 5. Using a multimeter, measure the resistance between the posts on the holder to the metal rails; this should be below 1 ohm. Rinse the holder when you remove it from the Bath while wearing the chemical safety gear.
 
