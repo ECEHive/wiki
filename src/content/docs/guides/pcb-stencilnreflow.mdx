@@ -6,13 +6,13 @@ prev:
 ---
 
 import { Image } from 'astro:assets';
-
+import { Steps } from '@astrojs/starlight/components';
 
 ## How to make (and use!) stencils
 
 ### What is a stencil?
 
-A *stencil* is a material with cutouts that enables solderpaste to be more easily and precisely applied prior to component placement and reflow. (If you don't know what I mean by 'reflow', or want more information about that process, see our “[Reflow Oven](/wiki/guides/pcb-stencilnreflow#how-to-use-the-reflow-oven)” page for more.) Stencils can be made with a variety of materials; the images below show two very common ones (polyimide on the left, and stainless steel on the right) ([Source for images](https://www.autodesk.com/products/fusion-360/blog/getting-started-solder-paste-stencils/)). Kapton tape (also polyimide) is another low-cost option. The Hive has 5mil polyimide sheets for stencil fabrication that are free for users, as well as Kapton tape. We also have (courtesy of Stephan Strassle) recipes for using [PET projector transparency sheets](https://www.amazon.com/dp/B087BF4YLJ) between 0.5 and 10 mil thick.
+A *stencil* is a material with cutouts that enables solderpaste to be more easily and precisely applied prior to component placement and reflow. (If you don't know what I mean by 'reflow', or want more information about that process, see our “[Reflow Oven](/wiki/guides/pcb-stencilnreflow#how-to-use-the-reflow-oven)” page for more.) Stencils can be made with a variety of materials; the images below show two very common ones: polyimide and stainless steel on the right. Kapton tape (also polyimide) is another low-cost option. The Hive has 5mil polyimide sheets for stencil fabrication that are free for users, as well as Kapton tape. We also have (courtesy of Stephan Strassle) recipes for using [PET projector transparency sheets](https://www.amazon.com/dp/B087BF4YLJ) between 0.5 and 10 mil thick.
 
 Stencils are by no means a required or necessary step for completing your PCB. They are very useful if you have many surface-mounted components (SMDs), SMDs with many pins or fine-pitch pins, or have a few SMDs but many identical boards. *They do not work for through-hole components!* Those must be done by hand. 
 
@@ -20,12 +20,16 @@ Stencils are by no means a required or necessary step for completing your PCB. T
 import ex1 from '../../../assets/guide-stencil1.png';
 import ex2 from '../../../assets/guide-stencil2.jpg';
 
+<figure>
+    <div class="not-content flex gap-1">
+        <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex1} alt="Polyamide stencil" height="200" />
 
-<div class="not-content flex gap-1">
-    <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex1} alt="Polyamide stencil" height="200" />
+        <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex2} alt="Stainless steel stencil" height="200" />
+    </div>
+    <figcaption>Two very common types of stencils: polyimide (left) and stainless steel (right) — [Image source](https://www.autodesk.com/products/fusion-360/blog/getting-started-solder-paste-stencils/)</figcaption>
+</figure>
 
-    <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex2} alt="Stainless steel stencil" height="200" />
-</div>
+
 
 ### How to make a stencil
 
@@ -39,6 +43,9 @@ Stencils can be fabricated at The Hive using the LPKF ProtoLaser U4. The process
 
 Before you start, you'll want to make sure that you have your solderpaste gerber files ready, along with your piece of polyimide. Note that we (typically) have either full 8×12 sheets, or a 24“-wide roll. If you need a full sheet, use one. Otherwise, use scissors to cut an appropriately-sized piece from the roll, making sure to leave enough room for a sizeable (~1 inch) frame/boarder around the design. Cut a large enough sheet for ALL stencils you'll be making (one per side of the PCB, if you have components on both sides - check your solderpaste gerber files). 
 
+
+
+<Steps>
 1. Log into the ProtoLaser. Turn on the tool and/or start the software if they are not already on and running. Brush off the processing surface; it needs to be clear of debris so that the polyimide can sit flat. Place your polyimide sheet onto the processing table and tape it down.
     1. It's advisable to tape it down as snug as possible. Unlike FR4, this will flap around during processing if it's not secured to the table. Taping all four edges works well.
 2. Start a new project (“File” > “New”).
@@ -59,24 +66,27 @@ Before you start, you'll want to make sure that you have your solderpaste gerber
     4. Move the pilot laser (double-click) to the corners of your design to confirm that the >= 1“ boarder exists for all four edges. If not, you will have to either move the design again (with the “Placement” window open), or you may have to cut a larger sheet of polyimide if you mis-judged.
 8. Once the design is properly placed within the polyimide, press the green play button in the toolbar (or “Processing” > “Process All” in the main toolbar) to begin processing. Follow the steps as requested.
 9. After processing, you may need to bend the stencil a bit to make sure all the little bits are out. Check with the jeweler's glass in the “PCB Tools” drawer to confirm if you can't visually confirm.
-
+</Steps>
 
 ### How to use a stencil
 
-Once the stencil is fabricated, it must be aligned with the bare board underneath. The stencil should sit against the board **as flat as possible**! This is very important for applying the correct amount of paste, as well as not pushing paste underneath the stencil (rather than through the cutouts). Because the stencil is often cut out of a sheet of material larger than the PCB itself, often some unused PCB material of the same thickness (scraps or fresh, whatever you have) is used to surround the PCB and provide support to the stencil (see image below left ([source](https://www.sparkfun.com/tutorials/58))). Make sure to secure everything down so it doesn't move! Typically tape is used for this, but The Hive also has a fancy frame system that you can use (the [LPKF ProtoPrint S](https://www.lpkfusa.com/datasheets/prototyping/zelprint.pdf)).
+Once the stencil is fabricated, it must be aligned with the bare board underneath. The stencil should sit against the board **as flat as possible**! This is very important for applying the correct amount of paste, as well as not pushing paste underneath the stencil (rather than through the cutouts). Because the stencil is often cut out of a sheet of material larger than the PCB itself, often some unused PCB material of the same thickness (scraps or fresh, whatever you have) is used to surround the PCB and provide support to the stencil (see image below left). Make sure to secure everything down so it doesn't move! Typically tape is used for this, but The Hive also has a fancy frame system that you can use (the [LPKF ProtoPrint S](https://www.lpkfusa.com/datasheets/prototyping/zelprint.pdf)).
 
 Apply paste over the stencil using whatever tool you have, either a syringe, a wooden spatula/tongue depressor, whatever. You don't need a lot, so start with less than you think you need. (**NOTE!!** The reflow oven that The Hive has is optimized for **lead-free** solder paste, so if you're planning on using our oven, please make sure to use lead-free paste, or you'll be sad later.)
 
-Then use a squeegee of some sort (credit card, ID, plastic scraper) to squeegee the applied paste across the stencil and into the cutouts (see image on right ([source](https://www.pcbway.com/blog/PCB_Design_Tutorial/A_very_easy_way_to_accurately_align_the_stencil_with_the_PCB_1.html))). You shouldn't need to press down very hard, and again, maintain the stencil as flat against the board as possible. 
+Then use a squeegee of some sort (credit card, ID, plastic scraper) to squeegee the applied paste across the stencil and into the cutouts (see image on right). You shouldn't need to press down very hard, and again, maintain the stencil as flat against the board as possible. 
 
 import ex3 from '../../../assets/guide-stencil3.jpg';
 import ex4 from '../../../assets/guide-stencil4.jpeg';
 
-<div class="not-content flex gap-1">
-    <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex3} alt="Stencil supports" height="200" />
+<figure>
+    <div class="not-content flex gap-1">
+        <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex3} alt="Stencil supports" height="200" />
 
-    <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex4} alt="Stencil paste application" height="200" />
-</div>
+        <Image class="inline-block border-2 border-slate-200 rounded-lg" src={ex4} alt="Stencil paste application" height="200" />
+    </div>
+    <figcaption>To lay the stencil flat against the PCB, you may use scrap material for support (left); use a scraper tool to spread the paste over the stencil (right) — Image sources [1](https://www.sparkfun.com/tutorials/58), [2](https://www.pcbway.com/blog/PCB_Design_Tutorial/A_very_easy_way_to_accurately_align_the_stencil_with_the_PCB_1.html)</figcaption>
+</figure>
 
 You can always lift the stencil to check your progress, but you run the risk of ruining the alignment, so be careful.
 
@@ -107,6 +117,7 @@ There is no training required to use the oven.
 
 To operate (images below):
 
+<Steps>
 1. Apply solder paste to the pads of your board (usually with a stencil) and populate your board with all surface-mount components. Leave off components that cannot be reflowed, e.g. connectors. Check all datasheets if you’re unsure! Default lead-free profile reaches 270C, leaded reaches 230C.
 2. Power on the oven by pressing the power button on the front of the tool.
 3. Using the arrow keys and the screen, navigate to the profile you'd like to run.
@@ -116,14 +127,19 @@ To operate (images below):
 5. Once the drawer is open, adjust the metal bars inside (they're magnetic) to be the correct spacing so that your PCB sits on their edges safely. Remove your PCB and press the right arrow key to close the drawer.
 6. Navigate to “START PROF” (down arrow key), and then start the profile with the right arrow key.
 7. Once the oven has warmed up (a minute or two), the drawer will open. Place your PCB onto the pre-aligned bars. BE CAREFUL – they're hot! Press the right arrow key to close the drawer.
+</Steps>
+
 
 The profile will run. When it's completed, the drawer will open. Carefully remove your PCB (it's hot!), and press enter to shut the drawer.
 
-**Clockwise from top-left**: the oven with its computer; the drawer open with the magnetic metal bars and green thermistor wires; the front of the oven with the power button prominently featured; and the screen and the four arrow keys on top of the oven. 
+
 
 import protoflow from '../../../assets/pcb-reflow.png';
 
-<Image class="inline-block border-2 border-slate-200 rounded-lg" src={protoflow} alt="LPKF ProtoFlow S N2" height="300" />
+<figure>
+    <Image class="inline-block border-2 border-slate-200 rounded-lg" src={protoflow} alt="LPKF ProtoFlow S N2" height="300" />
+    <figcaption>**Clockwise from top-left**: the oven with its computer; the drawer open with the magnetic metal bars and green thermistor wires; the front of the oven with the power button prominently featured; and the screen and the four arrow keys on top of the oven. </figcaption>
+</figure>
 
 
 **Lead-free solder paste oven temperature profile**

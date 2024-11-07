@@ -43,3 +43,8 @@ a.external {
 }
 
 ol ol { list-style-type: lower-alpha;}
+
+figcaption {
+	font-style: italic;
+	color: #747474
+}
