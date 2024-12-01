@@ -12,7 +12,9 @@ A fiber laser cutter is a focused beam of infrared down to .005" which will cut 
 
 ## Technical Specs
 
-For specific technical specifications, you may visit the manufacture's [website](https://www.3dfablight.com/laser-cutting-machines)
+For specific technical specifications, you may visit the manufacturer's [website](https://www.3dfablight.com/laser-cutting-machines)
+
+> Note: As of mid-2024, the manufacturer (3D Fablight) has suspended their operations. Many of their official resources may be unavailable.
 
 The dimensions of the cutter are 40"x74"x60".
 
@@ -20,11 +22,11 @@ The accuracy of the machine can be as +/-.002" per foot with kerfs being +/-.005
 
 For the most common materials, here are the maximum depths given:
 
-*Mild Steel: .250" (6.35mm)
-
-*Stainless Steel: .188" (4.78mm)
-
-*Aluminum .188" (4.78mm)
+| Material | Maximum Depth (in.) | Maximum Depth (mm) |
+| --- | --- | --- |
+| Mild Steel | .250" | 6.35mm |
+| Stainless Steel | .188" | 4.78mm |
+| Aluminum | .188" | 4.78mm |
 
 ## Standard Operating Procedures and Quick facts
 
@@ -38,6 +40,23 @@ If in the future any of this information becomes outdated or if you have any pos
 
 The current revision of this SOP will not explain the usage of the SolidWorks plugin. It is my goal to add this in the future.
 
-There are complementary YouTube videos which walks through the basics of safety and usage: [https://youtu.be/K0y_mLI1TWQ](https://youtu.be/K0y_mLI1TWQ) [https://youtu.be/yCWKfAJsYsw](https://youtu.be/yCWKfAJsYsw)
+### Video Guides
 
+There are complementary YouTube videos which walks through the basics of safety and usage: 
 
+import YouTubeGrid from '/src/components/youtube-grid.astro';
+
+<YouTubeGrid
+	videos={[
+		{
+			href: 'https://youtu.be/K0y_mLI1TWQ',
+			title: 'Intro to FabCreator',
+			description: 'Using the software to generate a file for Fablight use. Last revised January 2023.',
+		},
+		{
+			href: 'https://youtu.be/VNjUDnBhUuo',
+			title: 'Fablight Training 1',
+			description: 'Basics of operating the Fablight 4500 fiber laser cutter. Last revised March 2023.',
+		},
+	]}
+/>
