@@ -46,6 +46,10 @@ export default defineConfig({
           ],
         },
         {
+          label: '3D Printing',
+          autogenerate: { directory: '3d-printing' },
+        },
+        {
           label: "Workshop Docs",
           autogenerate: { directory: "workshop" },
         },

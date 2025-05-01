@@ -2,15 +2,19 @@
 title: "3D Printing"
 ---
 
-
+import { LinkCard } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
-import printing from '../../../assets/intro-3dprinting.jpg';
+import image from "@/assets/3dprinting/dozer.jpg"
 
-:::caution[This page is currently UNDER CONSTRUCTION]
-PLEASE CHECK BACK LATER FOR UPDATES OR STOP BY THE HIVE IF YOU HAVE ANY QUESTIONS!
-:::
+<Image src={image} alt="3D printing" class="rounded-lg w-full !max-w-sm" />
 
+3D printing is the process of creating a three-dimensional object from a digital file.
+This is done by adding material layer by layer until the object is complete.
+3D printing is also known as additive manufacturing, as it adds material to create an object.
+3D printing is a great way to create prototypes, functional parts, and artistic pieces.
 
-<Image class="border-2 border-slate-200 rounded-lg" src={printing} alt="Close-up of a 3D-printed model" width="300" />
-
-
+<LinkCard
+  title="Get Started with 3D Printing"
+  description="Learn how to get started with 3D printing at The Hive."
+  href="/wiki/3d-printing/00-index/"
+/>
