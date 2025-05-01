@@ -3,32 +3,22 @@ title: Crafts
 ---
 
 import { Image } from 'astro:assets';
+import YouTubeCard from '/src/components/youtube-card.astro';
 
-import buttonPressGuide from '../../../assets/crafts-quickstart-guide-button-press.jpg';
-import sublimationGuide from '../../../assets/crafts-quickstart-guide-sublimation.jpg';
-
-Ever wanted to create your own stickers, or embroider some random material? Look no further. The Hive has a vinyl cutter and embroidery/sewing machine to help with any of your designs. This crafting area is located by the benchtop desks, right by the staircase that leads to the bottom floor.
+Ever wanted to create your own stickers or embroider material? Look no further. The Hive has a vinyl cutter and embroidery/sewing machine to help with any of your designs. This crafting area is located by the benchtop desks, right by the staircase that leads to the bottom floor.
 
 ## Vinyl Cutter
 
-Our vinyl cutter is a Silhouette Cameo 3. This machine uses the computer located right next to it, and the application to use this device is called [Silhouette Studio](https://www.silhouetteamerica.com/silhouette-studio), which is very similar to Illustrator. We have anything from vinyl to cardstock and stencils for anything you want to cut with good precision.
+The Hive currently has three vinyl cutters: Silhouette Cameo 3, Silhouette Cameo 4, and Silhouette Cameo 5. This machine uses the computer located right next to it, and the application to use this device is called [Silhouette Studio](https://www.silhouetteamerica.com/silhouette-studio), which is very similar to Illustrator. We have anything from vinyl to cardstock and stencils for anything you want to cut with good precision.
 
-### Vinyl/Sticker Making Quick Start Guide
 
-<embed src="/wiki/crafts-quickstart-guide-vinyl.pdf" width="100%" height="375" />
-
-### Sticker Making with the Vinyl Cutter
-
-import YouTubeCard from '/src/components/youtube-card.astro';
-
-<YouTubeCard
-	href='https://www.youtube.com/watch?v=lPWjX5RfCjw&list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q&index=2' title='Sticker Making With The Vinyl Cutter' description='In this video, folks will learn how to use the vinyl cutter to print and cut their own custom stickers.'
-/>
+<embed src="/wiki/crafts-quickstart-vinyl.pdf" width="100%" height="375" />
+<a href="/wiki/crafts-quickstart-vinyl.pdf">View full document ↗</a>
 
 ## Sewing/Embroidery
 
 :::caution[Maintenance Note]
-At the moment, we do not have any available embroidery machines for end user usage. Our two existing machines -- BROTHER CS6000i COMPUTER and Janome Memory Craft 9850 Special Edition -- are not in operation. 
+At the moment, we do not have any available embroidery machines for end user usage. Our two existing machines -- BROTHER CS6000i COMPUTER and Janome Memory Craft 9850 Special Edition -- are not in operation.
 
 However, if you're around the space, you might see a the Melco EMT16X being set up! More information to come.
 :::
@@ -40,29 +30,39 @@ You don't really need to know how to sew or embroider, as most of the process is
 
 For sublimation, we have the Sawgrass SG 500 and Stahl's Hotronix Thermal Transfer Press.
 
-### Sublimation Quick Start Guide
 
-<Image class="border-2 border-slate-200 rounded-lg" src={sublimationGuide} alt="A quick start guide for sublimation." />
+<embed src="/wiki/crafts-quickstart-sublimation.pdf" width="100%" height="375" />
+<a href="/wiki/crafts-quickstart-sublimation.pdf">View full document ↗</a>
 
-### Sublimation Tutorials
+## Button Press
+
+Our button press model is VEVOR Button Maker Machine Badge Pin Machine 1" 25 MM.
+
+<embed src="/wiki/crafts-quickstart-buttonpress.pdf" width="100%" height="375" />
+<a href="/wiki/crafts-quickstart-buttonpress.pdf">View full document ↗</a>
+
+
+## Craft Training/Tutorial Videos
+
 import YouTubeGrid from '/src/components/youtube-grid.astro';
 
 <YouTubeGrid
 	videos={[
 		{
-			href: 'https://www.youtube.com/watch?v=vVuXaT4F-4E&list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q&index=2',
+			href: 'https://www.youtube.com/watch?v=lPWjX5RfCjw&list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q&index=2',
+			title: 'Sticker Making With The Vinyl Cutter',
+			description: 'In this video, folks will learn how to use the vinyl cutter to print and cut their own custom stickers.'
+		},
+		{
+			href: 'https://www.youtube.com/watch?v=vVuXaT4F-4E&list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q&index=3',
 			title: 'Sublimation Tutorial',
-			description: 'Learn how to use the Hive\'s sublimation printer and heat press to make some really cool things!',
+			description: 'Learn how to use the sublimation printer and heat press to make some really cool things!'
 		},
 		{
 			href: 'https://www.youtube.com/watch?v=XHvYG2dsmfg&list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q&index=3',
-			title: 'Embroidery at the Hive reupload',
-			description: 'In this video, you will learn how to use embird to design your EOF file and use the janome or the brother to embroider your files.',
-		}
+			title: 'Embroidery at the Hive (Legacy)',
+			description: 'In this video, you will learn how to use embird to design your EOF file and use the janome or the brother to embroider your files.'
+		},
 	]}
+
 />
-
-## More Resources
-- [Craft Linktree Resources](https://linktr.ee/thehivecraft)
-- [Craft Training/Tutorial Videos](https://www.youtube.com/playlist?list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q)
-

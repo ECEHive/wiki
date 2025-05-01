@@ -2,41 +2,7 @@
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-## To-Dos
-
-### Content
-- All pages need to be updated content-wise
-- Port over resources hosted on Sharepoint or GDrive
-- Update landing page quick links
-    - Create "How to contribute to this wiki" page
-- On intro page, change tech area bullet list links to tiles
-- Add currently hidden guides to sidebar 
-- Use Starlight's built-in 'steps' component for tutorials
-
-### Features / Components
-- Filtering out pages depending if you are an end user or a peer instructor (maybe a toggle in top toolbar)
-    - Guide: https://starlight-examples.netlify.app/examples/multi-sidebar/
-- Button toggle light/dark theme rather than dropdown
-- Ability to display pages as as sub-items (similar to gitbook and notion)
-- Toggle collapsable dropdown page component
-- Carousel item with captions
-- Youtube playlist component
-- Create category related links templates for bottom of the page
-- Sidebar manual ordering of pages
-- Heading link icon click to copy
-
-## Guides and Reference
-
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
-
-> Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
-
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
-
-> Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
-
+How to contribute: https://ecehive.github.io/wiki/contribute/
 
 ## Project Structure
 
