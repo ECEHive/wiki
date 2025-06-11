@@ -1,6 +1,6 @@
 ---
 title: "PCB Processes, by Board Design"
-prev: 
+prev:
     link: /wiki/explore/pcb/
     label: PCB Fabrication
 ---
@@ -10,7 +10,7 @@ prev:
 
 This process uses the ProtoLaser only to etch a single side of substrate and cut the board out. It is strongly advised not to attempt any holes using this process, including fiducials! The ProtoLaser is, frankly, not good at making holes, and you’ll be sad when your parts don’t fit.
 
-The other thing to be aware of is that you’ll need to push quite hard to remove the board out of the substrate. For thinner substrates, this might be damaging, so carefully consider what you need before starting this. The tabs are 0.5mm thick by default (so a very thin knife), but this can actually be changed - see our "[Adjusting breakout tabs](/wiki/guides/pcb-protolaser/#guide-how-to-adjust-the-breakout-tabs-on-the-laser)" page for details.
+The other thing to be aware of is that you’ll need to push quite hard to remove the board out of the substrate. For thinner substrates, this might be damaging, so carefully consider what you need before starting this. The tabs are 0.5mm thick by default (so a very thin knife), but this can actually be changed - see our "[Adjusting breakout tabs](/wiki/pcb/21-protolaser/#guide-how-to-adjust-the-breakout-tabs-on-the-laser)" page for details.
 
 [Single-sided, no drills process](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EZKY7KrKwEFKnTCmCzAEnOEBIVD32Zv7U5zpH8woXEz-Pg?e=e8hKqD)
 
@@ -19,9 +19,9 @@ The other thing to be aware of is that you’ll need to push quite hard to remov
 
 *NOTE*: "Single-sided" refers to the design; does it have traces on one or both sides?
 
-**If you are using a double sided substrate**, such as those provided by The Hive, go back to the [PCB fabrication](/wiki/guides/pcb-fab/) page and run the appropriate two-sided process (i.e. with or without plating). Nothing will change (including the "Double-sided" option in the Process Planning Wizard). The etch should still be done with the double-sided template because the etch will either isolate the holes on the back-side if you’ve made a bottom-side copper pour/polygon, OR it’ll etch away the entire backside. (Why? Otherwise anything put through the holes may short because of the copper on the backside.) So really, nothing changes at all from the standard double-sided process.
+**If you are using a double sided substrate**, such as those provided by The Hive, go back to the [PCB fabrication](/wiki/pcb/10-pcb-fab/) page and run the appropriate two-sided process (i.e. with or without plating). Nothing will change (including the "Double-sided" option in the Process Planning Wizard). The etch should still be done with the double-sided template because the etch will either isolate the holes on the back-side if you’ve made a bottom-side copper pour/polygon, OR it’ll etch away the entire backside. (Why? Otherwise anything put through the holes may short because of the copper on the backside.) So really, nothing changes at all from the standard double-sided process.
 
-If you have a single sided substrate, meaning copper on only one side, go back to the [PCB fabrication](/wiki/guides/pcb-fab/) page and run the appropriate two-sided process (i.e. with or without plating). Note the following:
+If you have a single sided substrate, meaning copper on only one side, go back to the [PCB fabrication](/wiki/pcb/10-pcb-fab/) page and run the appropriate two-sided process (i.e. with or without plating). Note the following:
 
 - In the ProtoMat setup, in the Process Planning Wizard (button #1), for "Substrate layers", select "Double sided" as you would for a standard double-sided process. If you don’t, it won’t stop to let you etch before it cuts the board out, and then you'll have to start over since you can't etch safely once you've cut the board out.
 - You will use a single-sided ProtoLaser template (either top or bottom, depending on where your traces are). Make sure the "Supported by ProtoMat" box is checked in the template window, or else it will try to drill the holes on its own.
@@ -46,7 +46,7 @@ If you have a single sided substrate, meaning copper on only one side, go back t
 
 **Step 2**: [Etching with the ProtoLaser](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ERfKdS6GbVpJo6k_gJ1MgLgB3VVaU7ckSrJCkb4FGMK1IA?e=1rAYmW)
 
-**Step 3**: [Routing with the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/Edjj8jMNM41GlLnyGoimobUBNnqyUsva7KgEmdtWk4Ceow?e=brYMfK) 
+**Step 3**: [Routing with the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/Edjj8jMNM41GlLnyGoimobUBNnqyUsva7KgEmdtWk4Ceow?e=brYMfK)
 
 ## Double Sided, With Plating
 
@@ -144,10 +144,7 @@ On the left of the screen, make sure nothing is selected under "Processing". If 
 
 ### I'm having other issues.
 
-Please check out our [Knowledge Base](/wiki/explore/pcb#pcb-knowledge-base-and-faq) for additional Q&As, tips, tricks, and solutions to common processing errors.
+Please check out our [Knowledge Base](/wiki/explore/pcb) for additional Q&As, tips, tricks, and solutions to common processing errors.
 
-For issues with the ProtoMat, see the [ProtoMat Knowledge Base](/wiki/guides/pcb-protomat/).
-
-For issues with the ProtoLaser, see the [ProtoLaser Knowledge Base](/wiki/guides/pcb-protolaser/).
-
-For issues with the electroplater, see the [Contact S4 Knowledge Base](/wiki/guides/pcb-electroplater/).
+- For issues with the ProtoMat, see the [ProtoMat Knowledge Base](/wiki/pcb/20-protomat/).
+- For issues with the ProtoLaser, see the [ProtoLaser Knowledge Base](/wiki/pcb/21-protolaser/).

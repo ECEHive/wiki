@@ -1,6 +1,6 @@
 ---
-title: "Knowledge Base: PROTOMAT"
-prev: 
+title: "LPKF ProtoMat S103"
+prev:
     link: /wiki/explore/pcb/
     label: PCB Fabrication
 ---
@@ -40,7 +40,7 @@ The ProtoMat software ("CircuitPro") compendium: [CircuitPro 2.3 Compendium (PDF
 
 The vacuum system manual: [Dust Extraction Manual Jet Stream iSeries-e-1-0 (PDF)](/wiki/pcb-dustextraction-manual-jetstream-iseries-e-1-0.pdf)
 
-Our standard operating procedures: [ProtoMat S103 SOP](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EcQvNGoNNa5AjiZ5wU1Vd8wBMPNk8mawFspeLrvNaG8VlQ?e=etuWny) 
+Our standard operating procedures: [ProtoMat S103 SOP](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EcQvNGoNNa5AjiZ5wU1Vd8wBMPNk8mawFspeLrvNaG8VlQ?e=etuWny)
 
 
 ## Q & A
@@ -48,13 +48,13 @@ Our standard operating procedures: [ProtoMat S103 SOP](https://gtvault.sharepoin
 
 ### How do I use the 0.15mm drill bit?
 
-The LPKF sofware handles drill hits down to 0.2mm (7.5 mil) without any adjustments, but we have the capability to make 0.15mm (5.6 mil) drill hits as well with slightly more effort. See our [0.15mm Drill Hits](/wiki/guides/pcb-protomat/#guide-making-015-mm-drill-hits) section for details on that.
+The LPKF sofware handles drill hits down to 0.2mm (7.5 mil) without any adjustments, but we have the capability to make 0.15mm (5.6 mil) drill hits as well with slightly more effort. See our [0.15mm Drill Hits](/wiki/pcb/20-protomat/#guide-making-015-mm-drill-hits) section for details on that.
 
 #### Additional small bit information
 
-The tool is most reliable with drill hits down to 0.4mm (15 mil), which is a pretty standard via size. For smaller bits, you're going to want to be very careful. The bits are quite fragile at this size and prone to breaking when either you or a PI or even the tool is handling them. "The tool?" you think. "Isn't the tool supposed to not break its own bits?" Yes, you would think, but at that scale, it still happens. It happens most frequently when the tool is adjusting the bit's height in the toolhead (right after it's picked the bit up), or during a drill hit. 
+The tool is most reliable with drill hits down to 0.4mm (15 mil), which is a pretty standard via size. For smaller bits, you're going to want to be very careful. The bits are quite fragile at this size and prone to breaking when either you or a PI or even the tool is handling them. "The tool?" you think. "Isn't the tool supposed to not break its own bits?" Yes, you would think, but at that scale, it still happens. It happens most frequently when the tool is adjusting the bit's height in the toolhead (right after it's picked the bit up), or during a drill hit.
 
-Therefore, it's really important to actually watch the bit exchange and then all of the drill hits to be able to emergency stop the tool (lift the cover) if it does break. Otherwise, the tool will not drill your holes out all the way. You can always replace the bit and re-drill if this happens, but it's still a pain. Either way, strongly consider if you need holes that small! Anything to make this process more reliable will save you lots of headaches and heartaches. 
+Therefore, it's really important to actually watch the bit exchange and then all of the drill hits to be able to emergency stop the tool (lift the cover) if it does break. Otherwise, the tool will not drill your holes out all the way. You can always replace the bit and re-drill if this happens, but it's still a pain. Either way, strongly consider if you need holes that small! Anything to make this process more reliable will save you lots of headaches and heartaches.
 
 ## Common processing errors
 
@@ -99,10 +99,10 @@ You've reached the 0.15mm Drill Hits page! That probably means that you wants th
 
 The first thing to know is that tiny bits are really, really, really tiny. So tiny that they frequently break, sometimes even during a run. So it's important to be watching the whole time the tool is using them to be able to stop it (usually by lifting the cover) if it does break, and get a PI to remove and replace the bit. You'll then have to restart the process from the step you stopped at with the fresh bit. Don't blink!
 
-Unfortunately, the software isn't clever enough to handle this bit because it's smaller than the default drill marker (which is 0.2mm), so we have to do of manual work to force it into using that bit. Not hard, just a few steps: 
+Unfortunately, the software isn't clever enough to handle this bit because it's smaller than the default drill marker (which is 0.2mm), so we have to do of manual work to force it into using that bit. Not hard, just a few steps:
 
 <Steps>
-1. Setup your process, import your files, and add your fiducials, all as you would normally. 
+1. Setup your process, import your files, and add your fiducials, all as you would normally.
 2. Open the toolpath generation window (the fourth button, called "Toolpath Dialog") ![Technology dialog window](../../../assets/guide-protomat-drill00.png)
 3. In the bottom section ("Convert to Toolpath"), next to "Drills", click "Show Details" ![Show details](../../../assets/guide-protomat-drill01.png)
 4. For "Tool", select "Spiral Drill 0.15mm". ![Tool dropdown](../../../assets/guide-protomat-drill02.png)
@@ -115,4 +115,4 @@ Unfortunately, the software isn't clever enough to handle this bit because it's 
 
 When you save it after the correct toolpath generation, it will save with the 0.15mm drill hits. However, you'll have to do this every time you generate a toolpath with 0.15mm drill hits.
 
-Good luck! 
+Good luck!

@@ -46,8 +46,12 @@ export default defineConfig({
           ],
         },
         {
-          label: '3D Printing',
-          autogenerate: { directory: '3d-printing' },
+          label: "3D Printing",
+          autogenerate: { directory: "3d-printing" },
+        },
+        {
+          label: "PCB Fabrication",
+          autogenerate: { directory: "pcb" },
         },
         {
           label: "Workshop Docs",

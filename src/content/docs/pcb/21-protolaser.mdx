@@ -1,6 +1,6 @@
 ---
-title: "Knowledge Base: PROTOLASER"
-prev: 
+title: "LPKF ProtoLaser U4"
+prev:
     link: /wiki/explore/pcb/
     label: PCB Fabrication
 ---
@@ -70,7 +70,7 @@ So you have a material that either isn't in the laser's material list, or maybe 
 
 The ProtoLaser can be a very powerful tool. If you're working carefully with it, and you want to know more details about how the tool works, and how to better optimize your process, please see LPKF's [Protolaser - Optimization (PDF)](/wiki/pcb-protolaser-optimization.pdf) document. This has proven to be useful for some users in the past. You can also contact LPKF directly at [lasersupport@lpkfusa.com](mailto:lasersupport@lpkfusa.com). A quick breakdown of optimizing is to look at the etch under a microscope with a set of tweezers in hand. Try to lift one of the stuck-on strips with the tweezers. If the ends of the strip are stuck, adjust the Mark Speed of the "Contour" tool down by 10%. If the sides are stuck, adjust the Mark Speed of the "Hatch" tool down by 10%. If the entire strip is stuck, adjust the Mark Speed of the "Heat" tool down by 10%. Repeat this until the etch is better for you.
 
-Adjusting the breakout tabs If you're running a single-sided laser-only process, you can adjust the breakout tabs that connect the board to the substrate, both their position and size. See "[Adjusting Breakout Tabs on the Laser](/wiki/guides/pcb-protolaser/#guide-how-to-adjust-the-breakout-tabs-on-the-laser)" for details. 
+Adjusting the breakout tabs If you're running a single-sided laser-only process, you can adjust the breakout tabs that connect the board to the substrate, both their position and size. See "[Adjusting Breakout Tabs on the Laser](/wiki/pcb/21-protolaser/#guide-how-to-adjust-the-breakout-tabs-on-the-laser)" for details.
 
 ## Common processing errors
 
@@ -117,7 +117,7 @@ Usually, this happens because the "supported by ProtoMat" box was not checked wh
 {/* TODO: Add steps, use starlight steps component */}
 
 
-So you're running a [single-sided laser-only process](/wiki/guides/pcb-processes#single-sided-no-holes), and you'd like to adjust the breakout tabs. No problem! It's very straightforward to do, and you can do it before or after the toolpath has been generated.
+So you're running a [single-sided laser-only process](/wiki/pcb/11-pcb-processes#single-sided-no-holes), and you'd like to adjust the breakout tabs. No problem! It's very straightforward to do, and you can do it before or after the toolpath has been generated.
 
 Before we start, it's useful to recognize that the software has some silly and sort of confusing nomenclature: "Contour routing" is the cutting out of the board, and is done using the "CutOutside" tool. The "Contour" tool is completely unrelated to this; this tool isolates regions that need to retain copper from those that need to copper removed. Don't confuse them in the Toolpath Generation window!
 
@@ -125,6 +125,6 @@ You can adjust the type of breakout tab alignment (two, four, corners, sides, eq
 
 Feel free in this window to adjust pretty much whatever you'd like to. "Method" is how many and where the breakout tabs will exist. "Position" is whether the routing will happen on the inside of the defined zero-width board edge line, or the outside (outside is the default). "Source" is the layer that defines what this routing process will affect; you can add different routing processes by going to "Add Contour Routing" under the "Toolpaths" menu. "Channel width" is the thickness of the rout, i.e. the distance between the board's actual cut edge and the substrate's cut edge. And "Gap width" is the length of the tabs themselves, which can also be adjusted in the "Edit Breakout Tabs" window. I don't really know how "Laser overlap" affects things. "Tab positions" is the same as "Method".
 
-You can adjust the size and position of the breakout tabs individually through the "Edit Breakout Tabs" window (under the "Toolpaths" menu) ![Toolpaths menu; Edit breakout tabs](../../../assets/guide-protolaser-breakout02.png) ![Edit breakout tabs; window adjusted](../../../assets/guide-protolaser-breakout03.png) 
+You can adjust the size and position of the breakout tabs individually through the "Edit Breakout Tabs" window (under the "Toolpaths" menu) ![Toolpaths menu; Edit breakout tabs](../../../assets/guide-protolaser-breakout02.png) ![Edit breakout tabs; window adjusted](../../../assets/guide-protolaser-breakout03.png)
 
-I didn't touch the "Algorithm", but "Gap width" is the length of the tabs themselves, and you can specify the break positions of each tab by clicking "Add tab" to add the number of tabs you'd like explicitly. "Gap width" will affect all the tabs equally. Checking "Replace existing toolpath" will do just that - it will replace any previously made tabs and settings with these new ones. 
+I didn't touch the "Algorithm", but "Gap width" is the length of the tabs themselves, and you can specify the break positions of each tab by clicking "Add tab" to add the number of tabs you'd like explicitly. "Gap width" will affect all the tabs equally. Checking "Replace existing toolpath" will do just that - it will replace any previously made tabs and settings with these new ones.

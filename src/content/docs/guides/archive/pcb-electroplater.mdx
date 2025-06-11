@@ -1,17 +1,17 @@
 ---
-title: "Knowledge Base: ELECTROPLATER"
-prev: 
+title: "LPKF Contac S4 Electroplating System"
+prev:
     link: /wiki/explore/pcb/
     label: PCB Fabrication
 ---
 
 import { Image } from 'astro:assets';
-import electroplater from '../../../assets/pcb-electroplater.jpg';
+import electroplater from '../../../../assets/pcb-electroplater.jpg';
 
 :::note
 **We are no longer guaranteeing quality of the electroplating results.** The required maintenance for the number of monthly users no longer justifies continued operation, and we'll be phasing the plater out of operation entirely at some point in 2024 (theoretically). You can read below to understand more about the plater.
 
-**If you need vias:** If you can get away with it, we recommend sizing your vias to be 1mm/40mil diameter holes (excluding the annular ring), and then soldering in a standard header pin. Otherwise, your best option is likely to get it fabricated professionally; see [our PCB Design](/wiki/guides/pcb-design/) page for some fabrication house options. 
+**If you need vias:** If you can get away with it, we recommend sizing your vias to be 1mm/40mil diameter holes (excluding the annular ring), and then soldering in a standard header pin. Otherwise, your best option is likely to get it fabricated professionally; see [our PCB Design](/wiki/pcb/01-pcb-design/) page for some fabrication house options.
 :::
 
 <Image class="border-2 border-slate-200 rounded-lg" src={electroplater} alt="The LPKF Contac S4 Electroplating System" width="300" />
@@ -20,13 +20,17 @@ The LPKF Contac S4 Electroplating System provides the ability to galvanically el
 
 Critically, what this means is that *the tool will plate copper everywhere that there is copper!* This means any copper faces of your substrate will get additional copper on them. Astute readers will remember that the internal layer of your substrate (e.g. FR4) is not conductive, so an "Activator" (a conductive ink) is used to coat the inside of your holes with a conductive substance so that current can pass through the holes, and thereby plate your holes.
 
-The LPKF Datasheet for the Contac S4: [Contac S4-v1-0-en (PDF)](/wiki/pcb-contac-s4-v1.pdf)
+The LPKF Datasheet for the Contac S4: [Contac S4-v1-0-en (PDF)](/wiki/pcb-contac-s4-v1.pdf), [Flyer](https://www.lpkf.com/fileadmin/mediafiles/user_upload/products/pdf/DQ/flyer_lpkf_contac_s4_en.pdf)
 
 The [Material] Safety Data Sheets (MSDS/SDS): [LPKD_SDS (PDF)](/wiki/pcb-lpkf-sds.pdf)
 
-Our standard operating procedures: IN PROGRESS 
+Our standard operating procedures: IN PROGRESS
 
 ## Q & A
+
+### How long does electroplating take?
+
+Between 2 and 3 hours, regardless of board size. This will plate between 8-15 um of copper onto your surfaces. Less than this processing time can cause unreliable vias with variable thickness of the plating.
 
 ### Do I have to do this to get vias? This seems very time consuming.
 
@@ -74,7 +78,7 @@ If you're asking about other substrates to plate copper onto, then yes, this sho
 
 If you're interested in plating a different metal, such as silver or tin, it may be possible.
 
-Either way, please contact us first! **DO NOT ATTEMPT THIS WITHOUT PRIOR APPROVAL!!** Doing so could have serious repercussions for you, both from a health perspective and an academic one. 
+Either way, please contact us first! **DO NOT ATTEMPT THIS WITHOUT PRIOR APPROVAL!!** Doing so could have serious repercussions for you, both from a health perspective and an academic one.
 
 ## Common Errors
 
@@ -91,4 +95,3 @@ Either way, please contact us first! **DO NOT ATTEMPT THIS WITHOUT PRIOR APPROVA
 - While wearing the chemical safety gear, make sure that the tool holder is completely screwed down onto the pegs.
 - If the toolholder screws will not tighten further but is not in contact with the rail (i.e. there is a gap between the tool holder and the metal side railings), attempt to re-seat the holder onto the pegs While wearing the chemical safety gear.
 - If that is unsuccessful in solving the issue, while wearing the chemical safety gear, remove the board+holder from Bath 5 and, using the drip tray, move to the sink to rinse the board, holder, gloves, and drip tray. Remove the board from the holder with the allen key. Using a wire brush, sandpaper, or other means, clean out the peg holes in the tool holder. This may require disassembly of the holder entirely. To test the connection, make sure to don the chemical safety gear again before slotting the holder (without the substrate) into Bath 5. Using a multimeter, measure the resistance between the posts on the holder to the metal rails; this should be below 1 ohm. Rinse the holder when you remove it from the Bath while wearing the chemical safety gear.
-

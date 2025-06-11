@@ -1,6 +1,6 @@
 ---
 title: "PCB Fabrication Process"
-prev: 
+prev:
     link: /wiki/explore/pcb/
     label: PCB Fabrication
 ---
@@ -17,17 +17,17 @@ prev:
 
 ## Process Guides
 
-1. [Single sided design, no holes](/wiki/guides/pcb-processes#single-sided-no-holes), regardless of plating.
-2. [Single sided design, with holes](/wiki/guides/pcb-processes#single-sided-with-holes), regardless of plating.
-3. [Double sided, no plating](/wiki/guides/pcb-processes#double-sided-no-plating), regardless of hole count.
-4. [Double sided, with plating](/wiki/guides/pcb-processes#double-sided-with-plating), regardless of hole count.
-5. [Solderpaste stencils](/wiki/guides/pcb-stencilnreflow#how-to-make-and-use-stencils)
-6. [Reflow oven](/wiki/guides/pcb-stencilnreflow#how-to-use-the-reflow-oven)
-7. [Kapton tape soldermasking](/wiki/guides/pcb-masknsilkscreen/#soldermasking-with-kapton-tape) (unverified)
+1. [Single sided design, no holes](/wiki/pcb/11-pcb-processes#single-sided-no-holes), regardless of plating.
+2. [Single sided design, with holes](/wiki/pcb/11-pcb-processes#single-sided-with-holes), regardless of plating.
+3. [Double sided, no plating](/wiki/pcb/11-pcb-processes#double-sided-no-plating), regardless of hole count.
+4. [Double sided, with plating](/wiki/pcb/11-pcb-processes#double-sided-with-plating), regardless of hole count.
+5. [Solderpaste stencils](/wiki/pcb/31-stencilnreflow#how-to-make-and-use-stencils)
+6. [Reflow oven](/wiki/pcb/31-stencilnreflow#how-to-use-the-reflow-oven)
+7. [Kapton tape soldermasking](/wiki/pcb/30-masknsilkscreen/#soldermasking-with-kapton-tape) (unverified)
 
-**HELP!** –> First, go to the proper process guide and make sure you've followed our most up-to-date process. If that doesn't resolve the issue, see the [Knowledge Base](/wiki/explore/pcb#pcb-knowledge-base-and-faq) for processing issues/concerns/questions.
+**HELP!** –> First, go to the proper process guide and make sure you've followed our most up-to-date process. If that doesn't resolve the issue, see the relevant tool pages ([Protomat](/wiki/pcb/20-protomat/), [Protolaser](/wiki/pcb/21-protolaser/)) for additional details.
 
-See our [tips and tricks](/wiki/explore/pcb#miscellaneous-processing-tips) page for some advanced processing concepts (or just interesting tidbits).
+See our [tips and tricks](/wiki/pcb/40-pcb-advanced/) page for some advanced processing concepts (or just interesting tidbits).
 
 *The above guides targeted towards End Users and PIs (Peer Instructors) who want to know about the standard fabrication process often employed at The Hive, either before they are certified or afterwards. It is not intended to serve as a technical manual for any of these three tools or the software that controls them; for those, see the individual tool SOPs. It is also not intended to serve as a complete list of all processes that can be achieved with this tool suite. It is simply a step-by-step guide to our standardized processes.*
 
@@ -38,30 +38,30 @@ The Hive has a suite of LPKF tools that enable students to fabricate 2-layer pro
 
 The Hive's PCB fabrication tool suite has the following capabilities:
 
-- *Substrate*s: FR4, Rogers materials, polyamide, among many others. See the [ProtoLaser help page](/wiki/guides/pcb-protolaser/) for more details.
+- *Substrates*: FR4, Rogers materials, polyamide, among many others. See the [ProtoLaser help page](/wiki/pcb/21-protolaser/) for more details.
 - *Copper thickness/weight*: No known limit, other than processing time.
-- *Slot*: yes, but YMMV. See our [fabs tips](/wiki/explore/pcb#miscellaneous-processing-tips) page for details.
-- *Electroplating*: yes, standard processing time of 3 hours will plate approximately 16 um of copper. We also have a chemical-free non-electrical "plating" process with the ProConduct package. See our [electroplater help page](/wiki/guides/pcb-electroplater/) for details.
-- *Soldermask*: we have the chemicals, which have an official process, but we don't officially support it. See the ProMask datasheet, below. We also have trialed an alternative masking process with Kapton tape, but YMMV. See [this page](/wiki/guides/pcb-masknsilkscreen/#soldermasking-with-kapton-tape) for more details.
+- *Slot*: yes, but YMMV. See our [fabs tips](/wiki/pcb/40-pcb-advanced/) page for details.
+- *Soldermask*: we have the chemicals, which have an official process, but we don't officially support it. See the ProMask datasheet, below. We also have trialed an alternative masking process with Kapton tape, but YMMV. See [this page](/wiki/pcb/30-masknsilkscreen/#soldermasking-with-kapton-tape) for more details.
 - *Silkscreen*: we have the chemicals, which have an official process, but we don't officially support it. See the ProLegend datasheet below.
-- *Stencils*: we can make them! See our "[How to make stencils](/wiki/guides/pcb-stencilnreflow#how-to-make-and-use-stencils)" page for more!
-- *Reflow*: we have a fully operational reflow oven, optimized for lead-free solder paste. See "[How to reflow](/wiki/guides/pcb-stencilnreflow#how-to-use-the-reflow-oven)" for more information.
-- Our [knowledge base](/wiki/explore/pcb#pcb-knowledge-base-and-faq) is pretty extensive as well, so check that for answers to many questions and processing help.
+- *Stencils*: we can make them! See our "[How to make stencils](/wiki/pcb/31-stencilnreflow#how-to-make-and-use-stencils)" page for more!
+- *Reflow*: we have a fully operational reflow oven, optimized for lead-free solder paste. See "[How to reflow](/wiki/pcb/31-stencilnreflow#how-to-use-the-reflow-oven)" for more information.
+- *"Plating"*: We have a chemical-free non-electrical "plating" process with the ProConduct package.
+
 
 The full suit includes the following:
 
-- LPKF ProtoMat S103 ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/s103.pdf), [SOP](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EcQvNGoNNa5AjiZ5wU1Vd8wBMPNk8mawFspeLrvNaG8VlQ?e=yWBkGg), [help page](/wiki/guides/pcb-protomat/)) - drilling, milling, and routing
-- LPKF ProtoLaser U4 ([datasheet](https://www.lpkf.com/fileadmin/mediafiles/user_upload/products/pdf/DQ/brochure_lpkf_protolaser_u4_en.pdf), SOP, [help page](/wiki/guides/pcb-protolaser/)) - etching, cutting
-- LPKF Contac S4 ([datasheet](https://www.lpkf.com/fileadmin/mediafiles/user_upload/products/pdf/DQ/flyer_lpkf_contac_s4_en.pdf), SOP, [help page](/wiki/guides/pcb-electroplater/)) - electroplating
+- LPKF ProtoMat S103 ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/s103.pdf), [SOP](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EcQvNGoNNa5AjiZ5wU1Vd8wBMPNk8mawFspeLrvNaG8VlQ?e=yWBkGg), [help page](/wiki/pcb/20-protomat/)) - drilling, milling, and routing
+- LPKF ProtoLaser U4 ([datasheet](https://www.lpkf.com/fileadmin/mediafiles/user_upload/products/pdf/DQ/brochure_lpkf_protolaser_u4_en.pdf), SOP, [help page](/wiki/pcb/21-protolaser/)) - etching, cutting
 - LPKF ProMask ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/promask.pdf), SOP) - Soldermask
 - LPKF ProLegend ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/prolegend.pdf), SOP) - Silkscreen
-- LPKF ProtoPrint S ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/zelprint.pdf), [How-to](/wiki/guides/pcb-stencilnreflow#how-to-make-and-use-stencils), SOP) - Solderpaste stencil holder
-- LPKF ProtoFlow ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/protoflow.pdf), [How-to](/wiki/guides/pcb-stencilnreflow#how-to-use-the-reflow-oven), SOP) - Reflow oven
+- LPKF ProtoPrint S ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/zelprint.pdf), [How-to](/wiki/pcb/31-stencilnreflow#how-to-make-and-use-stencils), SOP) - Solderpaste stencil holder
+- LPKF ProtoFlow ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/protoflow.pdf), [How-to](/wiki/pcb/31-stencilnreflow#how-to-use-the-reflow-oven), SOP) - Reflow oven
 - LPKF ProConduct ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/ProConduct_Specs.pdf), SOP) - Plating for RF applications
+- ~LPKF Contac S4 - electroplating~ *Discontinued for use at the Hive*
 
 ## Process Specifications and Tolerances
 
-If you’re board passes OshPark’s specs ([OshPark .dru file](https://docs.oshpark.com/design-tools/eagle/design-rules-files)), it can be made using our process (see their website for details). However, our process can, in fact, go beyond that in some ways. See our [Knowledge Base](/wiki/explore/pcb#pcb-knowledge-base-and-faq) and [Tips and Tricks](/wiki/explore/pcb#miscellaneous-processing-tips) pages for additional information.
+If you’re board passes OshPark’s specs ([OshPark .dru file](https://docs.oshpark.com/design-tools/eagle/design-rules-files)), it can be made using our process (see their website for details). However, our process can, in fact, go beyond that in some ways. See our equipment knowledge bases ([Protomat](/wiki/pcb/20-protomat/), [Protolaser](/wiki/pcb/21-protolaser/)) and [Tips and Tricks](/wiki/pcb/40-pcb-advanced/) pages for additional information.
 
 | Specification | Theoretical Minimum (see note below) |  Recommended Minimum |
 |---|---|---|
@@ -74,7 +74,7 @@ If you’re board passes OshPark’s specs ([OshPark .dru file](https://docs.osh
 | Laser repeatability | 0.08 mils (2 μm) |  |
 | Drill hit | 0.05 mil (1.2 μm) |  |
 
-**Note**: If you're considering a design at our theoretical minimum capabilities, first strongly consider whether you need that level of precision. If the answer is still yes, go to the [ProtoLaser](/wiki/guides/pcb-protolaser/) (for etching) and [ProtoMat](/wiki/guides/pcb-protomat/) (for drilling) help sections for advice on reaching those new lows.
+**Note**: If you're considering a design at our theoretical minimum capabilities, first strongly consider whether you need that level of precision. If the answer is still yes, go to the [ProtoLaser](/wiki/pcb/21-protolaser/) (for etching) and [ProtoMat](/wiki/pcb/20-protomat/) (for drilling) help sections for advice on reaching those new lows.
 
 
 ## Q & A
@@ -91,11 +91,9 @@ Yes! You must be present for the entire process. This is for safety reasons. PIs
 
 ### How long does it take to make a board?
 
-It depends on the size and layout of your board. A small board with no electroplating (i.e. no vias) can easily be made in under an hour, while a very large board with lots of copper removed can take over 4 hours not including electroplating.
+It depends on the size and layout of your board. A small board with no electroplating can easily be made in under an hour, while a very large board with lots of copper removed can take over 4 hours not including electroplating.
 
-### How long does electroplating take?
-
-Between 2 and 3 hours, regardless of board size. This will plate between 8-15 um of copper onto your surfaces. Less than this processing time can cause unreliable vias with variable thickness of the plating.
+Note the Hive currently does not support electroplating processes.
 
 ### Can I somehow reserve time on the equipment?
 
@@ -117,9 +115,9 @@ We highly advise you to schedule time on all the tools you’ll need, i.e. if yo
 
 We have the capability to apply soldermask and silkscreen, though we do not recommend attempting this process - it's time-consuming, UV- and temperature-sensitive, and unnecessary to a complete circuit board. If you need soldermask or silkscreen, consider sending your design to a professional fabrication facility.
 
-For those who would like to attempt this, instructions are available on our [mask and silkscreen](/wiki/guides/pcb-masknsilkscreen/) page, as well as in the "Manuals/Instructions" drawer next to the tools themselves.
+For those who would like to attempt this, instructions are available on our [mask and silkscreen](/wiki/pcb/30-masknsilkscreen/) page, as well as in the "Manuals/Instructions" drawer next to the tools themselves.
 
-We ALSO have an alternative process to use Kapton tape to make a soldermask-like covering on your board. Definite a YMMV-situation, but [the instructions are here](/wiki/guides/pcb-masknsilkscreen/#soldermasking-with-kapton-tape).
+We ALSO have an alternative process to use Kapton tape to make a soldermask-like covering on your board. Definite a YMMV-situation, but [the instructions are here](/wiki/pcb/30-masknsilkscreen/#soldermasking-with-kapton-tape).
 
 ### How do you handle slots? Can you do plated slots?
 
@@ -131,4 +129,6 @@ Unfortunately, we haven't found a good way to do plated slots because in the abo
 
 ### Do the tools have additional capabilities?
 
-Many! See the [Knowledge Base](/wiki/explore/pcb#pcb-knowledge-base-and-faq) page for these, as they're often listed in various bits of documentation that would be out of place on this page. We encourage our users to explore the capabilities of the tools beyond our guides, and beyond even what we list in our documentation. However, while such capabilities are technically allowed in the spec of the tool, we do not officially support anything beyond standard PCB fabrication, meaning that our PIs and MPIs do not have experience with them, so you will be on your own if you attempt any of them!
+Many! See the relevant tool pages ([Protomat](/wiki/pcb/20-protomat/), [Protolaser](/wiki/pcb/21-protolaser/)) and [Tips, tricks, and process miscellany](/wiki/pcb/40-pcb-advanced/) pages for these, as they're often listed in various bits of documentation that would be out of place on this page.
+
+We encourage our users to explore the capabilities of the tools beyond our guides, and beyond even what we list in our documentation. However, while such capabilities are technically allowed in the spec of the tool, we do not officially support anything beyond standard PCB fabrication, meaning that our PIs and MPIs do not have experience with them, so you will be on your own if you attempt any of them!
