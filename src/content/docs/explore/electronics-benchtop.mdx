@@ -2,7 +2,7 @@
 title: Electronics Benchtop
 ---
 
-import '../../../styles/table-align.css';
+import '../../../styles/table-snippets.css';
 import { Image } from 'astro:assets';
 import benchtop from '../../../assets/intro-benchtop.jpg';
 
@@ -50,7 +50,7 @@ Beginner guides on to use each piece of equipment are listed below:
 - Power supply guide (Planned)
 - Soldering guide (Planned)
 
-In addition we also have video demos listed for all of these different pieces of equipment found here: 
+In addition we also have video demos listed for all of these different pieces of equipment found here:
 
 import YouTubeGrid from '/src/components/youtube-grid.astro';
 
@@ -90,29 +90,99 @@ import YouTubeGrid from '/src/components/youtube-grid.astro';
 
 ## Full List of Benchtop Equipment
 
-The following is provided in no particular order. 
+The following is provided in no particular order.
 
-
-| Name      | Image |
-| ------------- | ----- |
-| Keithley source meter 2450  | <Image src={img1} alt="" width="200"/> |
-| Keithley digital multimeter DMM6500  | <Image src={img2} alt="" width="200"/> |
-| Tektronix oscilloscope MSO58  | <Image src={img3} alt="" width="200"/> |
-| Tektronix function generator AFG31152  | <Image src={img4} alt="" width="200"/> |
-| Keithley precision supply and battery simulator 2281S-20-6  | <Image src={img5} alt="" width="200"/> |
-| Keithley triple output power supply 2230-30-1  | <Image src={img6} alt="" width="200"/> |
-| Keysight LCR meter E4980-AL  | <Image src={img7} alt="" width="200"/> |
-| Keysight power meter N1913A  | <Image src={img8} alt="" width="200"/> |
-| Keysight triple power supply U8031A (2x 0-30V, 6A; 1x 5V, 3A)  | <Image src={img9} alt="" width="200"/> |
-| Keysight digital multimeter 34460A | <Image src={img10} alt="" width="200"/> |
-| Keysight waveform generator 33500B | <Image src={img11} alt="" width="200"/> |
-| Keysight oscilloscope DSOX3014A | <Image src={img12} alt="" width="200"/> |
-| Keysight oscilloscope DSOX4024A | <Image src={img13} alt="" width="200"/> |
-| Keysight oscilloscope DSOX6002A | <Image src={img14} alt="" width="200"/> |
-| Keysight network analyzer E5063A | <Image src={img15} alt="" width="200"/> |
-| Keysight signal analyzer N9000B | <Image src={img16} alt="" width="200"/> |
-| Keysight vector signal generator | <Image src={img17} alt="" width="200"/> |
-| Keysight triple power supply, low power E3630A (0-6V, 2.5A; 0-20V, 0.5V; 0-(-20)V, 0.5A) | <Image src={img18} alt="" width="200"/> |
-| Aoyue vacuum pick-up hand tool 932 | <Image src={img19} alt="" width="200"/> |
-| Weller soldering iron and solder sucker WXR3 | <Image src={img20} alt="" width="200"/> |
-| Quick hot-air rework station 957DW+ | <Image src={img21} alt="" width="200"/> |
+<table class="align-middle">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Keithley source meter 2450</td>
+            <td><Image src={img1} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keithley digital multimeter DMM6500</td>
+            <td><Image src={img2} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Tektronix oscilloscope MSO58</td>
+            <td><Image src={img3} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Tektronix function generator AFG31152</td>
+            <td><Image src={img4} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keithley precision supply and battery simulator 2281S-20-6</td>
+            <td><Image src={img5} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keithley triple output power supply 2230-30-1</td>
+            <td><Image src={img6} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight LCR meter E4980-AL</td>
+            <td><Image src={img7} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight power meter N1913A</td>
+            <td><Image src={img8} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight triple power supply U8031A (2x 0-30V, 6A; 1x 5V, 3A)</td>
+            <td><Image src={img9} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight digital multimeter 34460A</td>
+            <td><Image src={img10} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight waveform generator 33500B</td>
+            <td><Image src={img11} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight oscilloscope DSOX3014A</td>
+            <td><Image src={img12} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight oscilloscope DSOX4024A</td>
+            <td><Image src={img13} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight oscilloscope DSOX6002A</td>
+            <td><Image src={img14} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight network analyzer E5063A</td>
+            <td><Image src={img15} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight signal analyzer N9000B</td>
+            <td><Image src={img16} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight vector signal generator</td>
+            <td><Image src={img17} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Keysight triple power supply, low power E3630A (0-6V, 2.5A; 0-20V, 0.5V; 0-(-20)V, 0.5A)</td>
+            <td><Image src={img18} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Aoyue vacuum pick-up hand tool 932</td>
+            <td><Image src={img19} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Weller soldering iron and solder sucker WXR3</td>
+            <td><Image src={img20} alt="" width="200"/></td>
+        </tr>
+        <tr>
+            <td>Quick hot-air rework station 957DW+</td>
+            <td><Image src={img21} alt="" width="200"/></td>
+        </tr>
+    </tbody>
+</table>
