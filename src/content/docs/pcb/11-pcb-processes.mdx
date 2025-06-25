@@ -5,8 +5,9 @@ prev:
     label: PCB Fabrication
 ---
 
-## Single-sided, No Holes
+{/* TODO migrate these guides from word to wiki */}
 
+## Single-sided, No Holes
 
 This process uses the ProtoLaser only to etch a single side of substrate and cut the board out. It is strongly advised not to attempt any holes using this process, including fiducials! The ProtoLaser is, frankly, not good at making holes, and you’ll be sad when your parts don’t fit.
 
@@ -19,9 +20,9 @@ The other thing to be aware of is that you’ll need to push quite hard to remov
 
 *NOTE*: "Single-sided" refers to the design; does it have traces on one or both sides?
 
-**If you are using a double sided substrate**, such as those provided by The Hive, go back to the [PCB fabrication](/wiki/pcb/10-pcb-fab/) page and run the appropriate two-sided process (i.e. with or without plating). Nothing will change (including the "Double-sided" option in the Process Planning Wizard). The etch should still be done with the double-sided template because the etch will either isolate the holes on the back-side if you’ve made a bottom-side copper pour/polygon, OR it’ll etch away the entire backside. (Why? Otherwise anything put through the holes may short because of the copper on the backside.) So really, nothing changes at all from the standard double-sided process.
+**If you are using a double sided substrate**, such as those provided by The Hive, see the below section on two-sided board process. Nothing will change (including the "Double-sided" option in the Process Planning Wizard). The etch should still be done with the double-sided template because the etch will either isolate the holes on the back-side if you’ve made a bottom-side copper pour/polygon, OR it’ll etch away the entire backside. (Why? Otherwise anything put through the holes may short because of the copper on the backside.) So really, nothing changes at all from the standard double-sided process.
 
-If you have a single sided substrate, meaning copper on only one side, go back to the [PCB fabrication](/wiki/pcb/10-pcb-fab/) page and run the appropriate two-sided process (i.e. with or without plating). Note the following:
+If you have a single sided substrate, meaning copper on only one side, see the below section on two-sided board process. Note the following:
 
 - In the ProtoMat setup, in the Process Planning Wizard (button #1), for "Substrate layers", select "Double sided" as you would for a standard double-sided process. If you don’t, it won’t stop to let you etch before it cuts the board out, and then you'll have to start over since you can't etch safely once you've cut the board out.
 - You will use a single-sided ProtoLaser template (either top or bottom, depending on where your traces are). Make sure the "Supported by ProtoMat" box is checked in the template window, or else it will try to drill the holes on its own.
@@ -48,43 +49,11 @@ If you have a single sided substrate, meaning copper on only one side, go back t
 
 **Step 3**: [Routing with the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/Edjj8jMNM41GlLnyGoimobUBNnqyUsva7KgEmdtWk4Ceow?e=brYMfK)
 
-## Double Sided, With Plating
+:::note[On Plating]
+For board designs that commonly use electroplating to create vias between traces and/or components on both sides of the board, you may circumvent the need to electroplate.
 
-
-This is for PCBs with traces and/or components on both sides of the board, and a need to electroplate the board (most commonly, for vias).
-
-Note that as of Fall 2022, the electroplater is a separate tool that requires a separate training sequence. Please check our [Training](/wiki/guides/pcb-training/) page for details.
-
-**Be sure you actually NEED to electroplate before starting this!** The plating process usually takes in excess of three hours (depending on how closely you're watching it), and is historically unreliable. Further, even if it looks like the plating quality is good, the micron-scale variability across the sheet may doom any etching attempts. *There is an alternative!* Plating is typically avoidable by designing your vias as a standard hole with a diameter of 40 mil (1 mm). A standard 0.1" header pin can then be pushed through and soldered on both the top and bottom. You can accomplish similar things with wires or other pins of different diameters.
-
-**Before starting, make sure:**
-
-- [you're logged into SUMS;](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVBq41QPV51FvAhi3I_zkAUBqOHfQh_ylA_ddHQ4ZyzPGA?e=cO0su7)
-- [the ProtoMat and software are running](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EY2LyqOt_o9Pr8JPhp6u26cBxRIilQx5lEn7qFY9cZ2SoA?e=nH5y1X); and
-- [the ProtoLaser are software are on and warming up](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EbBDlXvWlSVItrI0YtYitGoBxD4IAhapi2-ZIFklbZFu_w?e=rjlMci).
-- Turn on the electroplater and let it warm up. Bath 1 needs to heat to 55C, which can take up to an hour, and which it will do in the background while the tool is not being used.
-
-**Step 1**: [Process setup and first drilling on the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVU4FeAXtdBLmLRg28Gp1XkBkJj_OcnjsgNE_SWZ_LaIYg?e=r7f7YP)
-
-- The ProtoMat will pause at a step called "Dismount Material".
-- Once it reaches that point, remove the substrate from the ProtoMat and click "Abort" in the Wizard. (Note that in the electroplater training video, we don't do this, but doing this will save you some time if you follow these guides.)
-- Continue with Step 2.
-
-**Step 2**: [Electroplating with the Contac S4](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ESv_zF8waMZDucEP3-J6NFYBuArRkl8M5vwusDOW_0RiDQ?e=IUuxvH)
-
-*Quick Plating Tips*:
-
-- Adjusting the plating time can be done if you need a different thickness of copper rather than the standard 18um. If you would like to adjust the plating time, contact the MPIs at [hive-pcb@ece.gatech.edu](mailto:hive-pcb@ece.gatech.edu).
-- Do not let your substrate sit in the bath (any bath) for very long after the timer runs out.
-- If the machine throws an error on startup, it’s likely a bath needs to be topped off. Get a PI to help.
-- Don't forget to stir bath 3 prior to use! At least 3 minutes, about 200 end-to-end strokes.
-- When rinsing after drying (after "bath 4"), scrub the copper surface with a sponge to remove as much of the dried activator off the copper as possible.
-- Scour around your fiducials after plating. It makes a noticeable difference to the laser.
-
-**Step 3**: [Etching with the ProtoLaser](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ERfKdS6GbVpJo6k_gJ1MgLgB3VVaU7ckSrJCkb4FGMK1IA?e=1rAYmW)
-
-**Step 4**: [Routing with the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/Edjj8jMNM41GlLnyGoimobUBNnqyUsva7KgEmdtWk4Ceow?e=brYMfK)
-
+*There is an alternative!* Plating is typically avoidable by designing your vias as a standard hole with a diameter of 40 mil (1 mm). A standard 0.1" header pin can then be pushed through and soldered on both the top and bottom. You can accomplish similar things with wires or other pins of different diameters.
+:::
 
 ## Common Issues
 

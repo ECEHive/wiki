@@ -1,0 +1,43 @@
+---
+title: "LPKF Contac S4 Electroplating System"
+prev:
+    link: /wiki/explore/pcb/
+    label: PCB Fabrication
+---
+
+
+# Double Sided, With Plating
+
+This is for PCBs with traces and/or components on both sides of the board, and a need to electroplate the board (most commonly, for vias).
+
+Note that as of Fall 2022, the electroplater is a separate tool that requires a separate training sequence. Please check our [Training](/wiki/guides/pcb-training/) page for details.
+
+**Be sure you actually NEED to electroplate before starting this!** The plating process usually takes in excess of three hours (depending on how closely you're watching it), and is historically unreliable. Further, even if it looks like the plating quality is good, the micron-scale variability across the sheet may doom any etching attempts. *There is an alternative!* Plating is typically avoidable by designing your vias as a standard hole with a diameter of 40 mil (1 mm). A standard 0.1" header pin can then be pushed through and soldered on both the top and bottom. You can accomplish similar things with wires or other pins of different diameters.
+
+**Before starting, make sure:**
+
+- [you're logged into SUMS;](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVBq41QPV51FvAhi3I_zkAUBqOHfQh_ylA_ddHQ4ZyzPGA?e=cO0su7)
+- [the ProtoMat and software are running](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EY2LyqOt_o9Pr8JPhp6u26cBxRIilQx5lEn7qFY9cZ2SoA?e=nH5y1X); and
+- [the ProtoLaser are software are on and warming up](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EbBDlXvWlSVItrI0YtYitGoBxD4IAhapi2-ZIFklbZFu_w?e=rjlMci).
+- Turn on the electroplater and let it warm up. Bath 1 needs to heat to 55C, which can take up to an hour, and which it will do in the background while the tool is not being used.
+
+**Step 1**: [Process setup and first drilling on the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVU4FeAXtdBLmLRg28Gp1XkBkJj_OcnjsgNE_SWZ_LaIYg?e=r7f7YP)
+
+- The ProtoMat will pause at a step called "Dismount Material".
+- Once it reaches that point, remove the substrate from the ProtoMat and click "Abort" in the Wizard. (Note that in the electroplater training video, we don't do this, but doing this will save you some time if you follow these guides.)
+- Continue with Step 2.
+
+**Step 2**: [Electroplating with the Contac S4](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ESv_zF8waMZDucEP3-J6NFYBuArRkl8M5vwusDOW_0RiDQ?e=IUuxvH), [PDF](/wiki/pcb-contac-s4-electroplating.pdf)
+
+*Quick Plating Tips*:
+
+- Adjusting the plating time can be done if you need a different thickness of copper rather than the standard 18um. If you would like to adjust the plating time, contact the MPIs at [hive-pcb@ece.gatech.edu](mailto:hive-pcb@ece.gatech.edu).
+- Do not let your substrate sit in the bath (any bath) for very long after the timer runs out.
+- If the machine throws an error on startup, it’s likely a bath needs to be topped off. Get a PI to help.
+- Don't forget to stir bath 3 prior to use! At least 3 minutes, about 200 end-to-end strokes.
+- When rinsing after drying (after "bath 4"), scrub the copper surface with a sponge to remove as much of the dried activator off the copper as possible.
+- Scour around your fiducials after plating. It makes a noticeable difference to the laser.
+
+**Step 3**: [Etching with the ProtoLaser](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ERfKdS6GbVpJo6k_gJ1MgLgB3VVaU7ckSrJCkb4FGMK1IA?e=1rAYmW)
+
+**Step 4**: [Routing with the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/Edjj8jMNM41GlLnyGoimobUBNnqyUsva7KgEmdtWk4Ceow?e=brYMfK)
