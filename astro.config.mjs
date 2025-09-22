@@ -9,8 +9,8 @@ import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ecehive.github.io/",
-  base: "/wiki",
+  site: "https://wiki.hivemakerspace.com/",
+  base: "/",
   integrations: [
     starlight({
       title: "The Hive Wiki",
