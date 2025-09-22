@@ -1,7 +1,7 @@
 ---
 title: Oscilloscope Guide
 prev: 
-    link: /wiki/explore/electronics-benchtop/
+    link: /explore/electronics-benchtop/
     label: Electronics Benchtop
 ---
 

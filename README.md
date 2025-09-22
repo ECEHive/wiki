@@ -2,7 +2,7 @@
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-How to contribute: https://ecehive.github.io/wiki/contribute/
+How to contribute: https://wiki.hivemakerspace.com/contribute/
 
 ## Project Structure
 

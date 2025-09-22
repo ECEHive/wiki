@@ -1,5 +1,5 @@
 .mask-hexagon {
-	mask: url(/wiki/mask-hexagon.svg);
+	mask: url(/mask-hexagon.svg);
 	mask-repeat: no-repeat;
 	mask-size: 100%;
 	aspect-ratio: 8/9;
@@ -10,7 +10,7 @@ a.external {
 	background-repeat: no-repeat;
 	background-position: right center;
 	padding: 0 16px 0 0;
-	background-image: url(/wiki/external-arrow.svg);
+	background-image: url(/external-arrow.svg);
 }
 
 .anchor {
@@ -22,7 +22,7 @@ a.external {
 }
 
 .anchor-link {
-	content: url(/wiki/hyperlink.svg);
+	content: url(/hyperlink.svg);
 	filter: brightness(0) saturate(100%) invert(50%) sepia(7%) saturate(0%) hue-rotate(206deg) brightness(101%) contrast(88%);
 	display: inline-flex;
 	margin-left: 0.25em;

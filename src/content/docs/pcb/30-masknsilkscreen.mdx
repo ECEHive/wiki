@@ -1,7 +1,7 @@
 ---
 title: PCB Soldermask and Silkscreen
 prev: 
-    link: /wiki/explore/pcb/
+    link: /explore/pcb/
     label: PCB Fabrication
 ---
 
@@ -13,7 +13,7 @@ So this is a bit of a hidden trick, and YMMV, but you can make a psuedo-solderma
 
 *NOTE: In general, we recommend etching away excess copper when possible to ease soldering. However, there is a balance, because the more etching that's required, the longer the fabrication process will take. One good strategy here is to increase the isolation between planes and pads, rather than etch everything away entirely.*
 
-This process is a slight modification of the process for structuring the [LPKF ProMask](https://www.lpkfusa.com/datasheets/prototyping/promask.pdf) soldermask. The original process can be found in the LPFK ProtoLaser U4's How-To document (section 4.3, p. 155), which is located [here (PDF)](/wiki/pcb-protolaser-u4-howto.pdf) and on the ProtoLaser itself, in a folder called "ProtoLaser Docs" on the Desktop.
+This process is a slight modification of the process for structuring the [LPKF ProMask](https://www.lpkfusa.com/datasheets/prototyping/promask.pdf) soldermask. The original process can be found in the LPFK ProtoLaser U4's How-To document (section 4.3, p. 155), which is located [here (PDF)](/pcb-protolaser-u4-howto.pdf) and on the ProtoLaser itself, in a folder called "ProtoLaser Docs" on the Desktop.
 
 ### To create a soldermask with Kapton tape:
 
@@ -32,7 +32,7 @@ This process is a slight modification of the process for structuring the [LPKF P
 11. Under "Material type":
     1. This process has had success with "Polyimide_0.125mm" material previously, but the resolution is not awesome.
     2. You might also try the "ProMask" material type and see if it works better.
-    3. If you are really keen on using this, I would recommend creating your own material and developing that process. See our [ProtoLaser: New Material](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EShrwNPAMH1Cj3cE3pg5h8QB6r3JP-XtLghmQcU96-fNfA?e=Ska4Ud) document for how to do this, and LPKF's [Protolaser - Optimization (PDF)](/wiki/pcb-protolaser-optimization.pdf) document for optimization.
+    3. If you are really keen on using this, I would recommend creating your own material and developing that process. See our [ProtoLaser: New Material](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EShrwNPAMH1Cj3cE3pg5h8QB6r3JP-XtLghmQcU96-fNfA?e=Ska4Ud) document for how to do this, and LPKF's [Protolaser - Optimization (PDF)](/pcb-protolaser-optimization.pdf) document for optimization.
 12. Set the "Material thickness" to 0.03mm. Click "OK".
 13. Paste (`Ctrl + v` or "Edit" > "Paste") the copied layers into the new project. Either left click or press Enter to set the pasted layers down in the design. Press `Esc` to deselect the layers.
 14. Processing is now nearly-identical to the standard process:
