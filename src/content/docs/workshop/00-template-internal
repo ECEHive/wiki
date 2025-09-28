@@ -1,0 +1,56 @@
+---
+title: "How to Host: TEMPLATE"
+sidebar:
+    hidden: true
+---
+
+
+[⬅️ Back to main workshop page](/workshop/TEMPLATE/)
+
+:::note
+
+**Semester**:
+
+**Peer Instructors**:
+
+:::
+
+import { Image } from 'astro:assets';
+import img1 from '../../../assets/TEMPLATE';
+
+<figure>
+    <Image class="border-2 border-slate-200 rounded-lg" src={img1} alt="" width="300"/>
+    <figcaption></figcaption>
+</figure>
+
+## Premise
+
+
+## Logistics
+Capacity:
+
+Volunteers requested:
+
+Location:
+
+Editable slides:
+<a href="/TEMPLATE" download>SEMESTER</a>
+
+## Materials
+
+| Item | Description | Quantity | Links |
+|---|---|---|---|
+|  |  |  | [Primary](), [Alternate]() |
+
+
+## Post-Workshop Notes
+
+Number of Participants:
+
+Premise of the workshop
+
+
+What went well
+
+
+What would you change
