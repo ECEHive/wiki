@@ -1,3 +1,5 @@
+
+
 .mask-hexagon {
 	mask: url(/mask-hexagon.svg);
 	mask-repeat: no-repeat;
@@ -21,30 +23,21 @@ a.external {
 	opacity: 1;
 }
 
-.anchor-link {
-	content: url(/hyperlink.svg);
-	filter: brightness(0) saturate(100%) invert(50%) sepia(7%) saturate(0%) hue-rotate(206deg) brightness(101%) contrast(88%);
-	display: inline-flex;
-	margin-left: 0.25em;
-	
-	font-size: 1.5rem;
-	width: 1em;
-	height: 1em;
-	align-items: center;
-	justify-content: center;
-	
-	opacity: 0;
-	transition: all 0.2s ease-in-out;
-}
-
-.anchor-link:hover {
-	/* hard-coded to current accent color #0073AA oops */
-	filter: invert(31%) sepia(92%) saturate(858%) hue-rotate(166deg) brightness(94%) contrast(105%);
-}
 
 ol ol { list-style-type: lower-alpha;}
 
 figcaption {
 	font-style: italic;
 	color: #747474
+}
+
+/* table snippets */
+
+.supplies td:nth-child(2) {
+  font-size: 10px;
+  vertical-align: top;
+}
+
+.align-middle td {
+  vertical-align: middle !important;
 }
