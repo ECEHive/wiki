@@ -1,16 +1,17 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
-import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://wiki.hivemakerspace.com/",
   base: "/",
+  legacy: {
+    collections: true,
+  },
   integrations: [
     starlight({
       title: "The Hive Wiki",
@@ -59,25 +60,9 @@ export default defineConfig({
         },
       ],
     }),
-    tailwind({
-      applyBaseStyles: false,
-    }),
   ],
   markdown: {
     rehypePlugins: [
-      rehypeSlug,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "append",
-          headingProperties: {
-            className: ["anchor"],
-          },
-          properties: {
-            className: ["anchor-link"],
-          },
-        },
-      ],
       [
         rehypeExternalLinks,
         {
@@ -88,5 +73,8 @@ export default defineConfig({
         },
       ],
     ],
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 });
