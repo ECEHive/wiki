@@ -8,20 +8,9 @@
 	object-fit: cover;
 }
 
-a.external {
-	background-repeat: no-repeat;
-	background-position: right center;
-	padding: 0 16px 0 0;
-	background-image: url(/external-arrow.svg);
-}
 
-.anchor {
-	scroll-margin-top: 2rem;
-}
 
-.anchor:hover >.anchor-link {
-	opacity: 1;
-}
+
 
 
 ol ol { list-style-type: lower-alpha;}
@@ -40,4 +29,14 @@ figcaption {
 
 .align-middle td {
   vertical-align: middle !important;
+}
+
+/* External link styling
+Reference: https://rachsmith.com/styling-external-links/ */
+
+a.external {
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding: 0 16px 0 0;
+	background-image: url(/external-arrow.svg);
 }
