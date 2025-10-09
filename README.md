@@ -47,5 +47,4 @@ Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro 
 
 More sites/pages that have been immense help
 - [freeCodeCamp.org's "Contribute" website repo](https://github.com/freeCodeCamp/contribute)
-- [Section Header Anchors in Astro](https://caseyjamesperno.com/blog/astro-header-anchors/)
 - [Styling the external links on this site](https://rachsmith.com/styling-external-links/)
