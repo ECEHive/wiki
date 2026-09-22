@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import { unified } from '@astrojs/markdown-remark';
 import tailwindcss from "@tailwindcss/vite";
 
 import rehypeExternalLinks from "rehype-external-links";
@@ -9,9 +10,6 @@ import rehypeExternalLinks from "rehype-external-links";
 export default defineConfig({
   site: "https://wiki.hivemakerspace.com/",
   base: "/",
-  legacy: {
-    collections: true,
-  },
   integrations: [
     starlight({
       title: "The Hive Wiki",
@@ -48,31 +46,33 @@ export default defineConfig({
         },
         {
           label: "3D Printing",
-          autogenerate: { directory: "3d-printing" },
+          items: [{ autogenerate: { directory: "3d-printing" } }],
         },
         {
           label: "PCB Fabrication",
-          autogenerate: { directory: "pcb" },
+          items: [{ autogenerate: { directory: "pcb" } }],
         },
         {
           label: "Workshop Docs",
-          autogenerate: { directory: "workshop" },
+          items: [{ autogenerate: { directory: "workshop" } }],
         },
       ],
     }),
   ],
   markdown: {
-    rehypePlugins: [
-      [
-        rehypeExternalLinks,
-        {
-          properties: {
-            className: ["external"],
+    processor: unified({
+      rehypePlugins: [
+        [
+          rehypeExternalLinks,
+          {
+            properties: {
+              className: ["external"],
+            },
+            target: "_blank",
           },
-          target: "_blank",
-        },
+        ],
       ],
-    ],
+    })
   },
   vite: {
     plugins: [tailwindcss()],
