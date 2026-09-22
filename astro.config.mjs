@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import starlight from "@astrojs/starlight";
 import { unified } from '@astrojs/markdown-remark';
 import tailwindcss from "@tailwindcss/vite";
@@ -10,6 +10,22 @@ import rehypeExternalLinks from "rehype-external-links";
 export default defineConfig({
   site: "https://wiki.hivemakerspace.com/",
   base: "/",
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      cssVariable: "--font-body",
+      name: "Inter",
+      weights: ["100 900"],
+      styles: ["normal", "italic"]
+    },
+    {
+      provider: fontProviders.google(),
+      cssVariable: "--font-heading",
+      name: "Rubik",
+      weights: ["300 900"],
+      styles: ["normal", "italic"]
+    }
+  ],
   integrations: [
     starlight({
       title: "The Hive Wiki",
@@ -57,6 +73,9 @@ export default defineConfig({
           items: [{ autogenerate: { directory: "workshop" } }],
         },
       ],
+      components: {
+        Head: "./src/components/CustomHead.astro"
+      }
     }),
   ],
   markdown: {
