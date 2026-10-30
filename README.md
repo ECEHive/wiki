@@ -1,4 +1,4 @@
-# The HIVE Wiki, Renewed
+# The Hive Wiki
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
