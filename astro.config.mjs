@@ -39,13 +39,6 @@ export default defineConfig({
         dark: "./public/wiki-logo-dark.svg",
         replacesTitle: true,
       },
-      social: [
-        {
-          icon: "github",
-          label: "GitHub",
-          href: "https://github.com/ecehive/wiki",
-        },
-      ],
       sidebar: [
         { label: "Home", link: "/" },
         "faq",
