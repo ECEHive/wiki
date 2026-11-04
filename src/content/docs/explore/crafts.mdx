@@ -5,64 +5,147 @@ title: Crafts
 import { Image } from 'astro:assets';
 import YouTubeCard from '/src/components/youtube-card.astro';
 
-Ever wanted to create your own stickers or embroider material? Look no further. The Hive has a vinyl cutter and embroidery/sewing machine to help with any of your designs. This crafting area is located by the benchtop desks, right by the staircase that leads to the bottom floor.
+Here at the Hive, engineering doesn't just involve creating the next big thing. We're also here to help you with branding! At our crafts section, you can create your own stickers and make your own merch. This crafting area is located by the benchtop desks, right by the staircase that leads to the bottom floor.
 
-## Vinyl Cutter
+As a note, due to institute policies, we do not allow commercial usage of our equipment and materials, e.g. you cannot make t-shirts here to sell.
 
-The Hive currently has three vinyl cutters: Silhouette Cameo 3, Silhouette Cameo 4, and Silhouette Cameo 5. This machine uses the computer located right next to it, and the application to use this device is called [Silhouette Studio](https://www.silhouetteamerica.com/silhouette-studio), which is very similar to Illustrator. We have anything from vinyl to cardstock and stencils for anything you want to cut with good precision.
+## Making Stickers
+
+The Hive has three Siser Romeo 60cm High-Definition Cutters. These machines can be run in two modes: print-and-cut and cut only. In general, when it comes to sticker making, you would want the machine to be configured to print-and-cut.
+
+<embed src="/crafts-stickers-quickstart.pdf" width="100%" height="375" />
+<a href="/crafts-stickers-quickstart.pdf">View full document ↗</a>
+
+### Self-Adhesive Vinyl
+
+Self-adhesive vinyl comes in a single-color sheet. Although not as commonly used, these sheets come in handy when cutting out simple designs like lettering or single-color logos.
+
+Below is a general process.
+
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+1. Import design into the Siser software. If the design is a bitmap image (PNG, JPEG, etc.), follow the steps to trace the outlines. SVG files can be directly imported as "editable image."
+2. Make sure the "print and cut job" checkbox is not selected. You can verify this by observing there are no calibration marks around your design. Send design to the cutter.
+3. If your design has multiple colors, each color will be separated in its own process.
+4. On the cut menu, make sure force is between 15-20. You do not want force to exceed this, or else the blade will cut through the non-adhesive backing paper. Additionally, for an easier time in the next step, enable auto-weedbox.
+5. After the cut is done for a single color, you would want to weed excess vinyl. Use the provided tools at each crafts station to pick away any vinyl that is not a part of your design.
+6. Cover the remaining vinyl (your design) with translucent adhesive transfer paper. 
+7. When you are ready to apply your design onto the intended surface, peel off the backing paper, apply the vinyl and transfer paper to the surface, and finally remove the transfer paper.
+</Steps>
 
 
-<embed src="/crafts-quickstart-vinyl.pdf" width="100%" height="375" />
-<a href="/crafts-quickstart-vinyl.pdf">View full document ↗</a>
+## Decorating Shirts (and Other Fabrics)
 
-## Sewing/Embroidery
-
-:::caution[Maintenance Note]
-At the moment, we do not have any available embroidery machines for end user usage. Our two existing machines -- BROTHER CS6000i COMPUTER and Janome Memory Craft 9850 Special Edition -- are not in operation.
-
-However, if you're around the space, you might see a the Melco EMT16X being set up! More information to come.
-:::
-
-You don't really need to know how to sew or embroider, as most of the process is actually computerized! We have various colors of thread for you to use and test shirts for you to practice your designs before you try it on your own material.
+Depending on your starting material, there are several methods for a high-quality product. If your material is at least 50% polyester, dye sublimation is your best bet! It is by far the easiest.
 
 
-## Dye Sublimation
+Sublimation printer + heat press
+
+- Directly dyes polyester fabric
+- Little to no processing involved (simply print and press)
+- Limitation 1: Cannot sublimate a design on 100% cotton. Fabric needs to be at least 50% polyester.
+- Limitation 2: Black/dark fabric does not work. The ink has to be darker than the fabric in order to show up
+- Limitation 3: The printer does not have white ink. If your image has white, that part of the image will be the color of the fabric.
+
+
+Iron-on vinyl / Heat transfer vinyl
+
+- Adds a layer of vinyl onto the fabric
+- Versatile (none of the limitations listed above with sublimation ink)
+- Produces a result with crisp edges
+- Con: Separate colors need to applied separately, and processing takes much more time compared to sublimation.
+
+
+For both processes, the materials are provided at the makerspace. There will be peer instructors on-shift to help you with using the equipment. One thing of note is that we don't have a setup for mass-production of shirts. 
+
+### Dye Sublimation
 
 For sublimation, we have the Sawgrass SG 500 and Stahl's Hotronix Thermal Transfer Press.
 
+The sublimation process is also compatible with other surfaces, such as acrylic with sublimatable coating. The process is the same, other than heat and time settings.
 
 <embed src="/crafts-quickstart-sublimation.pdf" width="100%" height="375" />
 <a href="/crafts-quickstart-sublimation.pdf">View full document ↗</a>
 
-## Button Press
+<br/>
+<br/>
 
-Our button press model is VEVOR Button Maker Machine Badge Pin Machine 1" 25 MM.
+<details>
+  <summary>Expand for supplemental video on sublimation.</summary>
 
-<embed src="/crafts-buttonpress-quickstart.pdf" width="100%" height="375" />
-<a href="/crafts-buttonpress-quickstart.pdf">View full document ↗</a>
+	<YouTubeCard
+		href='https://www.youtube.com/watch?v=vVuXaT4F-4E&list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q&index=3'
+		title='Sublimation Tutorial'
+		description='Learn how to use the sublimation printer and heat press to make some really cool things!'
+	/>
+</details>
 
 
-## Craft Training/Tutorial Videos
+### Heat-Transfer Vinyl
+
+The heat transfer vinyl process is very similar to self-adhesive vinyl, with two main differences. The design needs to be mirrored, and you do not need adhesive transfer paper.
+
+<Steps>
+1. Import your design into Siser software.
+2. Load heat-transfer vinyl matte-side up. You will be cutting on the bottom side of the material.
+3. Send design to the cutter. Since you are cutting on the bottom side, be sure the design is mirrored. To make the weeding step easier, add an auto-weedbox.
+4. Find a suitable preset for speed and forace. IMPORTANT: Force must be between 15-20. You want the plastic layer on top of the sheet to be intact, as it acts as your transfer layer.
+5. Move the cutting blade to where you want the bottom-left corner of your design, which would likely be the bottom-left corner of your material.
+6. Start the cut and wait for the process to finish.
+7. Using the provided weeding tools at each station, remove any unwanted vinyl that is not a part of your design.
+8. Once the unwanted vinyl is removed and only your design remains, flip over the sheet so that the design is no longer mirrored. Use an iron or a heat press to transfer the design onto the intended surface.
+</Steps>
+
+
+## Sewing/Embroidery
+
+As of Fall 2026, the embroidery machine we have is the Melco EMT16X. Once set up, it can embroider with 16 colored threads with no need for manual switching. At full speed, it can do 1500 stitches per minute. 
+
+You don't really need to know how to sew or embroider, as most of the process is actually computerized! We have various colors of thread for you to use and test shirts for you to practice your designs before you try it on your own material.
+
+To use the embroidery machine, simply drop by during open hours. Although we cannot make any guarantees, there will be a trained Peer Instructor available to help you. As the embroidery process can take a while to get started up and running, please allocate at least an hour.
 
 import YouTubeGrid from '/src/components/youtube-grid.astro';
 
 <YouTubeGrid
 	videos={[
 		{
-			href: 'https://www.youtube.com/watch?v=lPWjX5RfCjw&list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q&index=2',
-			title: 'Sticker Making With The Vinyl Cutter',
-			description: 'In this video, folks will learn how to use the vinyl cutter to print and cut their own custom stickers.'
+			href: 'https://www.youtube.com/watch?v=mX2ysCyIq4o&list=PLaHV-4SxpcHwQyJRPUPxuZa1dq3U_m3J6&index=1',
+			title: 'Melco Design Shop Video 1: Digitizing a Design',
+			description: 'Learn how to digitize a design with Melco Design Shop and Adobe Illustrator!'
 		},
 		{
-			href: 'https://www.youtube.com/watch?v=vVuXaT4F-4E&list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q&index=3',
-			title: 'Sublimation Tutorial',
-			description: 'Learn how to use the sublimation printer and heat press to make some really cool things!'
+			href: 'https://www.youtube.com/watch?v=JOipE9-e7x8&list=PLaHV-4SxpcHwQyJRPUPxuZa1dq3U_m3J6&index=2',
+			title: 'Melco Design Shop Video 2: Stitch Types and Manual Digitizing',
+			description: 'Learn about the different stitch types and how to manually digitize a design!'
 		},
 		{
-			href: 'https://www.youtube.com/watch?v=XHvYG2dsmfg&list=PLaHV-4SxpcHyyZhDLVUcz8C7LJ91uVO8q&index=3',
-			title: 'Embroidery at the Hive (Legacy)',
-			description: 'In this video, you will learn how to use embird to design your EOF file and use the janome or the brother to embroider your files.'
+			href: 'https://www.youtube.com/watch?v=1kU6dR0gtvA&list=PLaHV-4SxpcHwQyJRPUPxuZa1dq3U_m3J6&index=3',
+			title: 'Melco Design Shop Video 3: Extra Tips and Tricks',
+			description: 'Learn some extra tips and tricks for using Melco Design Shop!'
+		},
+		{
+			href: 'https://www.youtube.com/watch?v=IQOMhIL5uEU&list=PLaHV-4SxpcHwQyJRPUPxuZa1dq3U_m3J6&index=4',
+			title: 'Using the Melco EMT16x with Steven',
+			description: 'In this video, Steven walks you through using the the melco EMT16x for embroidering a file you have designed.'
+		},
+		{
+			href: 'https://www.youtube.com/watch?v=g8516GAIuqo&list=PLaHV-4SxpcHwQyJRPUPxuZa1dq3U_m3J6&index=5',
+			title: 'Hat Embroidery with Max',
+			description: 'In this video, Max shows you how to use the hat embroidery attachment.'
 		},
 	]}
 
 />
+
+
+
+## Button Press
+
+Our button press model is VEVOR Button Maker Machine Badge Pin Machine 1" 25 MM. Materials are provided but limited, as we do not support mass-production.
+
+<embed src="/crafts-buttonpress-quickstart.pdf" width="100%" height="375" />
+<a href="/crafts-buttonpress-quickstart.pdf">View full document ↗</a>
+
+
