@@ -1,0 +1,15 @@
+---
+title: Projects
+---
+
+import ProjectSearch from "@/components/ProjectSearch.svelte";
+import { getCollection } from "astro:content";
+
+Over the years we have compiled a number of guides for projects that can be done in the space. This is a non-exhaustive list, just because it isn't listed here doesn't mean it isn't possible!
+
+## List
+
+export const projects = await getCollection("projects");
+
+{/* {JSON.stringify(projects)} */}
+<ProjectSearch client:load pages={projects} />

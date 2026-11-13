@@ -1,14 +1,19 @@
 ---
 title: "LPKF ProtoLaser U4"
 prev:
-    link: /explore/pcb/
-    label: PCB Fabrication
+  link: /explore/pcb/
+  label: PCB Fabrication
 ---
 
-import { Image } from 'astro:assets';
-import protolaser from '../../../assets/pcb-protolaser.png';
+import { Image } from "astro:assets";
+import protolaser from "../../../assets/pcb-protolaser.png";
 
-<Image class="border-2 border-slate-200 rounded-lg" src={protolaser} alt="The LPKF ProtoLaser U4" height="300" />
+<Image
+  class="border-2 border-slate-200 rounded-lg"
+  src={protolaser}
+  alt="The LPKF ProtoLaser U4"
+  height="300"
+/>
 
 The LPKF ProtoLaser U4 is an automated laser etching and micro-machining tool. It uses a pulsed 5.7W 355 nm class 1 laser to reduce thermal effects on the substrate, and a laser spot size of 20 um allows for etching of structures down to a theoretical limit of 65 um (~2.55 mil). This combination allows for a very wide range of processing substrates and films, but it is particularly good for thinner substrates that the more physically-taxing ProtoMat may damage, organic/flexible substrates, and for very precise RF etching.
 
@@ -25,17 +30,17 @@ An incomplete list of compatible substrates and films:
 
 Some theoretical specifications:
 
-| Spec | Theoretical value |
-|---|---|
-| Laser pulse frequency | 25 kHz–300 kHz |
-| Structuring speed | 200 mm/s (7.8"/s) on 18 µm/½ oz Cu on FR4 |
-| Cutting speed | 200 mm/s (7.8"/s) 0.5 mm (0.02") FR4 |
-| Diameter of focused laser beam  | 20 ± 2 µm |
-| Minimum line/space | 50 μm/20 μm (2 mil/0.8 mil), on laminated subtrate (18 µm Cu) |
-| Accuracy | ±1.98 µm (± 0.08 mil) |
-| Positioning accuracy | ± 20 μm |
-| Repeatability | ± 2 μm |
-| Resolution | 1.2 um |
+| Spec                           | Theoretical value                                             |
+| ------------------------------ | ------------------------------------------------------------- |
+| Laser pulse frequency          | 25 kHz–300 kHz                                                |
+| Structuring speed              | 200 mm/s (7.8"/s) on 18 µm/½ oz Cu on FR4                     |
+| Cutting speed                  | 200 mm/s (7.8"/s) 0.5 mm (0.02") FR4                          |
+| Diameter of focused laser beam | 20 ± 2 µm                                                     |
+| Minimum line/space             | 50 μm/20 μm (2 mil/0.8 mil), on laminated subtrate (18 µm Cu) |
+| Accuracy                       | ±1.98 µm (± 0.08 mil)                                         |
+| Positioning accuracy           | ± 20 μm                                                       |
+| Repeatability                  | ± 2 μm                                                        |
+| Resolution                     | 1.2 um                                                        |
 
 For more information, see the following documents:
 
@@ -55,7 +60,7 @@ Optimizing your process: [Protolaser - Optimization (PDF)](/pcb-protolaser-optim
 
 ### What materials have been used successfully?
 
-This is a running list of materials that we, or someone we know of, have successfully etched and/or cut. *(Last updated: 2022-06-22)*
+This is a running list of materials that we, or someone we know of, have successfully etched and/or cut. _(Last updated: 2022-06-22)_
 
 - 0.5oz (18um)/1oz (35um) copper on FR4
 - 5mil/0.125mm polyamide
@@ -74,7 +79,6 @@ Adjusting the breakout tabs If you're running a single-sided laser-only process,
 
 ## Common processing errors
 
-
 ### The pre-toolpath file did not import correctly.
 
 It’s likely that you either did not save at the correct point in the process, you saved over the pre-toolpath file, or you are trying to import the wrong file. Double check all of this. If you’re certain you did it correctly, get a PI.
@@ -87,7 +91,7 @@ Sometimes, when placing the board, the fiducials move in the opposite direction 
 
 You can either restart the process entirely (hit the Play button, see figure 32) or right click on "Top Side" (or "Bottom side") under "Processing" on the left, and click "Process from here" to restart the top (or bottom) side processing with top (or bottom) side alignment. You can also do this for an individual tool or an individual tool for a single scan field through the "Scan Fields" drop-down in the same area.
 
-A more involved, but better long-term, solution is to make your own material settings: [ProtoLaser: New Material](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EShrwNPAMH1Cj3cE3pg5h8QB6r3JP-XtLghmQcU96-fNfA?e=Ska4Ud). It's not hard to do, though adjusting the settings can be time consuming. A quick thing to do it to look at the etch under a microscope with a set of tweezers in hand. Try to lift one of the stuck-on strips with the tweezers. If the ends of the strip are stuck, adjust the Mark Speed of the "Contour" tool down by 10%. If the sides are stuck, adjust the Mark Speed of the "Hatch" tool down by 10%. If the entire strip is stuck, adjust the Mark Speed of the "Heat" tool down by 10%. Repeat this until the etch is better for you. See LPKF's [Protolaser - Optimization (PDF)](/pcb-protolaser-optimization.pdf) document for more details on this process. ***DO NOT ADJUST THE DEFAULT MATERIALS!!*** Only adjust a custom material that you've created.
+A more involved, but better long-term, solution is to make your own material settings: [ProtoLaser: New Material](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EShrwNPAMH1Cj3cE3pg5h8QB6r3JP-XtLghmQcU96-fNfA?e=Ska4Ud). It's not hard to do, though adjusting the settings can be time consuming. A quick thing to do it to look at the etch under a microscope with a set of tweezers in hand. Try to lift one of the stuck-on strips with the tweezers. If the ends of the strip are stuck, adjust the Mark Speed of the "Contour" tool down by 10%. If the sides are stuck, adjust the Mark Speed of the "Hatch" tool down by 10%. If the entire strip is stuck, adjust the Mark Speed of the "Heat" tool down by 10%. Repeat this until the etch is better for you. See LPKF's [Protolaser - Optimization (PDF)](/pcb-protolaser-optimization.pdf) document for more details on this process. _**DO NOT ADJUST THE DEFAULT MATERIALS!!**_ Only adjust a custom material that you've created.
 
 ### The board is/is not flipped in the Processing tab.
 
@@ -100,22 +104,24 @@ Usually, this happens because the "supported by ProtoMat" box was not checked wh
 ### The software throws and "Insufficient pressure" error.
 
 **Potential issue**: The vacuum hose may be disconnected from the extraction hood.
+
 - Lift the door. The extraction hood is the plastic bit that the laser comes out of. There is a hose that should run from that to the back of the machine (still all inside the main bay). Make sure that its snugly inserted on both ends.
 
 **Potential issue**: The vacuum system may not be on or working strongly enough.
+
 - Confirm that the vacuum system is on.The vacuum system is the tall white box to the tool’s right. On the front panel, at the bottom, there should be some buttons. Try increasing the suction pressure.
 
 **Potential issue**: The vacuum hose(s) may be clogged.
+
 - There are two vacuum hoses. One runs from the extraction hood (the round plastic bit inside the main bay) to the rear interior wall of the tool, and the second runs from the outside backside of the tool to the vacuum system (the tall white box to the tool’s right). You should be able to remove both of these and check for clogs.
 
 **Potential issue**: If your substrate is very small, not enough of the bed may be covered for proper vacuum pressure.
-- Tape down an old piece of 8"x12" FR4 on the bed. Then, secure your sample inside one of the cutouts. If the FR4 has a lot of holes, try covering some of them with tape.
 
+- Tape down an old piece of 8"x12" FR4 on the bed. Then, secure your sample inside one of the cutouts. If the FR4 has a lot of holes, try covering some of them with tape.
 
 ## Guide: How to adjust the breakout tabs on the laser
 
 {/* TODO: Add steps, use starlight steps component */}
-
 
 So you're running a [single-sided laser-only process](/pcb/11-pcb-processes#single-sided-no-holes), and you'd like to adjust the breakout tabs. No problem! It's very straightforward to do, and you can do it before or after the toolpath has been generated.
 
