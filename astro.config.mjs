@@ -75,15 +75,13 @@ export default defineConfig({
         {
           label: "Embedded Systems",
           collapsed: true,
-          items: ["explore/embedded-systems", "guides/embed-selection"],
+          items: ["explore/embedded-systems"],
         },
         {
           label: "Laser Cutting",
           collapsed: true,
           items: [
             "explore/laser-cutting",
-            "sop/sop-laser",
-            "guides/laser-fablight",
           ],
         },
         {
