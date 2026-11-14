@@ -2,15 +2,19 @@
 title: "Getting Started"
 ---
 
-import { Image } from 'astro:assets';
-import printingImage from "@/assets/3dprinting/printing.jpg"
-import modelImage from "@/assets/3dprinting/dozer.jpg"
-import printerImage from "@/assets/3dprinting/bbl-p1s.jpg"
-import slicingImage from "@/assets/3dprinting/slicing.jpg"
-import processingImage from "@/assets/3dprinting/post-processing.jpg"
-import pickupImage from "@/assets/3dprinting/pickup.jpg"
+import { Image } from "astro:assets";
+import printingImage from "@/assets/3dprinting/printing.jpg";
+import modelImage from "@/assets/3dprinting/dozer.jpg";
+import printerImage from "@/assets/3dprinting/bbl-p1s.jpg";
+import slicingImage from "@/assets/3dprinting/slicing.jpg";
+import processingImage from "@/assets/3dprinting/post-processing.jpg";
+import pickupImage from "@/assets/3dprinting/pickup.jpg";
 
-<Image src={printingImage} alt="3D printing printing" class="rounded-lg w-full !max-w-sm" />
+<Image
+  src={printingImage}
+  alt="3D printing printing"
+  class="rounded-lg w-full !max-w-sm"
+/>
 
 3D printing is the process of creating a three-dimensional object from a digital file.
 This is done by adding material layer by layer until the object is complete.
@@ -28,18 +32,24 @@ This is done by adding material layer by layer until the object is complete.
 
 ### 1. Find a Model
 
-<Image src={modelImage} alt="3D printed LEGO bulldozer" class="rounded-lg w-full !max-w-sm" />
+<Image
+  src={modelImage}
+  alt="3D printed LEGO bulldozer"
+  class="rounded-lg w-full !max-w-sm"
+/>
 
 Before printing, you need a model to be printed.
 There are a wide variety of resources available for finding or designing models.
 If you are new to 3D printing, we recommend starting with a model that is already designed for 3D printing.
 
 **Resources for Finding Models**:
+
 - [Printables](https://www.printables.com/): A large library of 3D models hosted by Prusa Research.
 - [Thingiverse](https://www.thingiverse.com/): A popular site for sharing 3D models.
 - [Thangs](https://thangs.com/): A 3D model search engine that allows you to find models across multiple sites.
 
 **Resources for Designing Models**:
+
 - [TinkerCAD](https://www.tinkercad.com/): A free online CAD tool that is great for beginners.
 - [Fusion 360](https://www.autodesk.com/products/fusion-360/overview): A more advanced CAD tool that is free for students and educators.
 - [Blender](https://www.blender.org/): A free and open-source 3D modeling software that is great for creating complex models.
@@ -56,22 +66,30 @@ When designing or downloading models, there are several considerations to keep i
 
 ### 2. Select a Printer
 
-<Image src={printerImage} alt="Bambu Lab P1S printer" class="rounded-lg w-full !max-w-sm" />
+<Image
+  src={printerImage}
+  alt="Bambu Lab P1S printer"
+  class="rounded-lg w-full !max-w-sm"
+/>
 
 We have several printers available for use, each with its own strengths and weaknesses.
 It is important to choose the right printer for your needs.
 As always, if you are unsure of which printer to use, finding a PI in the Hive is a great place to start.
 
-| Printer | Material Options | When to Use |
-| ------- | ---------------- | ----------- |
-| [Bambu Lab P1S](/3d-printing/10-bbl-p1s) | PLA, PETG, ABS, TPU | General use, prototyping, and functional parts |
-| [Bambu Lab P1S w/ AMS](/3d-printing/15-bbl-multi-color) | PLA | Multi-color printing |
-| [Formlabs Form 3](/3d-printing/20-formlabs-form-3) | Standard Resins, Flexible Resin | High-detail prints, small parts, and models |
-| [Formlabs Form 3L](/3d-printing/21-formlabs-form-3l) | Draft Resin | Large parts and models, prototyping |
+| Printer                                                 | Material Options                | When to Use                                    |
+| ------------------------------------------------------- | ------------------------------- | ---------------------------------------------- |
+| [Bambu Lab P1S](/3d-printing/10-bbl-p1s)                | PLA, PETG, ABS, TPU             | General use, prototyping, and functional parts |
+| [Bambu Lab P1S w/ AMS](/3d-printing/15-bbl-multi-color) | PLA                             | Multi-color printing                           |
+| [Formlabs Form 3](/3d-printing/20-formlabs-form-3)      | Standard Resins, Flexible Resin | High-detail prints, small parts, and models    |
+| [Formlabs Form 3L](/3d-printing/21-formlabs-form-3l)    | Draft Resin                     | Large parts and models, prototyping            |
 
 ### 3. Preparing
 
-<Image src={slicingImage} alt="PI helping a person slice their model" class="rounded-lg w-full !max-w-sm" />
+<Image
+  src={slicingImage}
+  alt="PI helping a person slice their model"
+  class="rounded-lg w-full !max-w-sm"
+/>
 
 Once you have selected a model and printer, you will need to prepare the model for printing.
 We only accept `.stl`, `.obj`, and `.step` files.
@@ -94,7 +112,11 @@ Printing in the space is completely free for all Georgia Tech members (students,
 
 ### 4. Printing
 
-<Image src={printingImage} alt="3D printing printing" class="rounded-lg w-full !max-w-sm" />
+<Image
+  src={printingImage}
+  alt="3D printing printing"
+  class="rounded-lg w-full !max-w-sm"
+/>
 
 Once the model is prepared, we will print it for you.
 We will monitor the print to ensure that it is printing correctly and will notify you via email with the status of the print.
@@ -103,7 +125,11 @@ If the print is unsuccessful, we encourage you to come into the space and we wil
 
 ### 5. Post-Processing
 
-<Image src={processingImage} alt="Post-processing tools" class="rounded-lg w-full !max-w-sm" />
+<Image
+  src={processingImage}
+  alt="Post-processing tools"
+  class="rounded-lg w-full !max-w-sm"
+/>
 
 Once the print is complete, some post-processing may be required.
 This may include removing supports, sanding, or curing the print.
@@ -113,7 +139,11 @@ You are welcome to use our tools and supplies for any additional post-processing
 
 ### 6. Pick Up
 
-<Image src={pickupImage} alt="Location of bins to pickup print" class="rounded-lg w-full !max-w-sm" />
+<Image
+  src={pickupImage}
+  alt="Location of bins to pickup print"
+  class="rounded-lg w-full !max-w-sm"
+/>
 
 Once the print is complete and any post-processing is done, you can pick up your model from the space.
 The print pickup bins are located on the 1st floor of the Hive.

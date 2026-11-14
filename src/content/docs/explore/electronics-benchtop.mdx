@@ -2,32 +2,37 @@
 title: Electronics Benchtop
 ---
 
-import { Image } from 'astro:assets';
-import benchtop from '../../../assets/intro-benchtop.jpg';
+import { Image } from "astro:assets";
+import benchtop from "../../../assets/intro-benchtop.jpg";
 
-import img1 from '../../../assets/electronics-benchtop-kthysrcmtr.jpg';
-import img2 from '../../../assets/electronics-benchtop-kthydmm.jpg';
-import img3 from '../../../assets/electronics-benchtop-ttxoscope.jpg';
-import img4 from '../../../assets/electronics-benchtop-ttxfuncgen.jpg';
-import img5 from '../../../assets/electronics-benchtop-kthysupbattsim.jpg';
-import img6 from '../../../assets/electronics-benchtop-kthytriplesup.jpg';
-import img7 from '../../../assets/electronics-benchtop-kslcr.jpg';
-import img8 from '../../../assets/electronics-benchtop-kspwrmtr.jpg';
-import img9 from '../../../assets/electronics-benchtop-kstriplesup.jpg';
-import img10 from '../../../assets/electronics-benchtop-ksdmm.jpg';
-import img11 from '../../../assets/electronics-benchtop-kswavgen.jpg';
-import img12 from '../../../assets/electronics-benchtop-ksoscope100.jpg';
-import img13 from '../../../assets/electronics-benchtop-ksoscope200.jpg';
-import img14 from '../../../assets/electronics-benchtop-ksoscope800.jpg';
-import img15 from '../../../assets/electronics-benchtop-ksntwkan.jpg';
-import img16 from '../../../assets/electronics-benchtop-kssigan.jpg';
-import img17 from '../../../assets/electronics-benchtop-ksvecsiggen.jpg';
-import img18 from '../../../assets/electronics-benchtop-kstriplesuplow.jpg';
-import img19 from '../../../assets/electronics-benchtop-ayvacuum.jpg';
-import img20 from '../../../assets/electronics-benchtop-wlsoldering.jpg';
-import img21 from '../../../assets/electronics-benchtop-quickrework.jpg';
+import img1 from "../../../assets/electronics-benchtop-kthysrcmtr.jpg";
+import img2 from "../../../assets/electronics-benchtop-kthydmm.jpg";
+import img3 from "../../../assets/electronics-benchtop-ttxoscope.jpg";
+import img4 from "../../../assets/electronics-benchtop-ttxfuncgen.jpg";
+import img5 from "../../../assets/electronics-benchtop-kthysupbattsim.jpg";
+import img6 from "../../../assets/electronics-benchtop-kthytriplesup.jpg";
+import img7 from "../../../assets/electronics-benchtop-kslcr.jpg";
+import img8 from "../../../assets/electronics-benchtop-kspwrmtr.jpg";
+import img9 from "../../../assets/electronics-benchtop-kstriplesup.jpg";
+import img10 from "../../../assets/electronics-benchtop-ksdmm.jpg";
+import img11 from "../../../assets/electronics-benchtop-kswavgen.jpg";
+import img12 from "../../../assets/electronics-benchtop-ksoscope100.jpg";
+import img13 from "../../../assets/electronics-benchtop-ksoscope200.jpg";
+import img14 from "../../../assets/electronics-benchtop-ksoscope800.jpg";
+import img15 from "../../../assets/electronics-benchtop-ksntwkan.jpg";
+import img16 from "../../../assets/electronics-benchtop-kssigan.jpg";
+import img17 from "../../../assets/electronics-benchtop-ksvecsiggen.jpg";
+import img18 from "../../../assets/electronics-benchtop-kstriplesuplow.jpg";
+import img19 from "../../../assets/electronics-benchtop-ayvacuum.jpg";
+import img20 from "../../../assets/electronics-benchtop-wlsoldering.jpg";
+import img21 from "../../../assets/electronics-benchtop-quickrework.jpg";
 
-<Image class="border-2 border-slate-200 rounded-lg" src={benchtop} alt="People working on a benchtop project" width="300" />
+<Image
+  class="border-2 border-slate-200 rounded-lg"
+  src={benchtop}
+  alt="People working on a benchtop project"
+  width="300"
+/>
 
 The IDC contains a suite of electronics benchtop equipment available to all end users.
 
@@ -51,137 +56,185 @@ Beginner guides on to use each piece of equipment are listed below:
 
 In addition we also have video demos listed for all of these different pieces of equipment found here:
 
-import YouTubeGrid from '/src/components/youtube-grid.astro';
-
+import YouTubeGrid from "/src/components/youtube-grid.astro";
 
 {/* Create new component to auto-populate from playlist link https://www.youtube.com/playlist?list=PLaHV-4SxpcHx4nsOkHsaOwHsnmBU3wZ4W */}
 
 <YouTubeGrid
-	videos={[
-		{
-			href: 'https://youtu.be/HUVbGxMgu3E',
-			title: 'Intro To Electronics Prototyping',
-			description: 'This video introduces breadboards, multi-meters, and other tools needed to start prototyping electronics.',
-		},
-		{
-			href: 'https://youtu.be/ypZLYhUnwcs',
-			title: 'Intro To Soldering',
-			description: 'Here we talk about what soldering is, the basics of the soldering iron and solder, and how to do through hole soldering.',
-		},
-		{
-			href: 'https://youtu.be/9fZ4wMBCywc',
-			title: 'Waveform Generator',
-			description: 'Stevie shows you how to use the Waveform Generator found on most benches.',
-		},
-		{
-			href: 'https://youtu.be/f8wX688K1Nc',
-			title: 'DMM and Power Supply',
-			description: 'Stevie shows you how to use the DC power supply and Digital multi meter located on most of the benches.',
-		},
-		{
-			href: 'https://youtu.be/mKCJM2boW5I',
-			title: 'Oscilloscope How-To',
-			description: 'In this video, Stevie shows you how to use the oscilloscope, a tool that tells you voltage over time at a sample rate of 5 billion times a second.',
-		},
-	]}
+  videos={[
+    {
+      href: "https://youtu.be/HUVbGxMgu3E",
+      title: "Intro To Electronics Prototyping",
+      description:
+        "This video introduces breadboards, multi-meters, and other tools needed to start prototyping electronics.",
+    },
+    {
+      href: "https://youtu.be/ypZLYhUnwcs",
+      title: "Intro To Soldering",
+      description:
+        "Here we talk about what soldering is, the basics of the soldering iron and solder, and how to do through hole soldering.",
+    },
+    {
+      href: "https://youtu.be/9fZ4wMBCywc",
+      title: "Waveform Generator",
+      description:
+        "Stevie shows you how to use the Waveform Generator found on most benches.",
+    },
+    {
+      href: "https://youtu.be/f8wX688K1Nc",
+      title: "DMM and Power Supply",
+      description:
+        "Stevie shows you how to use the DC power supply and Digital multi meter located on most of the benches.",
+    },
+    {
+      href: "https://youtu.be/mKCJM2boW5I",
+      title: "Oscilloscope How-To",
+      description:
+        "In this video, Stevie shows you how to use the oscilloscope, a tool that tells you voltage over time at a sample rate of 5 billion times a second.",
+    },
+  ]}
 />
-
 
 ## Full List of Benchtop Equipment
 
 The following is provided in no particular order.
 
 <table class="align-middle">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Image</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Keithley source meter 2450</td>
-            <td><Image src={img1} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keithley digital multimeter DMM6500</td>
-            <td><Image src={img2} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Tektronix oscilloscope MSO58</td>
-            <td><Image src={img3} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Tektronix function generator AFG31152</td>
-            <td><Image src={img4} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keithley precision supply and battery simulator 2281S-20-6</td>
-            <td><Image src={img5} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keithley triple output power supply 2230-30-1</td>
-            <td><Image src={img6} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight LCR meter E4980-AL</td>
-            <td><Image src={img7} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight power meter N1913A</td>
-            <td><Image src={img8} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight triple power supply U8031A (2x 0-30V, 6A; 1x 5V, 3A)</td>
-            <td><Image src={img9} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight digital multimeter 34460A</td>
-            <td><Image src={img10} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight waveform generator 33500B</td>
-            <td><Image src={img11} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight oscilloscope DSOX3014A</td>
-            <td><Image src={img12} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight oscilloscope DSOX4024A</td>
-            <td><Image src={img13} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight oscilloscope DSOX6002A</td>
-            <td><Image src={img14} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight network analyzer E5063A</td>
-            <td><Image src={img15} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight signal analyzer N9000B</td>
-            <td><Image src={img16} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight vector signal generator</td>
-            <td><Image src={img17} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Keysight triple power supply, low power E3630A (0-6V, 2.5A; 0-20V, 0.5V; 0-(-20)V, 0.5A)</td>
-            <td><Image src={img18} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Aoyue vacuum pick-up hand tool 932</td>
-            <td><Image src={img19} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Weller soldering iron and solder sucker WXR3</td>
-            <td><Image src={img20} alt="" width="200"/></td>
-        </tr>
-        <tr>
-            <td>Quick hot-air rework station 957DW+</td>
-            <td><Image src={img21} alt="" width="200"/></td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Keithley source meter 2450</td>
+      <td>
+        <Image src={img1} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keithley digital multimeter DMM6500</td>
+      <td>
+        <Image src={img2} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Tektronix oscilloscope MSO58</td>
+      <td>
+        <Image src={img3} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Tektronix function generator AFG31152</td>
+      <td>
+        <Image src={img4} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keithley precision supply and battery simulator 2281S-20-6</td>
+      <td>
+        <Image src={img5} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keithley triple output power supply 2230-30-1</td>
+      <td>
+        <Image src={img6} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight LCR meter E4980-AL</td>
+      <td>
+        <Image src={img7} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight power meter N1913A</td>
+      <td>
+        <Image src={img8} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight triple power supply U8031A (2x 0-30V, 6A; 1x 5V, 3A)</td>
+      <td>
+        <Image src={img9} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight digital multimeter 34460A</td>
+      <td>
+        <Image src={img10} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight waveform generator 33500B</td>
+      <td>
+        <Image src={img11} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight oscilloscope DSOX3014A</td>
+      <td>
+        <Image src={img12} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight oscilloscope DSOX4024A</td>
+      <td>
+        <Image src={img13} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight oscilloscope DSOX6002A</td>
+      <td>
+        <Image src={img14} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight network analyzer E5063A</td>
+      <td>
+        <Image src={img15} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight signal analyzer N9000B</td>
+      <td>
+        <Image src={img16} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Keysight vector signal generator</td>
+      <td>
+        <Image src={img17} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Keysight triple power supply, low power E3630A (0-6V, 2.5A; 0-20V, 0.5V;
+        0-(-20)V, 0.5A)
+      </td>
+      <td>
+        <Image src={img18} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Aoyue vacuum pick-up hand tool 932</td>
+      <td>
+        <Image src={img19} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Weller soldering iron and solder sucker WXR3</td>
+      <td>
+        <Image src={img20} alt="" width="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>Quick hot-air rework station 957DW+</td>
+      <td>
+        <Image src={img21} alt="" width="200" />
+      </td>
+    </tr>
+  </tbody>
 </table>

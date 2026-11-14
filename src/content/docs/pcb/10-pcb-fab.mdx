@@ -1,18 +1,18 @@
 ---
 title: "PCB Fabrication Process"
 prev:
-    link: /explore/pcb/
-    label: PCB Fabrication
+  link: /explore/pcb/
+  label: PCB Fabrication
 ---
 
 :::tip[General Processing Reminders...]
 
-- Orient all your boards \*before* creating any fiducials.
+- Orient all your boards \*before\* creating any fiducials.
 - 4 fiducials – always.
 - Don't forget to save before generating the toolpath on the ProtoMat!
 - Make sure that the two boxes are checked before selecting a ProtoLaser template.
 - **Get a PI to change any bits in the ProtoMat!**
-:::
+  :::
 
 ## Process Guides
 
@@ -27,8 +27,7 @@ prev:
 
 See our [tips and tricks](/pcb/40-pcb-advanced/) page for some advanced processing concepts (or just interesting tidbits).
 
-*The above guides targeted towards End Users and PIs (Peer Instructors) who want to know about the standard fabrication process often employed at The Hive, either before they are certified or afterwards. It is not intended to serve as a technical manual for any of these three tools or the software that controls them; for those, see the individual tool SOPs. It is also not intended to serve as a complete list of all processes that can be achieved with this tool suite. It is simply a step-by-step guide to our standardized processes.*
-
+_The above guides targeted towards End Users and PIs (Peer Instructors) who want to know about the standard fabrication process often employed at The Hive, either before they are certified or afterwards. It is not intended to serve as a technical manual for any of these three tools or the software that controls them; for those, see the individual tool SOPs. It is also not intended to serve as a complete list of all processes that can be achieved with this tool suite. It is simply a step-by-step guide to our standardized processes._
 
 ## Process Capabilities
 
@@ -36,15 +35,14 @@ The Hive has a suite of LPKF tools that enable students to fabricate 2-layer pro
 
 The Hive's PCB fabrication tool suite has the following capabilities:
 
-- *Substrates*: FR4, Rogers materials, polyamide, among many others. See the [ProtoLaser help page](/pcb/21-protolaser/) for more details.
-- *Copper thickness/weight*: No known limit, other than processing time.
-- *Slot*: yes, but YMMV. See our [fabs tips](/pcb/40-pcb-advanced/) page for details.
-- *Soldermask*: we have the chemicals, which have an official process, but we don't officially support it. See the ProMask datasheet, below. We also have trialed an alternative masking process with Kapton tape, but YMMV. See [this page](/pcb/30-masknsilkscreen/#soldermasking-with-kapton-tape) for more details.
-- *Silkscreen*: we have the chemicals, which have an official process, but we don't officially support it. See the ProLegend datasheet below.
-- *Stencils*: we can make them! See our "[How to make stencils](/pcb/31-stencilnreflow#how-to-make-and-use-stencils)" page for more!
-- *Reflow*: we have a fully operational reflow oven, optimized for lead-free solder paste. See "[How to reflow](/pcb/31-stencilnreflow#how-to-use-the-reflow-oven)" for more information.
-- *"Plating"*: We have a chemical-free non-electrical "plating" process with the ProConduct package.
-
+- _Substrates_: FR4, Rogers materials, polyamide, among many others. See the [ProtoLaser help page](/pcb/21-protolaser/) for more details.
+- _Copper thickness/weight_: No known limit, other than processing time.
+- _Slot_: yes, but YMMV. See our [fabs tips](/pcb/40-pcb-advanced/) page for details.
+- _Soldermask_: we have the chemicals, which have an official process, but we don't officially support it. See the ProMask datasheet, below. We also have trialed an alternative masking process with Kapton tape, but YMMV. See [this page](/pcb/30-masknsilkscreen/#soldermasking-with-kapton-tape) for more details.
+- _Silkscreen_: we have the chemicals, which have an official process, but we don't officially support it. See the ProLegend datasheet below.
+- _Stencils_: we can make them! See our "[How to make stencils](/pcb/31-stencilnreflow#how-to-make-and-use-stencils)" page for more!
+- _Reflow_: we have a fully operational reflow oven, optimized for lead-free solder paste. See "[How to reflow](/pcb/31-stencilnreflow#how-to-use-the-reflow-oven)" for more information.
+- _"Plating"_: We have a chemical-free non-electrical "plating" process with the ProConduct package.
 
 The full suit includes the following:
 
@@ -55,37 +53,37 @@ The full suit includes the following:
 - LPKF ProtoPrint S ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/zelprint.pdf), [How-to](/pcb/31-stencilnreflow#how-to-make-and-use-stencils), SOP) - Solderpaste stencil holder
 - LPKF ProtoFlow ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/protoflow.pdf), [How-to](/pcb/31-stencilnreflow#how-to-use-the-reflow-oven), SOP) - Reflow oven
 - LPKF ProConduct ([datasheet](https://www.lpkfusa.com/datasheets/prototyping/ProConduct_Specs.pdf), SOP) - Plating for RF applications
-- ~LPKF Contac S4 - electroplating~ *Discontinued for use at the Hive*
+- ~LPKF Contac S4 - electroplating~ _Discontinued for use at the Hive_
 
 ## Process Specifications and Tolerances
 
 If you’re board passes OshPark’s specs ([OshPark .dru file](https://docs.oshpark.com/design-tools/eagle/design-rules-files)), it can be made using our process (see their website for details). However, our process can, in fact, go beyond that in some ways. See our equipment knowledge bases ([Protomat](/pcb/20-protomat/), [Protolaser](/pcb/21-protolaser/)) and [Tips and Tricks](/pcb/40-pcb-advanced/) pages for additional information.
 
-| Specification | Theoretical Minimum (see note below) |  Recommended Minimum |
-|---|---|---|
-| Trace width | 2 mils (0.05 mm) | 5 mils (0.25 mm) |
-| Trace spacing ("pitch") | 1 mils (0.025 mm) | 5 mils (0.15 mm) |
-| Polygon isolation | 10 mils (0.25 mm) | 24 mils (0.75 mm) |
-| Drill hit | 6 mil (0.15 mm) | 15 mil (0.4 mm) |
-| Drill X/Y resolution | +/- 0.01 mil (0.25 μm) |  |
-| Drill repeat accuracy | +/- 0.2 mil (5 μm) |  |
-| Laser repeatability | 0.08 mils (2 μm) |  |
-| Drill hit | 0.05 mil (1.2 μm) |  |
+| Specification           | Theoretical Minimum (see note below) | Recommended Minimum |
+| ----------------------- | ------------------------------------ | ------------------- |
+| Trace width             | 2 mils (0.05 mm)                     | 5 mils (0.25 mm)    |
+| Trace spacing ("pitch") | 1 mils (0.025 mm)                    | 5 mils (0.15 mm)    |
+| Polygon isolation       | 10 mils (0.25 mm)                    | 24 mils (0.75 mm)   |
+| Drill hit               | 6 mil (0.15 mm)                      | 15 mil (0.4 mm)     |
+| Drill X/Y resolution    | +/- 0.01 mil (0.25 μm)               |                     |
+| Drill repeat accuracy   | +/- 0.2 mil (5 μm)                   |                     |
+| Laser repeatability     | 0.08 mils (2 μm)                     |                     |
+| Drill hit               | 0.05 mil (1.2 μm)                    |                     |
 
 **Note**: If you're considering a design at our theoretical minimum capabilities, first strongly consider whether you need that level of precision. If the answer is still yes, go to the [ProtoLaser](/pcb/21-protolaser/) (for etching) and [ProtoMat](/pcb/20-protomat/) (for drilling) help sections for advice on reaching those new lows.
-
 
 ## Q & A
 
 ### Is there a recommended DRC/CAM file I can use?
 
 Yes!
+
 1. [DRC](/pcb-hive-minimum.dru)
 2. [CAM](/pcb-hive-basic.cam)
 
 ### Do I have to be with my board during the entire fabrication process?
 
-Yes! You must be present for the entire process. This is for safety reasons. PIs have the authority to cancel any unattended boards. You may, however, leave the space *if and only if* you leave a note with a phone number and accept the possibility that something may happen to your product while you're gone (because PIs are not watching your process).
+Yes! You must be present for the entire process. This is for safety reasons. PIs have the authority to cancel any unattended boards. You may, however, leave the space _if and only if_ you leave a note with a phone number and accept the possibility that something may happen to your product while you're gone (because PIs are not watching your process).
 
 ### How long does it take to make a board?
 
@@ -95,7 +93,7 @@ Note the Hive currently does not support electroplating processes.
 
 ### Can I somehow reserve time on the equipment?
 
-Yes! Although you are not required to, we *highly* recommend that you do as it guarantees equipment priority. You may reserve time up to 96 hours in advance though SUMS.
+Yes! Although you are not required to, we _highly_ recommend that you do as it guarantees equipment priority. You may reserve time up to 96 hours in advance though SUMS.
 
 1. Go to sums.gatech.edu and login (button is on the top right of the screen).
 2. In the main toolbar on top, on the right, click "Set Active BG/EG". Make sure your Billing Group is "Interdisciplinary Design Commons" and your Equipment Group is "The Hive".
@@ -104,7 +102,7 @@ Yes! Although you are not required to, we *highly* recommend that you do as it g
 
 We highly advise you to schedule time on all the tools you’ll need, i.e. if you’re fabricating a standard board, you should reserve time on both the Plotter and the Laser. If you do not, and someone schedules time on only the laser, they have priority on the tool.
 
-*Reservations are limited to the following:*
+_Reservations are limited to the following:_
 
 - Non-PIs (i.e. those who are not volunteers at The Hive) may schedule a maximum of 4 hour block per tool per day during The Hive’s open hours, and up to 4 days in advance.
 - PI’s may schedule up to 8 hours per tool per day, up to 7 days in advance.

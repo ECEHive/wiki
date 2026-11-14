@@ -4,14 +4,20 @@ title: "PCB Fabrication"
 
 {/*
 TODO
+
 - Miscellaneous images to port over as well on all pcb pages.
 - Also figure out how to mush together quick links and knowledge base links
-*/}
+  */}
 
-import { Image } from 'astro:assets';
-import pcb from '../../../assets/intro-pcb.jpg';
+import { Image } from "astro:assets";
+import pcb from "../../../assets/intro-pcb.jpg";
 
-<Image class="border-2 border-slate-200 rounded-lg" src={pcb} alt="Operating the PCB plotter" width="300" />
+<Image
+  class="border-2 border-slate-200 rounded-lg"
+  src={pcb}
+  alt="Operating the PCB plotter"
+  width="300"
+/>
 
 Here at The Hive, we have a suite of tools made by LPKF that enable students to fabricate printed circuit boards (PCBs). Students go through a three-step training process to gain access to the tools, after which they can use the equipment and our materials free of charge whenever the Hive is open.
 
@@ -25,6 +31,7 @@ There are two primary pieces of equipment used in this process:
 - [The LPKF ProtoLaser U4](/pcb/21-protolaser/) - a 20um-diameter laser to etch (selectively remove) a wide variety of film/substrate pairings
 
 If you need vias, which are usually achieved via electroplating, we suggest looking for alternative options, such as 1mm through-holes or no-via designs.
+
 - To make vias in our no-plating process, make any vias as 1mm-diameter holes (excluding the annular ring), and then solder in a standard header pin.
 - Otherwise, your best option is likely to get it fabricated professionally; see [our PCB Design](/pcb/01-pcb-design/#do-you-have-any-recommendations-for-professional-fabrication-houses) page for some fabrication house options.
 
@@ -35,6 +42,7 @@ Our DRC file: [DRC](/pcb-hive-minimum.dru)
 Out CAM file: [CAM](/pcb-hive-basic.cam)
 
 ## Quick Links
+
 - **No idea what a trace is?** –> [What is a PCB?](/pcb/00-pcb-basics/)
 - **Designing your own PCB?** –> [PCB Design](/pcb/01-pcb-design/)
 - **What can we do, and how to do it** –> [PCB Fabrication](/pcb/10-pcb-fab/)
