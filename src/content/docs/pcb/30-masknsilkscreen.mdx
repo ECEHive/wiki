@@ -1,17 +1,17 @@
 ---
 title: PCB Soldermask and Silkscreen
-prev: 
-    link: /explore/pcb/
-    label: PCB Fabrication
+prev:
+  link: /explore/pcb/
+  label: PCB Fabrication
 ---
 
-import { Steps } from '@astrojs/starlight/components';
+import { Steps } from "@astrojs/starlight/components";
 
 ## Soldermasking with Kapton Tape
 
 So this is a bit of a hidden trick, and YMMV, but you can make a psuedo-soldermask with Kapton using the ProtoLaser. This works better for larger-pad surface-mounted components when you need a plane on the component-side of the board, and helps to avoid solder and solder-paste from wicking between the pad and the plane.
 
-*NOTE: In general, we recommend etching away excess copper when possible to ease soldering. However, there is a balance, because the more etching that's required, the longer the fabrication process will take. One good strategy here is to increase the isolation between planes and pads, rather than etch everything away entirely.*
+_NOTE: In general, we recommend etching away excess copper when possible to ease soldering. However, there is a balance, because the more etching that's required, the longer the fabrication process will take. One good strategy here is to increase the isolation between planes and pads, rather than etch everything away entirely._
 
 This process is a slight modification of the process for structuring the [LPKF ProMask](https://www.lpkfusa.com/datasheets/prototyping/promask.pdf) soldermask. The original process can be found in the LPFK ProtoLaser U4's How-To document (section 4.3, p. 155), which is located [here (PDF)](/pcb-protolaser-u4-howto.pdf) and on the ProtoLaser itself, in a folder called "ProtoLaser Docs" on the Desktop.
 

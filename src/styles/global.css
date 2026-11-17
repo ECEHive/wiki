@@ -1,5 +1,5 @@
 :root {
-	--sl-font: var(--font-body);
+  --sl-font: var(--font-body);
 }
 
 h1,
@@ -8,80 +8,75 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-heading);
-	font-weight: bold;
+  font-family: var(--font-heading);
+  font-weight: bold;
 }
 
 /* Dark mode colors. */
 :root {
-	--sl-color-accent-low: #19223f;
-	--sl-color-accent: #435fc9;
-	--sl-color-accent-high: #b9c8ee;
-	--sl-color-white: #ffffff;
-	--sl-color-gray-1: #eeeeee;
-	--sl-color-gray-2: #c2c2c2;
-	--sl-color-gray-3: #8b8b8b;
-	--sl-color-gray-4: #585858;
-	--sl-color-gray-5: #383838;
-	--sl-color-gray-6: #272727;
-	--sl-color-black: #181818;
+  --sl-color-accent-low: #19223f;
+  --sl-color-accent: #435fc9;
+  --sl-color-accent-high: #b9c8ee;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #eeeeee;
+  --sl-color-gray-2: #c2c2c2;
+  --sl-color-gray-3: #8b8b8b;
+  --sl-color-gray-4: #585858;
+  --sl-color-gray-5: #383838;
+  --sl-color-gray-6: #272727;
+  --sl-color-black: #181818;
 }
 
 /* Light mode colors. */
-:root[data-theme='light'] {
-	--sl-color-accent-low: #cbd6f3;
-	--sl-color-accent: #4461cb;
-	--sl-color-accent-high: #212f5c;
-	--sl-color-white: #181818;
-	--sl-color-gray-1: #272727;
-	--sl-color-gray-2: #383838;
-	--sl-color-gray-3: #585858;
-	--sl-color-gray-4: #8b8b8b;
-	--sl-color-gray-5: #c2c2c2;
-	--sl-color-gray-6: #eeeeee;
-	--sl-color-gray-7: #f6f6f6;
-	--sl-color-black: #ffffff;
+:root[data-theme="light"] {
+  --sl-color-accent-low: #cbd6f3;
+  --sl-color-accent: #4461cb;
+  --sl-color-accent-high: #212f5c;
+  --sl-color-white: #181818;
+  --sl-color-gray-1: #272727;
+  --sl-color-gray-2: #383838;
+  --sl-color-gray-3: #585858;
+  --sl-color-gray-4: #8b8b8b;
+  --sl-color-gray-5: #c2c2c2;
+  --sl-color-gray-6: #eeeeee;
+  --sl-color-gray-7: #f6f6f6;
+  --sl-color-black: #ffffff;
 }
 
 .mask-hexagon {
-	mask: url(/mask-hexagon.svg);
-	mask-repeat: no-repeat;
-	mask-size: 100%;
-	aspect-ratio: 8/9;
-	object-fit: cover;
+  mask: url(/mask-hexagon.svg);
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+  aspect-ratio: 8/9;
+  object-fit: cover;
 }
 
-
-
-
-
-
 ol ol {
-	list-style-type: lower-alpha;
+  list-style-type: lower-alpha;
 }
 
 figcaption {
-	font-style: italic;
-	color: #747474
+  font-style: italic;
+  color: #747474;
 }
 
 /* table snippets */
 
 .supplies td:nth-child(2) {
-	font-size: 10px;
-	vertical-align: top;
+  font-size: 10px;
+  vertical-align: top;
 }
 
 .align-middle td {
-	vertical-align: middle !important;
+  vertical-align: middle !important;
 }
 
 /* External link styling
 Reference: https://rachsmith.com/styling-external-links/ */
 
 a.external {
-	background-repeat: no-repeat;
-	background-position: right center;
-	padding: 0 16px 0 0;
-	background-image: url(/external-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding: 0 16px 0 0;
+  background-image: url(/external-arrow.svg);
 }

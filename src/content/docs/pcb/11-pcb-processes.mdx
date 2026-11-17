@@ -1,8 +1,8 @@
 ---
 title: "PCB Processes, by Board Design"
 prev:
-    link: /explore/pcb/
-    label: PCB Fabrication
+  link: /explore/pcb/
+  label: PCB Fabrication
 ---
 
 {/* TODO migrate these guides from word to wiki */}
@@ -15,10 +15,9 @@ The other thing to be aware of is that you’ll need to push quite hard to remov
 
 [Single-sided, no drills process](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EZKY7KrKwEFKnTCmCzAEnOEBIVD32Zv7U5zpH8woXEz-Pg?e=e8hKqD)
 
-
 ## Single-Sided, WITH Holes
 
-*NOTE*: "Single-sided" refers to the design; does it have traces on one or both sides?
+_NOTE_: "Single-sided" refers to the design; does it have traces on one or both sides?
 
 **If you are using a double sided substrate**, such as those provided by The Hive, see the below section on two-sided board process. Nothing will change (including the "Double-sided" option in the Process Planning Wizard). The etch should still be done with the double-sided template because the etch will either isolate the holes on the back-side if you’ve made a bottom-side copper pour/polygon, OR it’ll etch away the entire backside. (Why? Otherwise anything put through the holes may short because of the copper on the backside.) So really, nothing changes at all from the standard double-sided process.
 
@@ -27,10 +26,9 @@ If you have a single sided substrate, meaning copper on only one side, see the b
 - In the ProtoMat setup, in the Process Planning Wizard (button #1), for "Substrate layers", select "Double sided" as you would for a standard double-sided process. If you don’t, it won’t stop to let you etch before it cuts the board out, and then you'll have to start over since you can't etch safely once you've cut the board out.
 - You will use a single-sided ProtoLaser template (either top or bottom, depending on where your traces are). Make sure the "Supported by ProtoMat" box is checked in the template window, or else it will try to drill the holes on its own.
 
-
 ## Double Sided, No Plating
 
-*(Some common errors and solutions are listed after the process steps.)*
+_(Some common errors and solutions are listed after the process steps.)_
 
 **Before starting, make sure:**
 
@@ -41,7 +39,7 @@ If you have a single sided substrate, meaning copper on only one side, see the b
 **Step 1:** [Process setup and first drilling on the ProtoMat](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EVU4FeAXtdBLmLRg28Gp1XkBkJj_OcnjsgNE_SWZ_LaIYg?e=0bBHpq)
 
 - After completion of Step 1, the ProtoMat will pause at a step called "Flip Material".
-    - If it pauses at a step called "Dismount material" instead, DO NOT PANIC! You selected something during the Process Planning Wizard for through-hole plating equipment, when you should've left it blank. But no worries - simply leave the software and continue with these steps as though everything is hunky-dory.
+  - If it pauses at a step called "Dismount material" instead, DO NOT PANIC! You selected something during the Process Planning Wizard for through-hole plating equipment, when you should've left it blank. But no worries - simply leave the software and continue with these steps as though everything is hunky-dory.
 - Once the software has paused, lift the ProtoMat's lid. Note the orientation of the substrate, and then remove it.
 - Move to the ProtoLaser, and continue with Step 2.
 
@@ -52,12 +50,12 @@ If you have a single sided substrate, meaning copper on only one side, see the b
 :::note[On Plating]
 For board designs that commonly use electroplating to create vias between traces and/or components on both sides of the board, you may circumvent the need to electroplate.
 
-*There is an alternative!* Plating is typically avoidable by designing your vias as a standard hole with a diameter of 40 mil (1 mm). A standard 0.1" header pin can then be pushed through and soldered on both the top and bottom. You can accomplish similar things with wires or other pins of different diameters.
+_There is an alternative!_ Plating is typically avoidable by designing your vias as a standard hole with a diameter of 40 mil (1 mm). A standard 0.1" header pin can then be pushed through and soldered on both the top and bottom. You can accomplish similar things with wires or other pins of different diameters.
 :::
 
 ## Common Issues
 
-{/* This section was previously nested under "Double Sided, No Plating" heading and may only pertain to that process*/}
+{/* This section was previously nested under "Double Sided, No Plating" heading and may only pertain to that process */}
 
 ### ProtoMat - Software cannot connect to the tool
 
@@ -106,13 +104,13 @@ You can either restart the process entirely (hit the Play button, see figure 32)
 On the left of the screen, make sure nothing is selected under "Processing". If there is, hold down either CTRL (on Windows) or the command key (on Mac) and then left click to de-select it. If that doesn’t fix it, you can select either "Bottom Side" or "Top Side" (again, on the left) to force the correct orientation. You can try starting the project over again if this doesn’t solve it as well. Sometimes, the software has bugs.
 
 ### ProtoLaser - Insufficient pressure
-**Potential issue**: The vacuum hose may be disconnected from the extraction hood.
-    - Lift the door. The extraction hood is the plastic bit that the laser comes out of. There is a hose that should run from that to the back of the machine (still all inside the main bay). Make sure that its snugly inserted on both ends.
 
-**Potential issue**: The vacuum system may not be on or working strongly enough.
-    - Confirm that the vacuum system is on.The vacuum system is the tall white box to the tool’s right. On the front panel, at the bottom, there should be some buttons. Try increasing the suction pressure.
+**Potential issue**: The vacuum hose may be disconnected from the extraction hood. - Lift the door. The extraction hood is the plastic bit that the laser comes out of. There is a hose that should run from that to the back of the machine (still all inside the main bay). Make sure that its snugly inserted on both ends.
+
+**Potential issue**: The vacuum system may not be on or working strongly enough. - Confirm that the vacuum system is on.The vacuum system is the tall white box to the tool’s right. On the front panel, at the bottom, there should be some buttons. Try increasing the suction pressure.
 
 **Potential issue**: The vacuum hose(s) may be clogged.
+
 - There are two vacuum hoses. One runs from the extraction hood (the round plastic bit inside the main bay) to the rear interior wall of the tool, and the second runs from the outside backside of the tool to the vacuum system (the tall white box to the tool’s right). You should be able to remove both of these and check for clogs.
 
 ### I'm having other issues.

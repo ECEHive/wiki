@@ -1,23 +1,26 @@
 ---
 title: "LPKF ProtoMat S103"
 prev:
-    link: /explore/pcb/
-    label: PCB Fabrication
+  link: /explore/pcb/
+  label: PCB Fabrication
 ---
 
+import { Image } from "astro:assets";
+import protomat from "../../../assets/pcb-protomat.jpg";
 
-import { Image } from 'astro:assets';
-import protomat from '../../../assets/pcb-protomat.jpg';
-
-<Image class="border-2 border-slate-200 rounded-lg" src={protomat} alt="The LPKF ProtoMat S103" width="300" />
-
+<Image
+  class="border-2 border-slate-200 rounded-lg"
+  src={protomat}
+  alt="The LPKF ProtoMat S103"
+  width="300"
+/>
 
 The LPKF ProtoMat S103 is a 2.5-dimension CNC mill capable of drilling, milling, and routing to manufacture printed circuit board (PCB) and 2.5-dimension structures on a variety of substrates. The tool is located in the Semi-Clean Room on the 1st floor of the IDC. It is part of the IDC’s PCB fabrication process flow. The tool uses a moving tray and toolhead that allow autonomous movement across the work space with a tool exchange methodology that allows for different mechanical processes to be carried out without user intervention, and a highly-accurate alignment algorithm that enables multi-machine fabrication processes.
 
 Substrates:
 
 - Fiberglass-based or carbon fiber reinforced polymers, including FR4
-    - The Hive provides 0.5 oz and 1 oz double-sided copper on 1.55mm FR4.
+  - The Hive provides 0.5 oz and 1 oz double-sided copper on 1.55mm FR4.
 - PTFE or ceramic-filled base material
 - Wood
 - Nonferrous materials, such as aluminum or brass
@@ -42,9 +45,7 @@ The vacuum system manual: [Dust Extraction Manual Jet Stream iSeries-e-1-0 (PDF)
 
 Our standard operating procedures: [ProtoMat S103 SOP](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/EcQvNGoNNa5AjiZ5wU1Vd8wBMPNk8mawFspeLrvNaG8VlQ?e=etuWny)
 
-
 ## Q & A
-
 
 ### How do I use the 0.15mm drill bit?
 
@@ -57,7 +58,6 @@ The tool is most reliable with drill hits down to 0.4mm (15 mil), which is a pre
 Therefore, it's really important to actually watch the bit exchange and then all of the drill hits to be able to emergency stop the tool (lift the cover) if it does break. Otherwise, the tool will not drill your holes out all the way. You can always replace the bit and re-drill if this happens, but it's still a pain. Either way, strongly consider if you need holes that small! Anything to make this process more reliable will save you lots of headaches and heartaches.
 
 ## Common processing errors
-
 
 ### Software cannot/did not connect to the tool
 
@@ -93,7 +93,7 @@ Details of this process can be found in this [short video](https://gtvault.share
 
 ## Guide: Making 0.15-mm Drill Hits
 
-import { Steps } from '@astrojs/starlight/components';
+import { Steps } from "@astrojs/starlight/components";
 
 You've reached the 0.15mm Drill Hits page! That probably means that you wants the down-low on drilling those super-duper tiny holes.
 
