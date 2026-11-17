@@ -7,44 +7,44 @@ import lasercutting from '../../../assets/intro-lasercutting.jpg';
 
 <Image class="border-2 border-slate-200 rounded-lg" src={lasercutting} alt="Removing a laser-cut design from a CO2 laser cutter" width="300" />
 
-When it comes to rapid prototyping or creating a personalized gift, laser cutting is your best friend. Our laser cutters are located in the Production Studio on the first floor of the IDC. Spots on the laser cutter come on a first come first serve basis with some exceptions, we're usually busier in the afternoons and evenings.
+When it comes to rapid prototyping or creating a personalized gift, laser cutting is your best friend. Our laser cutters are located in the Production Studio on the first floor of the IDC. 
 
-We do provide materials to some degree, but you are encouraged to bring your own, for most of the material we give is scrap from previous projects.
-
-If you would like to learn how to use the laser cutter, ask a PI to show you. If you already know how to use the laser cutter, stop by The Hive during open hours to use it. Remember that it may be different than the one you're used to, so don't hesitate to ask if you have any questions.
+Spots on the laser cutter come on a first come first serve basis with some exceptions. We do provide materials to some degree, but you are encouraged to bring your own, for most of the material we give is scrap from previous projects.
 
 ## General Laser Cutting
 CO2 laser cutters are the standard laser cutter that can cut and engrave a variety of materials, including wood, acrylic, paper, and cardboard. In some cases, they can be used to etch or mark metals. At The Hive, we have two CO2 laser cutters made by Universal Laser Systems Inc.
 
 ### Universal PLS6.150D Laser Cutter Specifications
-- The Laser cutter's bed is 32 inches by 18 inches, should you have something bigger, you can cut it down in the machine shop
+- The Laser cutter's bed is 32 inches by 18 inches, should you have something bigger, you can cut it down next door in the machine shop
 - We have a rotary attachment to allow you to cut on curved surfaces
 - While the laser cutter can accept any files that can be sent to a normal printer, vector format types work best
 
 ### Internal Documents
-Below are documents written for internal use by Peer Instructors, but that in no way means that only Peer Instuctors can peruse if needed.
+Below are documents written for internal use by Peer Instructors, but are provided in case non-Peer Instuctors are interested in perusing.
 
 - The [CO2 Laser Standard Operating Procedure](https://gtvault.sharepoint.com/:w:/s/HiveMakerspace/ESgEYOb4E6JHhxpkTdbmm18BJCpM5YMJHaEGjfg3Bc1Iog?e=Os8l53) tells you how to use the Laser Cutter and the process of getting trained. Note that only Peer instructors have access to the machines.
-- For more in depth detailed settings on how to use the more advanced settings on the laser cutter [click here](https://drive.google.com/file/d/1HbgXr24n8lCf7eEQ_1ITQGkezBf3KxzZ/view?usp=sharing)
-- To see our common errors and how to solve them page [click here](https://drive.google.com/file/d/1VRxfCMtqLJXg8tuEzA1mQ6ykI6NGAulG/view?usp=sharing)
+- For more in depth detailed settings on how to use the more advanced settings on the laser cutter, [click here](https://drive.google.com/file/d/1HbgXr24n8lCf7eEQ_1ITQGkezBf3KxzZ/view?usp=sharing)
+- To see our common errors and how to solve them, [click here](https://drive.google.com/file/d/1VRxfCMtqLJXg8tuEzA1mQ6ykI6NGAulG/view?usp=sharing)
 
 We also have video tutorials if you don't want to sift through the SOP or documents. The video tutorials will cover all the basics of the laser cutter, the documents have more niche topics that you may not be interested in. You can find the video tutorials [here](https://www.youtube.com/playlist?list=PLaHV-4SxpcHyQ8y1_MtftLU1UMYcQMnss).
 
 
 ## Metal Cutting
+> Note: As of mid-2024, the fiber laser manufacturer (3D Fablight) has suspended their operations. Many of their official resources may be unavailable.
 
-For cutting metals, a fiber laser cutter is best suited for the job. The Fablight 4500 is a noncontinuous fiber laser capable of cutting through quarter inch steel very quickly. The cuts are cleaner and can also engrave various metals such as mild/stainless steel, anodized/not anodized aluminum, brass, and copper. The fiber laser cutter is very easy to use and instructions and more information can be found here.
+For cutting metals, a fiber laser cutter is best suited for the job. The Fablight 4500 is a noncontinuous fiber laser capable of cutting through quarter inch steel very quickly. In comparison to a plasma cutter, which The Hive previously had, fiber laser cuts are cleaner and can also engrave various metals such as mild/stainless steel, anodized/not anodized aluminum, brass, and copper. The machine is able to cut and engrave.
 
+A fiber laser cutter is a focused beam of infrared down to .005" which will cut through metal. With a high pressure nozzle, the metal is melted and blown away. The laser is pulsed which means the laser is not continuous but will output higher power when it is on. 
 
-A fiber laser cutter is a focused beam of infrared down to .005" which will cut through metal. With a high pressure nozzle, the metal will be cut and blown away. The laser is pulsed which means the laser is not continuous but will output higher power when it is on. The machine is only suitable for metal, as wood and plastics will absorb the laser. However, most typical metals can be cut with ease such as aluminum, and various types of steels. We have had folks try copper, brass and bronze as well. The machine is able to cut and engrave.
+The FL4500 officially supports cutting steel, stainless steel, spring steel, aluminum, copper, brass, bronze, titanium, and more. At The Hive, we have material presets for `ALUMINUM_6061` (0.006 - 0.25"), `STAINLESS_304` (0.0025 - 0.188"), `COPPER` (0.025 - 0.048"), `STEEL_CRS` (0.008 - 0.25"), `ALUMINUM_ANODIZED` (0.04"), and `BRASS` (0.05").
+
+The machine is only suitable for metal, as wood and plastics will absorb the laser. 
 
 ### Technical Specs
 
-For specific technical specifications, you may visit the manufacturer's [website](https://www.3dfablight.com/laser-cutting-machines)
+For technical specifications for the FL4500, you may visit the manufacturer's [website](https://www.3dfablight.com/laser-cutting-machines).
 
-> Note: As of mid-2024, the manufacturer (3D Fablight) has suspended their operations. Many of their official resources may be unavailable.
-
-The dimensions of the cutter are 40"x74"x60".
+The dimensions of the cutting bed is 50" x 25".
 
 The accuracy of the machine can be as +/-.002" per foot with kerfs being +/-.005" per foot.
 
@@ -56,12 +56,12 @@ For the most common materials, here are the maximum depths given:
 | Stainless Steel | .188" | 4.78mm |
 | Aluminum | .188" | 4.78mm |
 
-### Standard Operating Procedures and Quick facts
 
-This SOP is meant to include all information necessary for standard operation as well as an introduction to maintenance. The team at FabLight provided multiple documents on the use of the machine, software, and plugin; this document will include the majority of that information while focusing on the tool’s usage in our space.
+### Standard Operating Procedures
 
-FabLight’s first party documents can be found here: [website](https://3dfablight.freshdesk.com/support/solutions/articles/33000221174-manuals)
+FabLight’s operator's manual can be found [here](/laser-fablight-manual-4-3.pdf). This document contains information for both operation and maintenance. FabLight also provides proprietary software and plugins, which are not publicly available.
 
+Within our space, FabLight software is pre-installed the computer located directly next to the FL4500. FabCreator accepts DXF/DWG files and outputs FAB files, which are then loaded onto the FL4500 via USB drive.
 
 ### Video Guides
 
