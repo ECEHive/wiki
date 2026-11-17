@@ -46,5 +46,6 @@ All commands are run from the root of the project, from a terminal:
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
 
 More sites/pages that have been immense help
+
 - [freeCodeCamp.org's "Contribute" website repo](https://github.com/freeCodeCamp/contribute)
 - [Styling the external links on this site](https://rachsmith.com/styling-external-links/)

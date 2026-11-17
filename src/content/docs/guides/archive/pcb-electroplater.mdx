@@ -1,12 +1,12 @@
 ---
 title: "LPKF Contac S4 Electroplating System"
 prev:
-    link: /explore/pcb/
-    label: PCB Fabrication
+  link: /explore/pcb/
+  label: PCB Fabrication
 ---
 
-import { Image } from 'astro:assets';
-import electroplater from '../../../../assets/pcb-electroplater.jpg';
+import { Image } from "astro:assets";
+import electroplater from "../../../../assets/pcb-electroplater.jpg";
 
 :::note
 **We are no longer guaranteeing quality of the electroplating results.** The required maintenance for the number of monthly users no longer justifies continued operation, and we'll be phasing the plater out of operation entirely at some point in 2024 (theoretically). You can read below to understand more about the plater.
@@ -14,11 +14,16 @@ import electroplater from '../../../../assets/pcb-electroplater.jpg';
 **If you need vias:** If you can get away with it, we recommend sizing your vias to be 1mm/40mil diameter holes (excluding the annular ring), and then soldering in a standard header pin. Otherwise, your best option is likely to get it fabricated professionally; see [our PCB Design](/pcb/01-pcb-design/) page for some fabrication house options.
 :::
 
-<Image class="border-2 border-slate-200 rounded-lg" src={electroplater} alt="The LPKF Contac S4 Electroplating System" width="300" />
+<Image
+  class="border-2 border-slate-200 rounded-lg"
+  src={electroplater}
+  alt="The LPKF Contac S4 Electroplating System"
+  width="300"
+/>
 
 The LPKF Contac S4 Electroplating System provides the ability to galvanically electroplate through-holes. Galvanic electroplating is a process by which your substrate sits in an acid bath (in this case, that’s sulfuric acid, H2SO4) along with a slice of the metal that you’re plating (in this case, copper). When a current is driven from the substrate, through the acid, and into the anode, a negative potential appears on the substrate, which draws copper ions from the copper sheets (called anodes) and distribute themselves onto any conductive surface on your substrate. In a gist. Google if you'd like more information on galvanic electroplating.
 
-Critically, what this means is that *the tool will plate copper everywhere that there is copper!* This means any copper faces of your substrate will get additional copper on them. Astute readers will remember that the internal layer of your substrate (e.g. FR4) is not conductive, so an "Activator" (a conductive ink) is used to coat the inside of your holes with a conductive substance so that current can pass through the holes, and thereby plate your holes.
+Critically, what this means is that _the tool will plate copper everywhere that there is copper!_ This means any copper faces of your substrate will get additional copper on them. Astute readers will remember that the internal layer of your substrate (e.g. FR4) is not conductive, so an "Activator" (a conductive ink) is used to coat the inside of your holes with a conductive substance so that current can pass through the holes, and thereby plate your holes.
 
 The LPKF Datasheet for the Contac S4: [Contac S4-v1-0-en (PDF)](/pcb-contac-s4-v1.pdf), [Flyer](https://www.lpkf.com/fileadmin/mediafiles/user_upload/products/pdf/DQ/flyer_lpkf_contac_s4_en.pdf)
 
@@ -83,15 +88,20 @@ Either way, please contact us first! **DO NOT ATTEMPT THIS WITHOUT PRIOR APPROVA
 ## Common Errors
 
 ### "Device in failed state" on tool boot up
+
 **Potential issue**: Baths 1 and/or 2 are low.
+
 - Lift the lids to baths 1 and 2. If they are low, get a PI/MPI/Staff to refill from the chemical cabinet in the storage closet in the Semi-clean room.
 
 ### Zero plating current error during plating step (Bath 5)
+
 **Potential issue**: Too much copper buildup on the PCB holder.
+
 - Put on the chemical safety gear (apron, goggles, gloves, in that order) and remove the board from bath 5. Using the drip tray, go to the sink and rinse the drip tray, board, holder, and gloves well. Remove the board from the holder with the allen key. Using a fine-grit sandpaper, file, or sanding block, sand off any copper build-up on the posts and on the metal on the underside. Big flakes of copper may come off; this is expected. Once it looks cleaner, seat the empty holder into an empty bath (Bath 4 works well) and screw it down. Get a multimeter. The resistance between either of the posts on the holder and the metal strips with the pegs that run down the line of baths should be less than 1 ohm. If the multimeter confirms the resistance as below 1 ohm, re-attach the substrate to the holder, don the chemical gear again, place it back into Bath 5 and screw it down, and press the play button to continue.
 - If the error continues to be triggered, the resistance remains high, or you are not comfortable doing this, please get a PI.
 
 **Potential issue**: Insufficient contact between the metal pegs in the tool and the metal underside of the tool holder.
+
 - While wearing the chemical safety gear, make sure that the tool holder is completely screwed down onto the pegs.
 - If the toolholder screws will not tighten further but is not in contact with the rail (i.e. there is a gap between the tool holder and the metal side railings), attempt to re-seat the holder onto the pegs While wearing the chemical safety gear.
 - If that is unsuccessful in solving the issue, while wearing the chemical safety gear, remove the board+holder from Bath 5 and, using the drip tray, move to the sink to rinse the board, holder, gloves, and drip tray. Remove the board from the holder with the allen key. Using a wire brush, sandpaper, or other means, clean out the peg holes in the tool holder. This may require disassembly of the holder entirely. To test the connection, make sure to don the chemical safety gear again before slotting the holder (without the substrate) into Bath 5. Using a multimeter, measure the resistance between the posts on the holder to the metal rails; this should be below 1 ohm. Rinse the holder when you remove it from the Bath while wearing the chemical safety gear.

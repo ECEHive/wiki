@@ -1,10 +1,12 @@
 // @ts-check
 import { defineConfig, fontProviders } from "astro/config";
 import starlight from "@astrojs/starlight";
-import { unified } from '@astrojs/markdown-remark';
+import { unified } from "@astrojs/markdown-remark";
 import tailwindcss from "@tailwindcss/vite";
 
 import rehypeExternalLinks from "rehype-external-links";
+
+import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,15 +18,15 @@ export default defineConfig({
       cssVariable: "--font-body",
       name: "Inter",
       weights: ["100 900"],
-      styles: ["normal", "italic"]
+      styles: ["normal", "italic"],
     },
     {
       provider: fontProviders.google(),
       cssVariable: "--font-heading",
       name: "Rubik",
       weights: ["300 900"],
-      styles: ["normal", "italic"]
-    }
+      styles: ["normal", "italic"],
+    },
   ],
   integrations: [
     starlight({
@@ -39,13 +41,6 @@ export default defineConfig({
         dark: "./public/wiki-logo-dark.svg",
         replacesTitle: true,
       },
-      social: [
-        {
-          icon: "github",
-          label: "GitHub",
-          href: "https://github.com/ecehive/wiki",
-        },
-      ],
       sidebar: [
         { label: "Home", link: "/" },
         "faq",
@@ -94,21 +89,18 @@ export default defineConfig({
         {
           label: "PCB Manufacturing",
           collapsed: true,
-          items: [
-            "explore/pcb",
-            { autogenerate: { directory: "pcb" } },
-          ],
+          items: ["explore/pcb", { autogenerate: { directory: "pcb" } }],
         },
         {
           label: "Projects",
-          collapsed: true,
-          items: [{ autogenerate: { directory: "workshop" } }],
-        },
+          link: "projects"
+        }
       ],
       components: {
-        Head: "./src/components/CustomHead.astro"
-      }
+        Head: "./src/components/CustomHead.astro",
+      },
     }),
+    svelte(),
   ],
   markdown: {
     processor: unified({
@@ -123,7 +115,7 @@ export default defineConfig({
           },
         ],
       ],
-    })
+    }),
   },
   vite: {
     plugins: [tailwindcss()],
