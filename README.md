@@ -2,8 +2,6 @@
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-How to contribute: https://wiki.hivemakerspace.com/contribute/
-
 ## Project Structure
 
 Inside of your Astro + Starlight project, you'll see the following folders and files:
@@ -44,8 +42,3 @@ All commands are run from the root of the project, from a terminal:
 ## Help
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
-
-More sites/pages that have been immense help
-
-- [freeCodeCamp.org's "Contribute" website repo](https://github.com/freeCodeCamp/contribute)
-- [Styling the external links on this site](https://rachsmith.com/styling-external-links/)
